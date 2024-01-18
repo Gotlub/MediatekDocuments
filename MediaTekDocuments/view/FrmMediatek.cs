@@ -374,6 +374,7 @@ namespace MediaTekDocuments.view
             cbxLivresRayonInfo.SelectedIndex = -1;
             txbLivresImage.Text = "";
             txbLivresNumero.Text = "";
+            txbLivresIsbn.Text = "";
         }
 
         /// <summary>
@@ -1344,7 +1345,6 @@ namespace MediaTekDocuments.view
             if (MessageBox.Show("Etes vous sur de vouloir supprimer" + laRevue.Titre + " ?",
                 "Validation suppresion", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                MessageBox.Show(controller.GetExemplairesRevue(laRevue.Id).Count.ToString());
                 if (controller.GetExemplairesRevue(laRevue.Id).Count == 0)
                 {
                     

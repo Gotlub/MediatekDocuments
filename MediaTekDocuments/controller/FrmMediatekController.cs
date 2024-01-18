@@ -11,6 +11,7 @@ namespace MediaTekDocuments.controller
     /// </summary>
     class FrmMediatekController
     {
+        #region Commun
         /// <summary>
         /// Objet d'accès aux données
         /// </summary>
@@ -34,33 +35,6 @@ namespace MediaTekDocuments.controller
         }
 
         /// <summary>
-        /// getter sur la liste des livres
-        /// </summary>
-        /// <returns>Liste d'objets Livre</returns>
-        public List<Livre> GetAllLivres()
-        {
-            return access.GetAllLivres();
-        }
-
-        /// <summary>
-        /// getter sur la liste des Dvd
-        /// </summary>
-        /// <returns>Liste d'objets dvd</returns>
-        public List<Dvd> GetAllDvd()
-        {
-            return access.GetAllDvd();
-        }
-
-        /// <summary>
-        /// getter sur la liste des revues
-        /// </summary>
-        /// <returns>Liste d'objets Revue</returns>
-        public List<Revue> GetAllRevues()
-        {
-            return access.GetAllRevues();
-        }
-
-        /// <summary>
         /// getter sur les rayons
         /// </summary>
         /// <returns>Liste d'objets Rayon</returns>
@@ -77,26 +51,16 @@ namespace MediaTekDocuments.controller
         {
             return access.GetAllPublics();
         }
+        #endregion
 
-
+        #region Onglet Livres
         /// <summary>
-        /// récupère les exemplaires d'une revue
+        /// getter sur la liste des livres
         /// </summary>
-        /// <param name="idDocuement">id de la revue concernée</param>
-        /// <returns>Liste d'objets Exemplaire</returns>
-        public List<Exemplaire> GetExemplairesRevue(string idDocuement)
+        /// <returns>Liste d'objets Livre</returns>
+        public List<Livre> GetAllLivres()
         {
-            return access.GetExemplairesRevue(idDocuement);
-        }
-
-        /// <summary>
-        /// Crée un exemplaire d'une revue dans la bdd
-        /// </summary>
-        /// <param name="exemplaire">L'objet Exemplaire concerné</param>
-        /// <returns>True si la création a pu se faire</returns>
-        public bool CreerExemplaire(Exemplaire exemplaire)
-        {
-            return access.CreerExemplaire(exemplaire);
+            return access.GetAllLivres();
         }
 
         /// <summary>
@@ -114,12 +78,12 @@ namespace MediaTekDocuments.controller
             dicDocument.Add("idRayon", livre.IdRayon);
             dicDocument.Add("idPublic", livre.IdPublic);
             dicDocument.Add("idGenre", livre.IdGenre);
-            if (!access.CreerDocument(JsonConvert.SerializeObject(dicDocument)))
+            if (!access.CreerEntite("document", JsonConvert.SerializeObject(dicDocument)))
                 validateur = false;
             Dictionary<string, string> dicLivreDvd = new Dictionary<string, string>();
             dicLivreDvd.Add("id", livre.Id);
             //Thread.Sleep(50) a garder pour passage en ligne de l'api ? (lag);
-            if (!access.CreerLivreDvd(JsonConvert.SerializeObject(dicLivreDvd)))
+            if (!access.CreerEntite("livres_dvd", JsonConvert.SerializeObject(dicLivreDvd)))
                 validateur = false;
 
             //Thread.Sleep(50) a garder pour passage en ligne de l'api ? (lag);
@@ -128,7 +92,7 @@ namespace MediaTekDocuments.controller
             unLivre.Add("ISBN", livre.Isbn);
             unLivre.Add("auteur", livre.Auteur);
             unLivre.Add("collection", livre.Collection);
-            if (!access.CreerLivre(JsonConvert.SerializeObject(unLivre)))
+            if (!access.CreerEntite("livre", JsonConvert.SerializeObject(unLivre)))
                 validateur = false;
            
             return validateur;
@@ -149,7 +113,7 @@ namespace MediaTekDocuments.controller
             dicDocument.Add("idRayon", livre.IdRayon);
             dicDocument.Add("idPublic", livre.IdPublic);
             dicDocument.Add("idGenre", livre.IdGenre);
-            if (!access.UpdateDocument(livre.Id, JsonConvert.SerializeObject(dicDocument)))
+            if (!access.UpdateEntite("document", livre.Id, JsonConvert.SerializeObject(dicDocument)))
                 validateur = false;
 
             //Thread.Sleep(50) a garder pour passage en ligne de l'api ? (lag);
@@ -158,7 +122,7 @@ namespace MediaTekDocuments.controller
             unLivre.Add("ISBN", livre.Isbn);
             unLivre.Add("auteur", livre.Auteur);
             unLivre.Add("collection", livre.Collection);
-            if (!access.UpdateLivre(livre.Id, JsonConvert.SerializeObject(unLivre)))
+            if (!access.UpdateEntite("livre", livre.Id, JsonConvert.SerializeObject(unLivre)))
                 validateur = false;
 
             return validateur;
@@ -178,13 +142,13 @@ namespace MediaTekDocuments.controller
             unLivre.Add("ISBN", livre.Isbn);
             unLivre.Add("auteur", livre.Auteur);
             unLivre.Add("collection", livre.Collection);
-            if (!access.SupprimerLivre(JsonConvert.SerializeObject(unLivre)))
+            if (!access.SupprimerEntite("livre", JsonConvert.SerializeObject(unLivre)))
                 validateur = false;
 
             //Thread.Sleep(50) a garder pour passage en ligne de l'api ? (lag);
             Dictionary<string, string> dicLivreDvd = new Dictionary<string, string>();
             dicLivreDvd.Add("id", livre.Id);
-            if (!access.SupprimerLivreDvD(JsonConvert.SerializeObject(dicLivreDvd)))
+            if (!access.SupprimerEntite("livres_dvd", JsonConvert.SerializeObject(dicLivreDvd)))
                 validateur = false;
 
             //Thread.Sleep(50) a garder pour passage en ligne de l'api ? (lag);
@@ -195,10 +159,21 @@ namespace MediaTekDocuments.controller
             dicDocument.Add("idRayon", livre.IdRayon);
             dicDocument.Add("idPublic", livre.IdPublic);
             dicDocument.Add("idGenre", livre.IdGenre);
-            if (!access.SupprimerDocument(JsonConvert.SerializeObject(dicDocument)))
+            if (!access.SupprimerEntite("document", JsonConvert.SerializeObject(dicDocument)))
                 validateur = false;
 
             return validateur;
+        }
+        #endregion
+
+        #region Onglet DvD
+        /// <summary>
+        /// getter sur la liste des Dvd
+        /// </summary>
+        /// <returns>Liste d'objets dvd</returns>
+        public List<Dvd> GetAllDvd()
+        {
+            return access.GetAllDvd();
         }
 
         /// <summary>
@@ -216,20 +191,21 @@ namespace MediaTekDocuments.controller
             dicDocument.Add("idRayon", dvd.IdRayon);
             dicDocument.Add("idPublic", dvd.IdPublic);
             dicDocument.Add("idGenre", dvd.IdGenre);
-            if (!access.CreerDocument(JsonConvert.SerializeObject(dicDocument)))
+            if (!access.CreerEntite("document", JsonConvert.SerializeObject(dicDocument)))
                 validateur = false;
             Dictionary<string, string> dicLivreDvd = new Dictionary<string, string>();
             dicLivreDvd.Add("id", dvd.Id);
             //Thread.Sleep(50) a garder pour passage en ligne de l'api ? (lag);
-            if (!access.CreerLivreDvd(JsonConvert.SerializeObject(dicLivreDvd)))
+            if (!access.CreerEntite("livres_dvd", JsonConvert.SerializeObject(dicLivreDvd)))
                 validateur = false;
 
             //Thread.Sleep(50) a garder pour passage en ligne de l'api ? (lag);
             Dictionary<string, object> unDvd = new Dictionary<string, object>();
+            unDvd.Add("id", dvd.Id);
             unDvd.Add("synopsis", dvd.Synopsis);
             unDvd.Add("realisateur", dvd.Realisateur);
             unDvd.Add("duree", dvd.Duree);
-            if (!access.CreerDvd(JsonConvert.SerializeObject(unDvd)))
+            if (!access.CreerEntite("dvd", JsonConvert.SerializeObject(unDvd)))
                 validateur = false;
 
             return validateur;
@@ -250,7 +226,7 @@ namespace MediaTekDocuments.controller
             dicDocument.Add("idRayon", dvd.IdRayon);
             dicDocument.Add("idPublic", dvd.IdPublic);
             dicDocument.Add("idGenre", dvd.IdGenre);
-            if (!access.UpdateDocument(dvd.Id, JsonConvert.SerializeObject(dicDocument)))
+            if (!access.UpdateEntite("document", dvd.Id, JsonConvert.SerializeObject(dicDocument)))
                 validateur = false;
 
             //Thread.Sleep(50) a garder pour passage en ligne de l'api ? (lag);
@@ -259,7 +235,7 @@ namespace MediaTekDocuments.controller
             unDvd.Add("synopsis", dvd.Synopsis);
             unDvd.Add("realisateur", dvd.Realisateur);
             unDvd.Add("duree", dvd.Duree);
-            if (!access.UpdateDvd(dvd.Id, JsonConvert.SerializeObject(unDvd)))
+            if (!access.UpdateEntite("dvd", dvd.Id, JsonConvert.SerializeObject(unDvd)))
                 validateur = false;
 
             return validateur;
@@ -279,13 +255,13 @@ namespace MediaTekDocuments.controller
             unDvd.Add("synopsis", dvd.Synopsis);
             unDvd.Add("realisateur", dvd.Realisateur);
             unDvd.Add("duree", dvd.Duree);
-            if (!access.SupprimerDvd(JsonConvert.SerializeObject(unDvd)))
+            if (!access.SupprimerEntite("dvd", JsonConvert.SerializeObject(unDvd)))
                 validateur = false;
 
             //Thread.Sleep(50) a garder pour passage en ligne de l'api ? (lag);
             Dictionary<string, string> dicLivreDvd = new Dictionary<string, string>();
             dicLivreDvd.Add("id", dvd.Id);
-            if (!access.SupprimerLivreDvD(JsonConvert.SerializeObject(dicLivreDvd)))
+            if (!access.SupprimerEntite("livres_dvd", JsonConvert.SerializeObject(dicLivreDvd)))
                 validateur = false;
 
             //Thread.Sleep(50) a garder pour passage en ligne de l'api ? (lag);
@@ -296,12 +272,22 @@ namespace MediaTekDocuments.controller
             dicDocument.Add("idRayon", dvd.IdRayon);
             dicDocument.Add("idPublic", dvd.IdPublic);
             dicDocument.Add("idGenre", dvd.IdGenre);
-            if (!access.SupprimerDocument(JsonConvert.SerializeObject(dicDocument)))
+            if (!access.SupprimerEntite("document", JsonConvert.SerializeObject(dicDocument)))
                 validateur = false;
 
             return validateur;
         }
+        #endregion
 
+        #region Onglet Revues
+        /// <summary>
+        /// getter sur la liste des revues
+        /// </summary>
+        /// <returns>Liste d'objets Revue</returns>
+        public List<Revue> GetAllRevues()
+        {
+            return access.GetAllRevues();
+        }
 
         /// <summary>
         /// creer une revue dans la bdd
@@ -318,7 +304,7 @@ namespace MediaTekDocuments.controller
             dicDocument.Add("idRayon", revue.IdRayon);
             dicDocument.Add("idPublic", revue.IdPublic);
             dicDocument.Add("idGenre", revue.IdGenre);
-            if (!access.CreerDocument(JsonConvert.SerializeObject(dicDocument)))
+            if (!access.CreerEntite("document", JsonConvert.SerializeObject(dicDocument)))
                 validateur = false;
 
             //Thread.Sleep(50) a garder pour passage en ligne de l'api ? (lag);
@@ -326,7 +312,7 @@ namespace MediaTekDocuments.controller
             uneRevue.Add("id", revue.Id);
             uneRevue.Add("periodicite", revue.Periodicite);
             uneRevue.Add("delaiMiseADispo", revue.DelaiMiseADispo);
-            if (!access.CreerRevue(JsonConvert.SerializeObject(uneRevue)))
+            if (!access.CreerEntite("revue", JsonConvert.SerializeObject(uneRevue)))
                 validateur = false;
 
             return validateur;
@@ -347,7 +333,7 @@ namespace MediaTekDocuments.controller
             dicDocument.Add("idRayon", revue.IdRayon);
             dicDocument.Add("idPublic", revue.IdPublic);
             dicDocument.Add("idGenre", revue.IdGenre);
-            if (!access.UpdateDocument(revue.Id, JsonConvert.SerializeObject(dicDocument)))
+            if (!access.UpdateEntite("document", revue.Id, JsonConvert.SerializeObject(dicDocument)))
                 validateur = false;
 
             //Thread.Sleep(50) a garder pour passage en ligne de l'api ? (lag);
@@ -355,7 +341,7 @@ namespace MediaTekDocuments.controller
             uneRevue.Add("id", revue.Id);
             uneRevue.Add("periodicite", revue.Periodicite);
             uneRevue.Add("delaiMiseADispo", revue.DelaiMiseADispo);
-            if (!access.UpdateRevue(revue.Id, JsonConvert.SerializeObject(uneRevue)))
+            if (!access.UpdateEntite("revue", revue.Id, JsonConvert.SerializeObject(uneRevue)))
                 validateur = false;
 
             return validateur;
@@ -374,7 +360,7 @@ namespace MediaTekDocuments.controller
             uneRevue.Add("id", revue.Id);
             uneRevue.Add("periodicite", revue.Periodicite);
             uneRevue.Add("delaiMiseADispo", revue.DelaiMiseADispo);
-            if (!access.SupprimerRevue(JsonConvert.SerializeObject(uneRevue)))
+            if (!access.SupprimerEntite("revue", JsonConvert.SerializeObject(uneRevue)))
                 validateur = false;
 
             //Thread.Sleep(50) a garder pour passage en ligne de l'api ? (lag);
@@ -385,10 +371,33 @@ namespace MediaTekDocuments.controller
             dicDocument.Add("idRayon", revue.IdRayon);
             dicDocument.Add("idPublic", revue.IdPublic);
             dicDocument.Add("idGenre", revue.IdGenre);
-            if (!access.SupprimerDocument(JsonConvert.SerializeObject(dicDocument)))
+            if (!access.SupprimerEntite("document", JsonConvert.SerializeObject(dicDocument)))
                 validateur = false;
 
             return validateur;
         }
+        #endregion
+
+        #region Onglet Parutions
+        /// <summary>
+        /// récupère les exemplaires d'une revue
+        /// </summary>
+        /// <param name="idDocuement">id de la revue concernée</param>
+        /// <returns>Liste d'objets Exemplaire</returns>
+        public List<Exemplaire> GetExemplairesRevue(string idDocuement)
+        {
+            return access.GetExemplairesRevue(idDocuement);
+        }
+
+        /// <summary>
+        /// Crée un exemplaire d'une revue dans la bdd
+        /// </summary>
+        /// <param name="exemplaire">L'objet Exemplaire concerné</param>
+        /// <returns>True si la création a pu se faire</returns>
+        public bool CreerExemplaire(Exemplaire exemplaire)
+        {
+            return access.CreerExemplaire(exemplaire);
+        }
+        #endregion
     }
 }

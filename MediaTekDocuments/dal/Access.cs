@@ -117,17 +117,17 @@ namespace MediaTekDocuments.dal
         }
 
         /// <summary>
-        /// Créer un document dans la BDD, return true si l'opération, c'est correctement déroulé
+        /// Créer une entite dans la BDD, return true si l'opération, c'est correctement déroulé
         /// </summary>
-        /// <param name="jsonDocument"></param>
+        /// <param name="jsonEntite"></param>
         /// <returns></returns>
-        public bool CreerDocument(String jsonDocument)
+        public bool CreerEntite(string type, String jsonEntite)
         {
-            jsonDocument = jsonDocument.Replace(' ', '-');  // <- xD c'est tres moche les espaces qui passent pas avec les regex dans champs
+            jsonEntite = jsonEntite.Replace(' ', '-');
             try
             {
                 // récupération soit d'une liste vide (requête ok) soit de null (erreur)
-                List<Object> liste = TraitementRecup<Object>(POST, "document/" + jsonDocument);
+                List<Object> liste = TraitementRecup<Object>(POST, type + "/" + jsonEntite);
                 return (liste != null);
             }
             catch (Exception ex)
@@ -138,18 +138,18 @@ namespace MediaTekDocuments.dal
         }
 
         /// <summary>
-        /// Modifie un document dans la BDD, return true si l'opération, c'est correctement déroulé
+        /// Modifie une entite dans la BDD, return true si l'opération, c'est correctement déroulé
         /// </summary>
         /// <param name="id"></param>
-        /// <param name="jsonDocument"></param>
+        /// <param name="jsonEntite"></param>
         /// <returns></returns>
-        public bool UpdateDocument(string id, String jsonDocument)
+        public bool UpdateEntite(string type, string id, String jsonEntite)
         {
-            jsonDocument = jsonDocument.Replace(' ', '-');
+            jsonEntite = jsonEntite.Replace(' ', '-');
             try
             {
                 // récupération soit d'une liste vide (requête ok) soit de null (erreur)
-                List<Object> liste = TraitementRecup<Object>(PUT, "document/" + id + "/" + jsonDocument);
+                List<Object> liste = TraitementRecup<Object>(PUT, type + "/" + id + "/" + jsonEntite);
                 return (liste != null);
             }
             catch (Exception ex)
@@ -160,250 +160,17 @@ namespace MediaTekDocuments.dal
         }
 
         /// <summary>
-        /// Supprime un document dans la BDD, return true si l'opération, c'est correctement déroulé
+        /// Supprime une entité dans la BDD, return true si l'opération, c'est correctement déroulé
         /// </summary>
-        /// <param name="jsonDocument"></param>
+        /// <param name="jsonEntite"></param>
         /// <returns></returns>
-        public bool SupprimerDocument(String jsonDocument)
+        public bool SupprimerEntite(string type, String jsonEntite)
         {
-            jsonDocument = jsonDocument.Replace(' ', '-');
+            jsonEntite = jsonEntite.Replace(' ', '-');
             try
             {
                 // récupération soit d'une liste vide (requête ok) soit de null (erreur)
-                List<Object> liste = TraitementRecup<Object>(DELETE, "document/" + jsonDocument);
-                return (liste != null);
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
-            return false;
-        }
-
-        /// <summary>
-        /// Créer un livre_dvd dans la BDD, return true si l'opération, c'est correctement déroulé
-        /// </summary>
-        /// <param name="jsonLivreDvd"></param>
-        /// <returns></returns>
-        public bool CreerLivreDvd(String jsonLivreDvd)
-        {
-            try
-            {
-                // récupération soit d'une liste vide (requête ok) soit de null (erreur)
-                List<Object> liste = TraitementRecup<Object>(POST, "livres_dvd/" + jsonLivreDvd);
-                return (liste != null);
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
-            return false;
-        }
-
-        /// <summary>
-        /// Supprime un livre_dvd dans la BDD, return true si l'opération, c'est correctement déroulé
-        /// </summary>
-        /// <param name="jsonLivreDvd"></param>
-        /// <returns></returns>
-        public bool SupprimerLivreDvD(String jsonLivreDvd)
-        {
-            jsonLivreDvd = jsonLivreDvd.Replace(' ', '-');
-            try
-            {
-                // récupération soit d'une liste vide (requête ok) soit de null (erreur)
-                List<Object> liste = TraitementRecup<Object>(DELETE, "livres_dvd/" + jsonLivreDvd);
-                return (liste != null);
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
-            return false;
-        }
-
-        /// <summary>
-        /// Créer un livre dans la BDD, return true si l'opération, c'est correctement déroulé
-        /// </summary>
-        /// <param name="jsonLivre"></param>
-        /// <returns></returns>
-        public bool CreerLivre(String jsonLivre)
-        {
-            jsonLivre = jsonLivre.Replace(' ', '-');
-            try
-            {
-                // récupération soit d'une liste vide (requête ok) soit de null (erreur)
-                List<Object> liste = TraitementRecup<Object>(POST, "livre/" + jsonLivre);
-                return (liste != null);
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
-            return false;
-        }
-
-        /// <summary>
-        /// Modifie un livre dans la BDD, return true si l'opération, c'est correctement déroulé
-        /// </summary>
-        /// <param name="id"></param>
-        /// <param name="jsonLivre"></param>
-        /// <returns></returns>
-        public bool UpdateLivre(string id, String jsonLivre)
-        {
-            jsonLivre = jsonLivre.Replace(' ', '-');
-            try
-            {
-                // récupération soit d'une liste vide (requête ok) soit de null (erreur)
-                List<Object> liste = TraitementRecup<Object>(PUT, "livre/" + id + "/" + jsonLivre);
-                return (liste != null);
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
-            return false;
-        }
-
-        /// <summary>
-        /// Supprime un livre dans la BDD, return true si l'opération, c'est correctement déroulé
-        /// </summary>
-        /// <param name="jsonLivreDvd"></param>
-        /// <returns></returns>
-        public bool SupprimerLivre(String jsonLivreDvd)
-        {
-            jsonLivreDvd = jsonLivreDvd.Replace(' ', '-');
-            try
-            {
-                // récupération soit d'une liste vide (requête ok) soit de null (erreur)
-                List<Object> liste = TraitementRecup<Object>(DELETE, "livre/" + jsonLivreDvd);
-                return (liste != null);
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
-            return false;
-        }
-
-        /// <summary>
-        /// Créer un DVD dans la BDD, return true si l'opération, c'est correctement déroulé
-        /// </summary>
-        /// <param name="jsonDvd"></param>
-        /// <returns></returns>
-        public bool CreerDvd(String jsonDvd)
-        {
-            jsonDvd = jsonDvd.Replace(' ', '-');
-            try
-            {
-                // récupération soit d'une liste vide (requête ok) soit de null (erreur)
-                List<Object> liste = TraitementRecup<Object>(POST, "dvd/" + jsonDvd);
-                return (liste != null);
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
-            return false;
-        }
-
-        /// <summary>
-        /// Modifie un DVD dans la BDD, return true si l'opération, c'est correctement déroulé
-        /// </summary>
-        /// <param name="id"></param>
-        /// <param name="jsonDvd"></param>
-        /// <returns></returns>
-        public bool UpdateDvd(string id, String jsonDvd)
-        {
-            jsonDvd = jsonDvd.Replace(' ', '-');
-            try
-            {
-                // récupération soit d'une liste vide (requête ok) soit de null (erreur)
-                List<Object> liste = TraitementRecup<Object>(PUT, "dvd/" + id + "/" + jsonDvd);
-                return (liste != null);
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
-            return false;
-        }
-
-        /// <summary>
-        /// Supprime un DVD dans la BDD, return true si l'opération, c'est correctement déroulé
-        /// </summary>
-        /// <param name="jsonDvd"></param>
-        /// <returns></returns>
-        public bool SupprimerDvd(String jsonDvd)
-        {
-            jsonDvd = jsonDvd.Replace(' ', '-');
-            try
-            {
-                // récupération soit d'une liste vide (requête ok) soit de null (erreur)
-                List<Object> liste = TraitementRecup<Object>(DELETE, "dvd/" + jsonDvd);
-                return (liste != null);
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
-            return false;
-        }
-
-        /// <summary>
-        /// Créer une revue dans la BDD, return true si l'opération, c'est correctement déroulé
-        /// </summary>
-        /// <param name="jsonRevue"></param>
-        /// <returns></returns>
-        public bool CreerRevue(String jsonRevue)
-        {
-            jsonRevue = jsonRevue.Replace(' ', '-');
-            try
-            {
-                // récupération soit d'une liste vide (requête ok) soit de null (erreur)
-                List<Object> liste = TraitementRecup<Object>(POST, "revue/" + jsonRevue);
-                return (liste != null);
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
-            return false;
-        }
-
-        /// <summary>
-        /// Modifie une revue dans la BDD, return true si l'opération, c'est correctement déroulé
-        /// </summary>
-        /// <param name="id"></param>
-        /// <param name="jsonRevue"></param>
-        /// <returns></returns>
-        public bool UpdateRevue(string id, String jsonRevue)
-        {
-            jsonRevue = jsonRevue.Replace(' ', '-');
-            try
-            {
-                // récupération soit d'une liste vide (requête ok) soit de null (erreur)
-                List<Object> liste = TraitementRecup<Object>(PUT, "revue/" + id + "/" + jsonRevue);
-                return (liste != null);
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
-            return false;
-        }
-
-        /// <summary>
-        /// Supprime une revue dans la BDD, return true si l'opération, c'est correctement déroulé
-        /// </summary>
-        /// <param name="jsonRevue"></param>
-        /// <returns></returns>
-        public bool SupprimerRevue(String jsonRevue)
-        {
-            jsonRevue = jsonRevue.Replace(' ', '-');
-            try
-            {
-                // récupération soit d'une liste vide (requête ok) soit de null (erreur)
-                List<Object> liste = TraitementRecup<Object>(DELETE, "revue/" + jsonRevue);
+                List<Object> liste = TraitementRecup<Object>(DELETE, type + "/" + jsonEntite);
                 return (liste != null);
             }
             catch (Exception ex)
