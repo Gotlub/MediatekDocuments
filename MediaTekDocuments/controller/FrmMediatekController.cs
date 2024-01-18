@@ -53,6 +53,132 @@ namespace MediaTekDocuments.controller
         }
         #endregion
 
+        #region Utils
+        /// <summary>
+        /// Permets de gérer les demandes de requêtes post update delete concernant
+        /// un document
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="titre"></param>
+        /// <param name="image"></param>
+        /// <param name="IdRayon"></param>
+        /// <param name="IdPublic"></param>
+        /// <param name="IdGenre"></param>
+        /// <param name="verbose"></param>
+        /// <returns></returns>
+        public bool utilDocument(string id, string titre, string image, string IdRayon, string IdPublic, string IdGenre, string verbose)
+        {
+            Dictionary<string, string> dicDocument = new Dictionary<string, string>();
+            dicDocument.Add("id", id);
+            dicDocument.Add("titre", titre);
+            dicDocument.Add("image", image);
+            dicDocument.Add("idRayon", IdRayon);
+            dicDocument.Add("idPublic", IdPublic);
+            dicDocument.Add("idGenre", IdGenre);
+            if (verbose == "post")
+                return access.CreerEntite("document", JsonConvert.SerializeObject(dicDocument));
+            if (verbose == "update")
+                return access.UpdateEntite("document", id, JsonConvert.SerializeObject(dicDocument));
+            if (verbose == "delete")
+                return access.SupprimerEntite("document", JsonConvert.SerializeObject(dicDocument));
+            return false;
+        }
+
+        /// <summary>
+        /// Permets de gérer les demandes de requêtes post update delete concernant
+        /// un dvd_livre
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="verbose"></param>
+        /// <returns></returns>
+        public bool utilDvdLivre(string id, string verbose)
+        {
+            Dictionary<string, string> dicLivreDvd = new Dictionary<string, string>();
+            dicLivreDvd.Add("id", id);
+            if (verbose == "post")
+                return access.CreerEntite("livres_dvd", JsonConvert.SerializeObject(dicLivreDvd));
+            if (verbose == "delete")
+                return access.SupprimerEntite("livres_dvd", JsonConvert.SerializeObject(dicLivreDvd));
+            return false;
+        }
+
+        /// <summary>
+        /// Permets de gérer les demandes de requêtes post update delete concernant
+        /// un livre
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="isbn"></param>
+        /// <param name="auteur"></param>
+        /// <param name="collection"></param>
+        /// <param name="verbose"></param>
+        /// <returns></returns>
+        public bool utilLivre(string id, string isbn, string auteur, string collection, string verbose)
+        {
+            Dictionary<string, string> unLivre = new Dictionary<string, string>();
+            unLivre.Add("id", id);
+            unLivre.Add("ISBN", isbn);
+            unLivre.Add("auteur", auteur);
+            unLivre.Add("collection", collection);
+            if (verbose == "post")
+                return access.CreerEntite("livre", JsonConvert.SerializeObject(unLivre));
+            if (verbose == "update")
+                return access.UpdateEntite("livre", id, JsonConvert.SerializeObject(unLivre));
+            if (verbose == "delete")
+                return access.SupprimerEntite("livre", JsonConvert.SerializeObject(unLivre));
+            return false;
+        }
+
+        /// <summary>
+        /// Permets de gérer les demandes de requêtes post update delete concernant
+        /// un Dvd
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="synopsis"></param>
+        /// <param name="realisateur"></param>
+        /// <param name="duree"></param>
+        /// <param name="verbose"></param>
+        /// <returns></returns>
+        public bool utilDvd(string id, string synopsis, string realisateur, int duree, string verbose)
+        {
+            Dictionary<string, object> unDvd = new Dictionary<string, object>();
+            unDvd.Add("id", id);
+            unDvd.Add("synopsis", synopsis);
+            unDvd.Add("realisateur", realisateur);
+            unDvd.Add("duree", duree);
+            if (verbose == "post")
+                return access.CreerEntite("dvd", JsonConvert.SerializeObject(unDvd));
+            if (verbose == "update")
+                return access.UpdateEntite("dvd", id, JsonConvert.SerializeObject(unDvd));
+            if (verbose == "delete")
+                return access.SupprimerEntite("dvd", JsonConvert.SerializeObject(unDvd));
+            return false;
+        }
+
+        /// <summary>
+        /// Permets de gérer les demandes de requêtes post update delete concernant
+        /// une revue
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="periodicite"></param>
+        /// <param name="delaiMiseADispo"></param>
+        /// <param name="verbose"></param>
+        /// <returns></returns>
+        public bool utilRevue(string id, string periodicite, int delaiMiseADispo, string verbose)
+        {
+            Dictionary<string, object> uneRevue = new Dictionary<string, object>();
+            uneRevue.Add("id", id);
+            uneRevue.Add("periodicite", periodicite);
+            uneRevue.Add("delaiMiseADispo", delaiMiseADispo);
+            if (verbose == "post")
+                return access.CreerEntite("revue", JsonConvert.SerializeObject(uneRevue));
+            if (verbose == "update")
+                return access.UpdateEntite("revue", id, JsonConvert.SerializeObject(uneRevue));
+            if (verbose == "delete")
+                return access.SupprimerEntite("revue", JsonConvert.SerializeObject(uneRevue));
+            return false;
+        }
+        #endregion
+
         #region Onglet Livres
         /// <summary>
         /// getter sur la liste des livres
@@ -71,28 +197,13 @@ namespace MediaTekDocuments.controller
         public bool CreerLivre(Livre livre)
         {
             bool validateur = true;
-            Dictionary<string, string> dicDocument = new Dictionary<string, string>();
-            dicDocument.Add("id", livre.Id);
-            dicDocument.Add("titre", livre.Titre);
-            dicDocument.Add("image", livre.Image);
-            dicDocument.Add("idRayon", livre.IdRayon);
-            dicDocument.Add("idPublic", livre.IdPublic);
-            dicDocument.Add("idGenre", livre.IdGenre);
-            if (!access.CreerEntite("document", JsonConvert.SerializeObject(dicDocument)))
+            if (!utilDocument(livre.Id, livre.Titre, livre.Image, livre.IdRayon, livre.IdPublic, livre.IdGenre, "post"))
                 validateur = false;
-            Dictionary<string, string> dicLivreDvd = new Dictionary<string, string>();
-            dicLivreDvd.Add("id", livre.Id);
             //Thread.Sleep(50) a garder pour passage en ligne de l'api ? (lag);
-            if (!access.CreerEntite("livres_dvd", JsonConvert.SerializeObject(dicLivreDvd)))
+            if (!utilDvdLivre(livre.Id, "post"))
                 validateur = false;
-
             //Thread.Sleep(50) a garder pour passage en ligne de l'api ? (lag);
-            Dictionary<string, string> unLivre = new Dictionary<string, string>();
-            unLivre.Add("id", livre.Id);
-            unLivre.Add("ISBN", livre.Isbn);
-            unLivre.Add("auteur", livre.Auteur);
-            unLivre.Add("collection", livre.Collection);
-            if (!access.CreerEntite("livre", JsonConvert.SerializeObject(unLivre)))
+            if (!utilLivre(livre.Id, livre.Isbn, livre.Auteur, livre.Collection, "post"))
                 validateur = false;
            
             return validateur;
@@ -106,23 +217,10 @@ namespace MediaTekDocuments.controller
         public bool UpdateLivre(Livre livre)
         {
             bool validateur = true;
-            Dictionary<string, string> dicDocument = new Dictionary<string, string>();
-            dicDocument.Add("id", livre.Id);
-            dicDocument.Add("titre", livre.Titre);
-            dicDocument.Add("image", livre.Image);
-            dicDocument.Add("idRayon", livre.IdRayon);
-            dicDocument.Add("idPublic", livre.IdPublic);
-            dicDocument.Add("idGenre", livre.IdGenre);
-            if (!access.UpdateEntite("document", livre.Id, JsonConvert.SerializeObject(dicDocument)))
+            if (!utilDocument(livre.Id, livre.Titre, livre.Image, livre.IdRayon, livre.IdPublic, livre.IdGenre, "update"))
                 validateur = false;
-
             //Thread.Sleep(50) a garder pour passage en ligne de l'api ? (lag);
-            Dictionary<string, string> unLivre = new Dictionary<string, string>();
-            unLivre.Add("id", livre.Id);
-            unLivre.Add("ISBN", livre.Isbn);
-            unLivre.Add("auteur", livre.Auteur);
-            unLivre.Add("collection", livre.Collection);
-            if (!access.UpdateEntite("livre", livre.Id, JsonConvert.SerializeObject(unLivre)))
+            if (!utilLivre(livre.Id, livre.Isbn, livre.Auteur, livre.Collection, "update"))
                 validateur = false;
 
             return validateur;
@@ -136,30 +234,13 @@ namespace MediaTekDocuments.controller
         public bool SupprimerLivre(Livre livre)
         {
             bool validateur = true;
-
-            Dictionary<string, string> unLivre = new Dictionary<string, string>();
-            unLivre.Add("id", livre.Id);
-            unLivre.Add("ISBN", livre.Isbn);
-            unLivre.Add("auteur", livre.Auteur);
-            unLivre.Add("collection", livre.Collection);
-            if (!access.SupprimerEntite("livre", JsonConvert.SerializeObject(unLivre)))
+            if (!utilLivre(livre.Id, livre.Isbn, livre.Auteur, livre.Collection, "delete"))
                 validateur = false;
-
             //Thread.Sleep(50) a garder pour passage en ligne de l'api ? (lag);
-            Dictionary<string, string> dicLivreDvd = new Dictionary<string, string>();
-            dicLivreDvd.Add("id", livre.Id);
-            if (!access.SupprimerEntite("livres_dvd", JsonConvert.SerializeObject(dicLivreDvd)))
+            if (!utilDvdLivre(livre.Id, "delete"))
                 validateur = false;
-
             //Thread.Sleep(50) a garder pour passage en ligne de l'api ? (lag);
-            Dictionary<string, string> dicDocument = new Dictionary<string, string>();
-            dicDocument.Add("id", livre.Id);
-            dicDocument.Add("titre", livre.Titre);
-            dicDocument.Add("image", livre.Image);
-            dicDocument.Add("idRayon", livre.IdRayon);
-            dicDocument.Add("idPublic", livre.IdPublic);
-            dicDocument.Add("idGenre", livre.IdGenre);
-            if (!access.SupprimerEntite("document", JsonConvert.SerializeObject(dicDocument)))
+            if (!utilDocument(livre.Id, livre.Titre, livre.Image, livre.IdRayon, livre.IdPublic, livre.IdGenre, "delete"))
                 validateur = false;
 
             return validateur;
@@ -184,28 +265,12 @@ namespace MediaTekDocuments.controller
         public bool CreerDvd(Dvd dvd)
         {
             bool validateur = true;
-            Dictionary<string, string> dicDocument = new Dictionary<string, string>();
-            dicDocument.Add("id", dvd.Id);
-            dicDocument.Add("titre", dvd.Titre);
-            dicDocument.Add("image", dvd.Image);
-            dicDocument.Add("idRayon", dvd.IdRayon);
-            dicDocument.Add("idPublic", dvd.IdPublic);
-            dicDocument.Add("idGenre", dvd.IdGenre);
-            if (!access.CreerEntite("document", JsonConvert.SerializeObject(dicDocument)))
+            if (!utilDocument(dvd.Id, dvd.Titre, dvd.Image, dvd.IdRayon, dvd.IdPublic, dvd.IdGenre, "post"))
                 validateur = false;
-            Dictionary<string, string> dicLivreDvd = new Dictionary<string, string>();
-            dicLivreDvd.Add("id", dvd.Id);
-            //Thread.Sleep(50) a garder pour passage en ligne de l'api ? (lag);
-            if (!access.CreerEntite("livres_dvd", JsonConvert.SerializeObject(dicLivreDvd)))
+            if (!utilDvdLivre(dvd.Id, "post"))
                 validateur = false;
-
             //Thread.Sleep(50) a garder pour passage en ligne de l'api ? (lag);
-            Dictionary<string, object> unDvd = new Dictionary<string, object>();
-            unDvd.Add("id", dvd.Id);
-            unDvd.Add("synopsis", dvd.Synopsis);
-            unDvd.Add("realisateur", dvd.Realisateur);
-            unDvd.Add("duree", dvd.Duree);
-            if (!access.CreerEntite("dvd", JsonConvert.SerializeObject(unDvd)))
+            if (!utilDvd(dvd.Id, dvd.Synopsis, dvd.Realisateur, dvd.Duree, "post"))
                 validateur = false;
 
             return validateur;
@@ -219,23 +284,10 @@ namespace MediaTekDocuments.controller
         public bool UpdateDvd(Dvd dvd)
         {
             bool validateur = true;
-            Dictionary<string, string> dicDocument = new Dictionary<string, string>();
-            dicDocument.Add("id", dvd.Id);
-            dicDocument.Add("titre", dvd.Titre);
-            dicDocument.Add("image", dvd.Image);
-            dicDocument.Add("idRayon", dvd.IdRayon);
-            dicDocument.Add("idPublic", dvd.IdPublic);
-            dicDocument.Add("idGenre", dvd.IdGenre);
-            if (!access.UpdateEntite("document", dvd.Id, JsonConvert.SerializeObject(dicDocument)))
+            if (!utilDocument(dvd.Id, dvd.Titre, dvd.Image, dvd.IdRayon, dvd.IdPublic, dvd.IdGenre, "update"))
                 validateur = false;
-
             //Thread.Sleep(50) a garder pour passage en ligne de l'api ? (lag);
-            Dictionary<string, object> unDvd = new Dictionary<string, object>();
-            unDvd.Add("id", dvd.Id);
-            unDvd.Add("synopsis", dvd.Synopsis);
-            unDvd.Add("realisateur", dvd.Realisateur);
-            unDvd.Add("duree", dvd.Duree);
-            if (!access.UpdateEntite("dvd", dvd.Id, JsonConvert.SerializeObject(unDvd)))
+            if (!utilDvd(dvd.Id, dvd.Synopsis, dvd.Realisateur, dvd.Duree, "update"))
                 validateur = false;
 
             return validateur;
@@ -249,30 +301,12 @@ namespace MediaTekDocuments.controller
         public bool SupprimerDvd(Dvd dvd)
         {
             bool validateur = true;
-
-            Dictionary<string, object> unDvd = new Dictionary<string, object>();
-            unDvd.Add("id", dvd.Id);
-            unDvd.Add("synopsis", dvd.Synopsis);
-            unDvd.Add("realisateur", dvd.Realisateur);
-            unDvd.Add("duree", dvd.Duree);
-            if (!access.SupprimerEntite("dvd", JsonConvert.SerializeObject(unDvd)))
+            if (!utilDvd(dvd.Id, dvd.Synopsis, dvd.Realisateur, dvd.Duree, "delete"))
                 validateur = false;
-
-            //Thread.Sleep(50) a garder pour passage en ligne de l'api ? (lag);
-            Dictionary<string, string> dicLivreDvd = new Dictionary<string, string>();
-            dicLivreDvd.Add("id", dvd.Id);
-            if (!access.SupprimerEntite("livres_dvd", JsonConvert.SerializeObject(dicLivreDvd)))
+            if (!utilDvdLivre(dvd.Id, "delete"))
                 validateur = false;
-
             //Thread.Sleep(50) a garder pour passage en ligne de l'api ? (lag);
-            Dictionary<string, string> dicDocument = new Dictionary<string, string>();
-            dicDocument.Add("id", dvd.Id);
-            dicDocument.Add("titre", dvd.Titre);
-            dicDocument.Add("image", dvd.Image);
-            dicDocument.Add("idRayon", dvd.IdRayon);
-            dicDocument.Add("idPublic", dvd.IdPublic);
-            dicDocument.Add("idGenre", dvd.IdGenre);
-            if (!access.SupprimerEntite("document", JsonConvert.SerializeObject(dicDocument)))
+            if (!utilDocument(dvd.Id, dvd.Titre, dvd.Image, dvd.IdRayon, dvd.IdPublic, dvd.IdGenre, "delete"))
                 validateur = false;
 
             return validateur;
@@ -297,22 +331,10 @@ namespace MediaTekDocuments.controller
         public bool CreerRevue(Revue revue)
         {
             bool validateur = true;
-            Dictionary<string, string> dicDocument = new Dictionary<string, string>();
-            dicDocument.Add("id", revue.Id);
-            dicDocument.Add("titre", revue.Titre);
-            dicDocument.Add("image", revue.Image);
-            dicDocument.Add("idRayon", revue.IdRayon);
-            dicDocument.Add("idPublic", revue.IdPublic);
-            dicDocument.Add("idGenre", revue.IdGenre);
-            if (!access.CreerEntite("document", JsonConvert.SerializeObject(dicDocument)))
+            if (!utilDocument(revue.Id, revue.Titre, revue.Image, revue.IdRayon, revue.IdPublic, revue.IdGenre, "post"))
                 validateur = false;
-
             //Thread.Sleep(50) a garder pour passage en ligne de l'api ? (lag);
-            Dictionary<string, object> uneRevue = new Dictionary<string, object>();
-            uneRevue.Add("id", revue.Id);
-            uneRevue.Add("periodicite", revue.Periodicite);
-            uneRevue.Add("delaiMiseADispo", revue.DelaiMiseADispo);
-            if (!access.CreerEntite("revue", JsonConvert.SerializeObject(uneRevue)))
+            if (!utilRevue(revue.Id, revue.Periodicite, revue.DelaiMiseADispo, "post"))
                 validateur = false;
 
             return validateur;
@@ -326,22 +348,10 @@ namespace MediaTekDocuments.controller
         public bool UpdateRevue(Revue revue)
         {
             bool validateur = true;
-            Dictionary<string, string> dicDocument = new Dictionary<string, string>();
-            dicDocument.Add("id", revue.Id);
-            dicDocument.Add("titre", revue.Titre);
-            dicDocument.Add("image", revue.Image);
-            dicDocument.Add("idRayon", revue.IdRayon);
-            dicDocument.Add("idPublic", revue.IdPublic);
-            dicDocument.Add("idGenre", revue.IdGenre);
-            if (!access.UpdateEntite("document", revue.Id, JsonConvert.SerializeObject(dicDocument)))
+            if (!utilDocument(revue.Id, revue.Titre, revue.Image, revue.IdRayon, revue.IdPublic, revue.IdGenre, "update"))
                 validateur = false;
-
             //Thread.Sleep(50) a garder pour passage en ligne de l'api ? (lag);
-            Dictionary<string, object> uneRevue = new Dictionary<string, object>();
-            uneRevue.Add("id", revue.Id);
-            uneRevue.Add("periodicite", revue.Periodicite);
-            uneRevue.Add("delaiMiseADispo", revue.DelaiMiseADispo);
-            if (!access.UpdateEntite("revue", revue.Id, JsonConvert.SerializeObject(uneRevue)))
+            if (!utilRevue(revue.Id, revue.Periodicite, revue.DelaiMiseADispo, "update"))
                 validateur = false;
 
             return validateur;
@@ -355,23 +365,10 @@ namespace MediaTekDocuments.controller
         public bool SupprimerRevue(Revue revue)
         {
             bool validateur = true;
-
-            Dictionary<string, object> uneRevue = new Dictionary<string, object>();
-            uneRevue.Add("id", revue.Id);
-            uneRevue.Add("periodicite", revue.Periodicite);
-            uneRevue.Add("delaiMiseADispo", revue.DelaiMiseADispo);
-            if (!access.SupprimerEntite("revue", JsonConvert.SerializeObject(uneRevue)))
+            if (!utilRevue(revue.Id, revue.Periodicite, revue.DelaiMiseADispo, "delete"))
                 validateur = false;
-
             //Thread.Sleep(50) a garder pour passage en ligne de l'api ? (lag);
-            Dictionary<string, string> dicDocument = new Dictionary<string, string>();
-            dicDocument.Add("id", revue.Id);
-            dicDocument.Add("titre", revue.Titre);
-            dicDocument.Add("image", revue.Image);
-            dicDocument.Add("idRayon", revue.IdRayon);
-            dicDocument.Add("idPublic", revue.IdPublic);
-            dicDocument.Add("idGenre", revue.IdGenre);
-            if (!access.SupprimerEntite("document", JsonConvert.SerializeObject(dicDocument)))
+            if (!utilDocument(revue.Id, revue.Titre, revue.Image, revue.IdRayon, revue.IdPublic, revue.IdGenre, "delete"))
                 validateur = false;
 
             return validateur;
