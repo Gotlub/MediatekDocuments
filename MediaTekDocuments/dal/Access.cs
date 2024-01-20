@@ -96,6 +96,12 @@ namespace MediaTekDocuments.dal
             return new List<Categorie>(lesRayons);
         }
 
+        public List<Suivi> GetAllSuivis()
+        {
+            IEnumerable<Suivi> LesSuivis = TraitementRecup<Suivi>(GET, "suivi");
+            return new List<Suivi>(LesSuivis);
+        }
+
         /// <summary>
         /// Retourne toutes les catégories de public à partir de la BDD
         /// </summary>
@@ -212,6 +218,18 @@ namespace MediaTekDocuments.dal
             String jsonIdDocument = convertToJson("id", idDocument);
             List<Exemplaire> lesExemplaires = TraitementRecup<Exemplaire>(GET, "exemplaire/" + jsonIdDocument);
             return lesExemplaires;
+        }
+
+        /// <summary>
+        /// Retourne les commandes d'un livre
+        /// </summary>
+        /// <param name="idLivre"></param>
+        /// <returns></returns>
+        public List<CommandeDocument> GetCommandesLivres(string idLivre)
+        {
+            String jsonIdDocument = convertToJson("idLivreDvd", idLivre);
+            List<CommandeDocument> lesCommandesLivres = TraitementRecup<CommandeDocument>(GET, "commandedocument/" + jsonIdDocument);
+            return lesCommandesLivres;
         }
 
         /// <summary>
