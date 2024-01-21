@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using MediaTekDocuments.model;
 using MediaTekDocuments.dal;
 using Newtonsoft.Json;
@@ -184,6 +185,56 @@ namespace MediaTekDocuments.controller
                 return access.UpdateEntite("revue", id, JsonConvert.SerializeObject(uneRevue));
             if (verbose == "delete")
                 return access.SupprimerEntite("revue", JsonConvert.SerializeObject(uneRevue));
+            return false;
+        }
+
+        /// <summary>
+        /// Permets de gérer les demandes de requêtes post update delete concernant
+        /// une commande
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="dateCommande"></param>
+        /// <param name="montant"></param>
+        /// <param name="verbose"></param>
+        /// <returns></returns>
+        public bool utilCommande(string id, DateTime dateCommande, double montant, string verbose)
+        {
+            Dictionary<string, object> uneCommande = new Dictionary<string, object>();
+            uneCommande.Add("id", id);
+            uneCommande.Add("dateCommande", dateCommande.ToString("yyyy-MM-dd"));
+            uneCommande.Add("montant", montant);
+            if (verbose == "post")
+                return access.CreerEntite("commande", JsonConvert.SerializeObject(uneCommande));
+            if (verbose == "update")
+                return access.UpdateEntite("commande", id, JsonConvert.SerializeObject(uneCommande));
+            if (verbose == "delete")
+                return access.SupprimerEntite("commande", JsonConvert.SerializeObject(uneCommande));
+            return false;
+        }
+
+        /// <summary>
+        /// Permets de gérer les demandes de requêtes post update delete concernant
+        /// une commande de livre ou dvd
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="nbExemplaire"></param>
+        /// <param name="idLivreDvd"></param>
+        /// <param name="idsuivi"></param>
+        /// <param name="verbose"></param>
+        /// <returns></returns>
+        public bool utilCommandeDocument(string id, int nbExemplaire, string idLivreDvd, int idsuivi, string verbose)
+        {
+            Dictionary<string, object> uneCommandeDocument = new Dictionary<string, object>();
+            uneCommandeDocument.Add("id", id);
+            uneCommandeDocument.Add("nbExemplaire", nbExemplaire);
+            uneCommandeDocument.Add("idLivreDvd", idLivreDvd);
+            uneCommandeDocument.Add("idsuivi", idsuivi);
+            if (verbose == "post")
+                return access.CreerEntite("commandedocument", JsonConvert.SerializeObject(uneCommandeDocument));
+            if (verbose == "update")
+                return access.UpdateEntite("commandedocument", id, JsonConvert.SerializeObject(uneCommandeDocument));
+            if (verbose == "delete")
+                return access.SupprimerEntite("commandedocument", JsonConvert.SerializeObject(uneCommandeDocument));
             return false;
         }
         #endregion
@@ -406,6 +457,7 @@ namespace MediaTekDocuments.controller
         }
         #endregion
 
+        #region Commandes de livres
         /// <summary>
         /// récupère les commandes d'une livre
         /// </summary>
@@ -415,5 +467,43 @@ namespace MediaTekDocuments.controller
         {
             return access.GetCommandesLivres(idLivre);
         }
+
+        public string getNbCommandeMax()
+        {
+            return access.getNbCommandeMax();
+        }
+
+        public bool CreerLivreDvdCom(CommandeDocument commandeLivreDvd)
+        {
+            bool validateur = true;
+            if(!utilCommande(commandeLivreDvd.Id, commandeLivreDvd.DateCommande, commandeLivreDvd.Montant, "post"))
+                validateur = false;
+            if (!utilCommandeDocument(commandeLivreDvd.Id, commandeLivreDvd.NbExemplaire, commandeLivreDvd.IdLivreDvd, commandeLivreDvd.IdSuivi, "post"))
+                validateur = false;
+            return validateur;
+        }
+
+        public bool UpdateLivreDvdCom(CommandeDocument commandeLivreDvd)
+        {
+            bool validateur = true;
+            if (!utilCommande(commandeLivreDvd.Id, commandeLivreDvd.DateCommande, commandeLivreDvd.Montant, "update"))
+                validateur = false;
+            if (!utilCommandeDocument(commandeLivreDvd.Id, commandeLivreDvd.NbExemplaire, commandeLivreDvd.IdLivreDvd, commandeLivreDvd.IdSuivi, "update"))
+                validateur = false;
+            return validateur;
+        }
+
+        public bool SupprimerLivreDvdCom(CommandeDocument commandeLivreDvd)
+        {
+            bool validateur = true;
+            if (!utilCommandeDocument(commandeLivreDvd.Id, commandeLivreDvd.NbExemplaire, commandeLivreDvd.IdLivreDvd, commandeLivreDvd.IdSuivi, "delete"))
+                validateur = false;
+            if (!utilCommande(commandeLivreDvd.Id, commandeLivreDvd.DateCommande, commandeLivreDvd.Montant, "delete"))
+                validateur = false;
+            return validateur;
+        }
+        #endregion
+
+
     }
 }

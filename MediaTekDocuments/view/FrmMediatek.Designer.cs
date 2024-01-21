@@ -2224,6 +2224,7 @@ namespace MediaTekDocuments.view
             this.dgvLivresComListeCom.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvLivresComListeCom.Size = new System.Drawing.Size(451, 333);
             this.dgvLivresComListeCom.TabIndex = 13;
+            this.dgvLivresComListeCom.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvLivresComListeCom_ColumnHeaderMouseClick);
             this.dgvLivresComListeCom.SelectionChanged += new System.EventHandler(this.dgvLivresComListeCom_SelectionChanged);
             // 
             // grpLivresComRecherche

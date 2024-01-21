@@ -129,7 +129,7 @@ namespace MediaTekDocuments.dal
         /// <returns></returns>
         public bool CreerEntite(string type, String jsonEntite)
         {
-            jsonEntite = jsonEntite.Replace(' ', '-');
+            //jsonEntite = jsonEntite.Replace(' ', '-');
             try
             {
                 // récupération soit d'une liste vide (requête ok) soit de null (erreur)
@@ -151,7 +151,7 @@ namespace MediaTekDocuments.dal
         /// <returns></returns>
         public bool UpdateEntite(string type, string id, String jsonEntite)
         {
-            jsonEntite = jsonEntite.Replace(' ', '-');
+            //jsonEntite = jsonEntite.Replace(' ', '-');
             try
             {
                 // récupération soit d'une liste vide (requête ok) soit de null (erreur)
@@ -230,6 +230,12 @@ namespace MediaTekDocuments.dal
             String jsonIdDocument = convertToJson("idLivreDvd", idLivre);
             List<CommandeDocument> lesCommandesLivres = TraitementRecup<CommandeDocument>(GET, "commandedocument/" + jsonIdDocument);
             return lesCommandesLivres;
+        }
+
+        public string getNbCommandeMax()
+        {
+            List<Categorie> maxCommande = TraitementRecup<Categorie>(GET, "maxcommande");
+            return maxCommande[0].Id;
         }
 
         /// <summary>

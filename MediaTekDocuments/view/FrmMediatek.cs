@@ -1741,6 +1741,7 @@ namespace MediaTekDocuments.view
         private readonly BindingSource bdgLivresComEtat = new BindingSource();
         private List<Livre> lesLivresCom = new List<Livre>();
         private List<CommandeDocument> lesCommandes = new List<CommandeDocument>();
+        private bool ajouterComLivre = false;
 
         /// <summary>
         /// Ouverture de l'onglet Livres : 
@@ -1892,7 +1893,7 @@ namespace MediaTekDocuments.view
             {
                 txbLivresComTitreRecherche.Text = "";
                 txbLivresComNumRecherche.Text = "";
-                dgvLivresComListe.CurrentCell = null;
+                dgvLivresComListe.ClearSelection();
                 Genre genre;
                 cbxLivresComRayons.SelectedIndex = -1;
                 cbxLivresComPublics.SelectedIndex = -1;
@@ -1924,7 +1925,7 @@ namespace MediaTekDocuments.view
                 txbLivresComNumRecherche.Text = "";
                 cbxLivresComRayons.SelectedIndex = -1;
                 cbxLivresComGenres.SelectedIndex = -1;
-                dgvLivresComListe.CurrentCell = null;
+                dgvLivresComListe.ClearSelection();
                 Public lePublic;
                 try
                 {
@@ -1953,7 +1954,7 @@ namespace MediaTekDocuments.view
                 txbLivresComNumRecherche.Text = "";
                 cbxLivresComGenres.SelectedIndex = -1;
                 cbxLivresComPublics.SelectedIndex = -1;
-                dgvLivresComListe.CurrentCell = null;
+                dgvLivresComListe.ClearSelection();
                 Rayon rayon;
                 try
                 {
@@ -1992,7 +1993,7 @@ namespace MediaTekDocuments.view
                 {
                     //VideLivresComInfos();
                     //txbLivresComNumLivre.Text = "";
-                    dgvLivresComListe.CurrentCell = null;
+                    //dgvLivresComListe.TabIndex = 0;
                     VideLivresComZones();
                 }
             }
@@ -2012,6 +2013,7 @@ namespace MediaTekDocuments.view
         {
             string idLivre = livre.Id;
             lesCommandes = controller.GetCommandesLivres(idLivre);
+            grpLivresCommandes.Text = livre.Titre + " de " + livre.Auteur;
             if (lesCommandes.Count == 0 )
             {
                 VideLivresComInfos();
@@ -2071,6 +2073,7 @@ namespace MediaTekDocuments.view
             cbxLivresComPublics.SelectedIndex = -1;
             txbLivresComNumRecherche.Text = "";
             txbLivresComTitreRecherche.Text = "";
+            grpLivresCommandes.Text = "";
         }
 
         /// <summary>
@@ -2092,6 +2095,8 @@ namespace MediaTekDocuments.view
             cbxLivresComEtat.Enabled = modif;
             dgvLivresComListe.Enabled = !modif;
             dgvLivresComListeCom.Enabled = !modif;
+            ajouterComLivre = false;
+           
         }
 
         /// <summary>
@@ -2102,16 +2107,22 @@ namespace MediaTekDocuments.view
         private void btnLivresComAjouter_Click(object sender, EventArgs e)
         {
             enCoursModifLivresCom(true);
-            txbLivresComNbCommande.ReadOnly = false;
             txbLivresComNumLivre.ReadOnly = true;
+            ajouterComLivre = true;
+            string id = plusUnIdString(controller.getNbCommandeMax());
+            if (id == "0")
+                id = "00001";            
             VideLivresComInfos();
+            txbLivresComNbCommande.Text = id;
         }
 
         private void btnLivresComModifier_Click(object sender, EventArgs e)
         {
-            if(dgvLivresComListeCom.CurrentCell != null)
+            if(dgvLivresComListeCom.CurrentCell != null && txbLivresComNbCommande.Text != "")
             {
+                List<Suivi> lesSuivi = controller.GetAllSuivis().FindAll(o => o.Id >= ((Suivi)cbxLivresComEtat.SelectedItem).Id).ToList();
                 enCoursModifLivresCom(true);
+                RemplirComboSuivi(lesSuivi, bdgLivresComEtat, cbxLivresComEtat);
             }
             else
             {
@@ -2121,17 +2132,149 @@ namespace MediaTekDocuments.view
 
         private void btnLivresComSupprimer_Click(object sender, EventArgs e)
         {
-            //afaire
+            CommandeDocument commandeDocument = (CommandeDocument)bdgLivresComListeCommande[bdgLivresComListeCommande.Position];
+
+            if(dgvLivresComListeCom.CurrentCell != null && txbLivresComNbCommande.Text != "")
+            {
+                if(commandeDocument.IdSuivi > 2 )
+                    MessageBox.Show("Une commande livrée ou réglée ne peut etre supprimée");
+                else if (MessageBox.Show("Etes vous sur de vouloir supprimer la commande n°" + commandeDocument.Id +
+                    " concernant " + lesLivresCom.Find( o => o.Id == commandeDocument.IdLivreDvd).Titre + " ?",
+                    "Validation suppresion", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    if(controller.SupprimerLivreDvdCom(commandeDocument))
+                    {
+                        Thread.Sleep(50);
+                        try
+                        {
+                            Livre livre = (Livre)bdgLivresComListe.List[bdgLivresComListe.Position];
+                            AfficheLivresCommandeInfos(livre);
+                            txbLivresComNumLivre.Text = livre.Id;
+                        }
+                        catch
+                        {
+                            VideLivresComZones();
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Erreur");
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Veuillez selectionner une commande");
+            }
+            
         }
 
         private void btnLivresComAnnuler_Click(object sender, EventArgs e)
         {
+            ajouterComLivre = false;
+            RemplirComboSuivi(controller.GetAllSuivis(), bdgLivresComEtat, cbxLivresComEtat);
             enCoursModifLivresCom(false);
+            try
+            {
+                CommandeDocument commandeDocument = (CommandeDocument)bdgLivresComListeCommande[bdgLivresComListeCommande.Position];
+                AfficheLivresComInfo(commandeDocument);
+            }
+            catch
+            {
+                VideLivresComInfos();
+            }
+        }
+
+        private string plusUnIdString(string id)
+        {
+            int taille = id.Length;
+            int idnum = int.Parse(id) + 1;
+            id = idnum.ToString();
+            if (id.Length > taille)
+                MessageBox.Show("Taille du registre de commandes arrivé a saturation");
+            while( id.Length != taille)
+            {
+                id = "0" + id;
+            }
+            return id;
+
         }
 
         private void btnLivresComValider_Click(object sender, EventArgs e)
         {
-            //afaire
+            
+            if (MessageBox.Show("Etes vous sur ?", "oui ?", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                string id = txbLivresComNbCommande.Text;
+                bool checkValid = false;
+                DateTime dateCommande = dtpLivresComDateCommande.Value;
+                float montant = -1;
+                int nbExemplaire = -1;
+                try
+                {
+                    montant = float.Parse(txbLivresComMontant.Text);
+                }
+                catch
+                {
+                    MessageBox.Show("Le montant doit etre un nombre a virgule");
+                }
+                try
+                {
+                    nbExemplaire = int.Parse(txbLivresComNbExemplaires.Text);
+                }
+                catch
+                {
+                    MessageBox.Show("Le nombre d'exemplaire doit etre un nombre a entier");
+                }
+                string idLivreDvd = txbLivresComNumLivre.Text;
+                int idSuivi = 0;
+                string etat = "";
+                Suivi suivi = (Suivi)cbxLivresComEtat.SelectedItem;
+                if (suivi != null)
+                {
+                    idSuivi = suivi.Id;
+                    etat = suivi.Etat;
+                }
+                else
+                {
+                    MessageBox.Show("Veuillez selectionner un etat");
+                }
+                if (montant != -1 && nbExemplaire != -1 &&  etat != "" )
+                {
+                    CommandeDocument commandeLivre = new CommandeDocument( id,  dateCommande,  montant,  nbExemplaire,  idLivreDvd,  idSuivi,  etat);
+                    if (!ajouterComLivre)
+                    {
+                        checkValid = controller.UpdateLivreDvdCom(commandeLivre);
+                    }
+                    else
+                    {
+                        checkValid = controller.CreerLivreDvdCom(commandeLivre);
+                    }
+                    if (checkValid)
+                    {
+                        if(!ajouterComLivre)
+                            RemplirComboSuivi(controller.GetAllSuivis(), bdgLivresComEtat, cbxLivresComEtat);
+                        enCoursModifLivresCom(false);
+                        Thread.Sleep(50);
+                        try
+                        {
+                            Livre livre = (Livre)bdgLivresComListe.List[bdgLivresComListe.Position];
+                            AfficheLivresCommandeInfos(livre);
+                            txbLivresComNumLivre.Text = livre.Id;
+                        }
+                        catch
+                        {
+                            VideLivresComZones();
+                        }
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Erreur");
+                    }
+
+                }
+            }
         }
 
         /// <summary>
@@ -2179,7 +2322,6 @@ namespace MediaTekDocuments.view
                 {
                     CommandeDocument commandeDocument = (CommandeDocument)bdgLivresComListeCommande[bdgLivresComListeCommande.Position];
                     AfficheLivresComInfo(commandeDocument);
-                    Console.WriteLine(commandeDocument.Etat);
                 }
                 catch
                 {
@@ -2198,7 +2340,7 @@ namespace MediaTekDocuments.view
             txbLivresComNumLivre.Text = laCommande.IdLivreDvd;
             dtpLivresComDateCommande.Value = laCommande.DateCommande;
             txbLivresComMontant.Text = laCommande.Montant.ToString();
-            txbLivresComNbExemplaires.Text = laCommande.NbExemmplaire.ToString();
+            txbLivresComNbExemplaires.Text = laCommande.NbExemplaire.ToString();
             txbLivresComNumLivre.Text = laCommande.IdLivreDvd;
             cbxLivresComEtat.SelectedIndex = cbxLivresComEtat.FindString(laCommande.Etat);
         }
@@ -2210,6 +2352,35 @@ namespace MediaTekDocuments.view
             txbLivresComMontant.Text = "";
             txbLivresComNbExemplaires.Text = "";
             cbxLivresComEtat.SelectedIndex = -1;
+        }
+
+        private void dgvLivresComListeCom_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (lesCommandes.Count > 0 && dgvLivresComListeCom != null)
+            { 
+                VideLivresComZones();
+                string titreColonne = dgvLivresComListeCom.Columns[e.ColumnIndex].HeaderText;
+                List<CommandeDocument> sortedList = new List<CommandeDocument>();
+                switch (titreColonne)
+                {
+                    case "Id":
+                        sortedList = lesCommandes.OrderBy(o => o.Id).ToList();
+                        break;
+                    case "DateCommande":
+                        sortedList = lesCommandes.OrderBy(o => o.DateCommande).ToList();
+                        break;
+                    case "NbExemplaire":
+                        sortedList = lesCommandes.OrderBy(o => o.NbExemplaire).ToList();
+                        break;
+                    case "Etat":
+                        sortedList = lesCommandes.OrderBy(o => o.IdSuivi).ToList();
+                        break;
+                    case "Montant":
+                        sortedList = lesCommandes.OrderBy(o => o.Montant).ToList();
+                        break;
+                }
+                RemplirLivresComListeCommandes(sortedList);
+            }
         }
     }
     #endregion
