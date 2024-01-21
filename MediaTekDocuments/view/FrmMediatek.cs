@@ -48,6 +48,41 @@ namespace MediaTekDocuments.view
             }
         }
 
+        /// <summary>
+        /// Rempli un des 3 combo (genre, public, rayon)
+        /// </summary>
+        /// <param name="lesCategories">liste des objets de type Genre ou Public ou Rayon</param>
+        /// <param name="bdg">bindingsource contenant les informations</param>
+        /// <param name="cbx">combobox à remplir</param>
+        public void RemplirComboSuivi(List<Suivi> lesSuivis, BindingSource bdg, ComboBox cbx)
+        {
+            bdg.DataSource = lesSuivis;
+            cbx.DataSource = bdg;
+            if (cbx.Items.Count > 0)
+            {
+                cbx.SelectedIndex = -1;
+            }
+        }
+
+        /// <summary>
+        /// Augemente un index de type string
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        private string plusUnIdString(string id)
+        {
+            int taille = id.Length;
+            int idnum = int.Parse(id) + 1;
+            id = idnum.ToString();
+            if (id.Length > taille)
+                MessageBox.Show("Taille du registre de commandes arrivé a saturation");
+            while (id.Length != taille)
+            {
+                id = "0" + id;
+            }
+            return id;
+        }
+
         #endregion
 
         #region Onglet Livres
@@ -92,6 +127,7 @@ namespace MediaTekDocuments.view
             dgvLivresListe.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             dgvLivresListe.Columns["id"].DisplayIndex = 0;
             dgvLivresListe.Columns["titre"].DisplayIndex = 1;
+            dgvLivresListe.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
         /// <summary>
@@ -355,10 +391,18 @@ namespace MediaTekDocuments.view
             txbLivresImage.ReadOnly = !modif;
             txbLivresNumero.ReadOnly = true;
             dgvLivresListe.Enabled = !modif;
+            cbxLivresGenres.Enabled = !modif;
+            cbxLivresPublics.Enabled = !modif;
+            cbxLivresRayons.Enabled = !modif;
+            btnLivresNumRecherche.Enabled = !modif;
+            txbLivresTitreRecherche.Enabled = !modif;
+            btnLivresAnnulRayons.Enabled = !modif;
+            btnLivresAnnulGenres.Enabled = !modif;
+            btnLivresAnnulPublics.Enabled = !modif;
         }
 
         /// <summary>
-        /// enclanche la procédure d'ajout de livre
+        /// démarre la procédure d'ajout de livre
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -378,7 +422,7 @@ namespace MediaTekDocuments.view
         }
 
         /// <summary>
-        /// enclanche la procédure de modification de livre
+        /// démarre la procédure de modification de livre
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -388,7 +432,7 @@ namespace MediaTekDocuments.view
         }
 
         /// <summary>
-        /// enclanche la procédure de suppresion de livre
+        /// démarre la procédure de suppresion de livre
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -567,6 +611,7 @@ namespace MediaTekDocuments.view
             dgvDvdListe.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             dgvDvdListe.Columns["id"].DisplayIndex = 0;
             dgvDvdListe.Columns["titre"].DisplayIndex = 1;
+            dgvDvdListe.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
         /// <summary>
@@ -830,6 +875,14 @@ namespace MediaTekDocuments.view
             txbDvdImage.ReadOnly = !modif;
             dgvDvdListe.Enabled = !modif;
             txbDvdNumero.ReadOnly = true;
+            cbxDvdGenres.Enabled = !modif;
+            cbxDvdPublics.Enabled = !modif;
+            cbxDvdRayons.Enabled = !modif;
+            btnDvdNumRecherche.Enabled = !modif;
+            txbDvdTitreRecherche.Enabled = !modif;
+            btnDvdAnnulRayons.Enabled = !modif;
+            btnDvdAnnulGenres.Enabled = !modif;
+            btnDvdAnnulPublics.Enabled = !modif;
         }
 
         /// <summary>
@@ -1041,6 +1094,7 @@ namespace MediaTekDocuments.view
             dgvRevuesListe.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             dgvRevuesListe.Columns["id"].DisplayIndex = 0;
             dgvRevuesListe.Columns["titre"].DisplayIndex = 1;
+            dgvRevuesListe.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
         /// <summary>
@@ -1302,6 +1356,14 @@ namespace MediaTekDocuments.view
             txbRevuesImage.ReadOnly = !modif;
             txbRevuesNumero.ReadOnly = true;
             dgvRevuesListe.Enabled = !modif;
+            cbxRevuesGenres.Enabled = !modif;
+            cbxRevuesPublics.Enabled = !modif;
+            cbxRevuesRayons.Enabled = !modif;
+            btnRevuesNumRecherche.Enabled = !modif;
+            txbRevuesTitreRecherche.Enabled = !modif;
+            btnRevuesAnnulRayons.Enabled = !modif;
+            btnRevuesAnnulGenres.Enabled = !modif;
+            btnRevuesAnnulPublics.Enabled = !modif;
         }
 
         /// <summary>
@@ -1761,21 +1823,6 @@ namespace MediaTekDocuments.view
         }
 
         /// <summary>
-        /// Rempli un des 3 combo (genre, public, rayon)
-        /// </summary>
-        /// <param name="lesCategories">liste des objets de type Genre ou Public ou Rayon</param>
-        /// <param name="bdg">bindingsource contenant les informations</param>
-        /// <param name="cbx">combobox à remplir</param>
-        public void RemplirComboSuivi(List<Suivi> lesSuivis, BindingSource bdg, ComboBox cbx)
-        {
-            bdg.DataSource = lesSuivis;
-            cbx.DataSource = bdg;
-            if (cbx.Items.Count > 0)
-            {
-                cbx.SelectedIndex = -1;
-            }
-        }
-        /// <summary>
         /// Remplit le dategrid avec la liste reçue en paramètre
         /// </summary>
         /// <param name="livres">liste de livres</param>
@@ -1793,7 +1840,6 @@ namespace MediaTekDocuments.view
             dgvLivresComListe.Columns["titre"].DisplayIndex = 1;
             dgvLivresComListe.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
-
 
         /// <summary>
         /// Remplit le dategrid avec la liste reçue en paramètre
@@ -1894,20 +1940,11 @@ namespace MediaTekDocuments.view
                 txbLivresComTitreRecherche.Text = "";
                 txbLivresComNumRecherche.Text = "";
                 dgvLivresComListe.ClearSelection();
-                Genre genre;
+                Genre genre = (Genre)cbxLivresComGenres.SelectedItem;
                 cbxLivresComRayons.SelectedIndex = -1;
                 cbxLivresComPublics.SelectedIndex = -1;
-                try
-                {
-                    genre = (Genre)cbxLivresComGenres.SelectedItem;
-                    List<Livre> livres = lesLivresCom.FindAll(x => x.Genre.Equals(genre.Libelle));
-                    RemplirLivresComListe(livres);
-                }
-                catch
-                {
-                    cbxLivresComGenres.SelectedIndex = -1;
-                    RemplirLivresListeComplete();
-                }
+                List<Livre> livres = lesLivresCom.FindAll(x => x.Genre.Equals(genre.Libelle));
+                RemplirLivresComListe(livres);
 
             }
         }
@@ -1926,18 +1963,9 @@ namespace MediaTekDocuments.view
                 cbxLivresComRayons.SelectedIndex = -1;
                 cbxLivresComGenres.SelectedIndex = -1;
                 dgvLivresComListe.ClearSelection();
-                Public lePublic;
-                try
-                {
-                    lePublic = (Public)cbxLivresComPublics.SelectedItem;
-                    List<Livre> livres = lesLivresCom.FindAll(x => x.Public.Equals(lePublic.Libelle));
-                    RemplirLivresComListe(livres);
-                }
-                catch
-                {
-                    cbxLivresComPublics.SelectedIndex = -1;
-                    RemplirLivresListeComplete();
-                }
+                Public lePublic = (Public)cbxLivresComPublics.SelectedItem;
+                List<Livre> livres = lesLivresCom.FindAll(x => x.Public.Equals(lePublic.Libelle));
+                RemplirLivresComListe(livres);
             }
         }
 
@@ -1955,53 +1983,9 @@ namespace MediaTekDocuments.view
                 cbxLivresComGenres.SelectedIndex = -1;
                 cbxLivresComPublics.SelectedIndex = -1;
                 dgvLivresComListe.ClearSelection();
-                Rayon rayon;
-                try
-                {
-                    rayon = (Rayon)cbxLivresComRayons.SelectedItem;
-                    List<Livre> livres = lesLivresCom.FindAll(x => x.Rayon.Equals(rayon.Libelle));
-                    RemplirLivresComListe(livres);
-                    
-                }
-                catch
-                {
-                    cbxLivresComRayons.SelectedIndex = -1;
-                    RemplirLivresListeComplete();
-                }
-
-            }
-
-        }
-
-        /// <summary>
-        /// Sur la sélection d'une ligne ou cellule dans le grid
-        /// affichage des informations du livre
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void dgvLivresComListe_SelectionChanged(object sender, EventArgs e)
-        {
-            if (dgvLivresComListe.CurrentCell != null)
-            {
-                try
-                {
-                    Livre livre = (Livre)bdgLivresComListe.List[bdgLivresComListe.Position];
-                    AfficheLivresCommandeInfos(livre);
-                    txbLivresComNumLivre.Text = livre.Id;
-                }
-                catch
-                {
-                    //VideLivresComInfos();
-                    //txbLivresComNumLivre.Text = "";
-                    //dgvLivresComListe.TabIndex = 0;
-                    VideLivresComZones();
-                }
-            }
-            else
-            {
-                txbLivresComNumLivre.Text = "";
-                VideLivresComInfos();
-                //VideLivresComZones();
+                Rayon rayon= (Rayon)cbxLivresComRayons.SelectedItem;
+                List<Livre> livres = lesLivresCom.FindAll(x => x.Rayon.Equals(rayon.Libelle));
+                RemplirLivresComListe(livres);
             }
         }
 
@@ -2012,16 +1996,15 @@ namespace MediaTekDocuments.view
         private void AfficheLivresCommandeInfos(Livre livre)
         {
             string idLivre = livre.Id;
+            VideLivresComInfos();
+            Console.WriteLine("coucou AfficheLivresCommandeInfos?");
             lesCommandes = controller.GetCommandesLivres(idLivre);
             grpLivresCommandes.Text = livre.Titre + " de " + livre.Auteur;
-            if (lesCommandes.Count == 0 )
-            {
+            Console.WriteLine("lesCommandes.count = " + lesCommandes.Count.ToString());
+            if ( lesCommandes.Count == 0)
                 VideLivresComInfos();
-            }
             RemplirLivresComListeCommandes(lesCommandes);
         }
-
-
 
         /// <summary>
         /// Sur le clic du bouton d'annulation, affichage de la liste complète des livres
@@ -2077,6 +2060,18 @@ namespace MediaTekDocuments.view
         }
 
         /// <summary>
+        /// vide les zones d'affichage d'une commande
+        /// </summary>
+        private void VideLivresComInfos()
+        {
+            txbLivresComNbCommande.Text = "";
+            dtpLivresComDateCommande.Value = DateTime.Now.Date;
+            txbLivresComMontant.Text = "";
+            txbLivresComNbExemplaires.Text = "";
+            cbxLivresComEtat.SelectedIndex = -1;
+        }
+
+        /// <summary>
         /// applique des droits sur l'interface en fonction de la situation
         /// </summary>
         /// <param name="modif"></param>
@@ -2096,11 +2091,33 @@ namespace MediaTekDocuments.view
             dgvLivresComListe.Enabled = !modif;
             dgvLivresComListeCom.Enabled = !modif;
             ajouterComLivre = false;
-           
+            cbxLivresComGenres.Enabled = !modif;
+            cbxLivresComPublics.Enabled = !modif;
+            cbxLivresComRayons.Enabled = !modif;
+            btnLivresComNbRecherche.Enabled = !modif;
+            txbLivresComTitreRecherche.Enabled = !modif;
+            btnLivresComAnnulRayons.Enabled = !modif;
+            btnLivresComAnnulGenres.Enabled = !modif;
+            btnlivresComAnnulPublics.Enabled = !modif;
         }
 
         /// <summary>
-        /// enclanche la procédure d'ajout d'une commande
+        /// affiche les détailles d'une commande
+        /// </summary>
+        /// <param name="laCommande"></param>
+        private void AfficheLivresComInfo(CommandeDocument laCommande)
+        {
+            txbLivresComNbCommande.Text = laCommande.Id;
+            txbLivresComNumLivre.Text = laCommande.IdLivreDvd;
+            dtpLivresComDateCommande.Value = laCommande.DateCommande;
+            txbLivresComMontant.Text = laCommande.Montant.ToString();
+            txbLivresComNbExemplaires.Text = laCommande.NbExemplaire.ToString();
+            txbLivresComNumLivre.Text = laCommande.IdLivreDvd;
+            cbxLivresComEtat.SelectedIndex = cbxLivresComEtat.FindString(laCommande.Etat);
+        }
+
+        /// <summary>
+        /// démarre la procédure d'ajout d'une commande
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -2116,6 +2133,11 @@ namespace MediaTekDocuments.view
             txbLivresComNbCommande.Text = id;
         }
 
+        /// <summary>
+        /// démarre la procédure d'ajout de commande
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnLivresComModifier_Click(object sender, EventArgs e)
         {
             if(dgvLivresComListeCom.CurrentCell != null && txbLivresComNbCommande.Text != "")
@@ -2130,10 +2152,14 @@ namespace MediaTekDocuments.view
             }
         }
 
+        /// <summary>
+        /// annule les modifications en cours
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnLivresComSupprimer_Click(object sender, EventArgs e)
         {
             CommandeDocument commandeDocument = (CommandeDocument)bdgLivresComListeCommande[bdgLivresComListeCommande.Position];
-
             if(dgvLivresComListeCom.CurrentCell != null && txbLivresComNbCommande.Text != "")
             {
                 if(commandeDocument.IdSuivi > 2 )
@@ -2169,6 +2195,11 @@ namespace MediaTekDocuments.view
             
         }
 
+        /// <summary>
+        /// annule la modifications ou l'ajouts en cours
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnLivresComAnnuler_Click(object sender, EventArgs e)
         {
             ajouterComLivre = false;
@@ -2185,24 +2216,14 @@ namespace MediaTekDocuments.view
             }
         }
 
-        private string plusUnIdString(string id)
-        {
-            int taille = id.Length;
-            int idnum = int.Parse(id) + 1;
-            id = idnum.ToString();
-            if (id.Length > taille)
-                MessageBox.Show("Taille du registre de commandes arrivé a saturation");
-            while( id.Length != taille)
-            {
-                id = "0" + id;
-            }
-            return id;
-
-        }
-
+        
+        /// <summary>
+        /// valide la modification ou l'ajout en cours
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnLivresComValider_Click(object sender, EventArgs e)
         {
-            
             if (MessageBox.Show("Etes vous sur ?", "oui ?", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 string id = txbLivresComNbCommande.Text;
@@ -2255,7 +2276,6 @@ namespace MediaTekDocuments.view
                         if(!ajouterComLivre)
                             RemplirComboSuivi(controller.GetAllSuivis(), bdgLivresComEtat, cbxLivresComEtat);
                         enCoursModifLivresCom(false);
-                        Thread.Sleep(50);
                         try
                         {
                             Livre livre = (Livre)bdgLivresComListe.List[bdgLivresComListe.Position];
@@ -2272,8 +2292,35 @@ namespace MediaTekDocuments.view
                     {
                         MessageBox.Show("Erreur");
                     }
-
                 }
+            }
+        }
+
+        /// <summary>
+        /// Sur la sélection d'une ligne ou cellule dans le grid
+        /// affichage des commandes du livres
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void dgvLivresComListe_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dgvLivresComListe.CurrentCell != null)
+            {
+                try
+                {
+                    Livre livre = (Livre)bdgLivresComListe.List[bdgLivresComListe.Position];
+                    AfficheLivresCommandeInfos(livre);
+                    txbLivresComNumLivre.Text = livre.Id;
+                }
+                catch
+                {
+                    VideLivresComZones();
+                }
+            }
+            else
+            {
+                txbLivresComNumLivre.Text = "";
+                VideLivresComInfos();
             }
         }
 
@@ -2314,6 +2361,12 @@ namespace MediaTekDocuments.view
             RemplirLivresComListe(sortedList);
         }
 
+        /// <summary>
+        /// Sur la sélection d'une ligne ou cellule dans le grid
+        /// affichage du detaille de la commande
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void dgvLivresComListeCom_SelectionChanged(object sender, EventArgs e)
         {
             if (dgvLivresComListeCom.CurrentCell != null)
@@ -2334,26 +2387,12 @@ namespace MediaTekDocuments.view
             }
         }
 
-        private void AfficheLivresComInfo(CommandeDocument laCommande)
-        {
-            txbLivresComNbCommande.Text = laCommande.Id;
-            txbLivresComNumLivre.Text = laCommande.IdLivreDvd;
-            dtpLivresComDateCommande.Value = laCommande.DateCommande;
-            txbLivresComMontant.Text = laCommande.Montant.ToString();
-            txbLivresComNbExemplaires.Text = laCommande.NbExemplaire.ToString();
-            txbLivresComNumLivre.Text = laCommande.IdLivreDvd;
-            cbxLivresComEtat.SelectedIndex = cbxLivresComEtat.FindString(laCommande.Etat);
-        }
-
-        private void VideLivresComInfos()
-        {
-            txbLivresComNbCommande.Text = "";
-            dtpLivresComDateCommande.Value = DateTime.Now.Date;
-            txbLivresComMontant.Text = "";
-            txbLivresComNbExemplaires.Text = "";
-            cbxLivresComEtat.SelectedIndex = -1;
-        }
-
+        /// <summary>
+        /// Sur la sélection d'une ligne ou cellule dans le grid
+        /// affichage des informations de la commande
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void dgvLivresComListeCom_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             if (lesCommandes.Count > 0 && dgvLivresComListeCom != null)

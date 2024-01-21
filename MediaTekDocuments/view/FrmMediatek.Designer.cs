@@ -59,7 +59,7 @@ namespace MediaTekDocuments.view
             this.label9 = new System.Windows.Forms.Label();
             this.grpLivresRecherche = new System.Windows.Forms.GroupBox();
             this.btnLivresAnnulRayons = new System.Windows.Forms.Button();
-            this.btnlivresAnnulPublics = new System.Windows.Forms.Button();
+            this.btnLivresAnnulPublics = new System.Windows.Forms.Button();
             this.btnLivresNumRecherche = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.txbLivresNumRecherche = new System.Windows.Forms.TextBox();
@@ -557,7 +557,7 @@ namespace MediaTekDocuments.view
             // grpLivresRecherche
             // 
             this.grpLivresRecherche.Controls.Add(this.btnLivresAnnulRayons);
-            this.grpLivresRecherche.Controls.Add(this.btnlivresAnnulPublics);
+            this.grpLivresRecherche.Controls.Add(this.btnLivresAnnulPublics);
             this.grpLivresRecherche.Controls.Add(this.btnLivresNumRecherche);
             this.grpLivresRecherche.Controls.Add(this.label5);
             this.grpLivresRecherche.Controls.Add(this.txbLivresNumRecherche);
@@ -588,15 +588,15 @@ namespace MediaTekDocuments.view
             this.btnLivresAnnulRayons.UseVisualStyleBackColor = true;
             this.btnLivresAnnulRayons.Click += new System.EventHandler(this.BtnLivresAnnulRayons_Click);
             // 
-            // btnlivresAnnulPublics
+            // btnLivresAnnulPublics
             // 
-            this.btnlivresAnnulPublics.Location = new System.Drawing.Point(833, 60);
-            this.btnlivresAnnulPublics.Name = "btnlivresAnnulPublics";
-            this.btnlivresAnnulPublics.Size = new System.Drawing.Size(22, 22);
-            this.btnlivresAnnulPublics.TabIndex = 15;
-            this.btnlivresAnnulPublics.Text = "X";
-            this.btnlivresAnnulPublics.UseVisualStyleBackColor = true;
-            this.btnlivresAnnulPublics.Click += new System.EventHandler(this.BtnLivresAnnulPublics_Click);
+            this.btnLivresAnnulPublics.Location = new System.Drawing.Point(833, 60);
+            this.btnLivresAnnulPublics.Name = "btnLivresAnnulPublics";
+            this.btnLivresAnnulPublics.Size = new System.Drawing.Size(22, 22);
+            this.btnLivresAnnulPublics.TabIndex = 15;
+            this.btnLivresAnnulPublics.Text = "X";
+            this.btnLivresAnnulPublics.UseVisualStyleBackColor = true;
+            this.btnLivresAnnulPublics.Click += new System.EventHandler(this.BtnLivresAnnulPublics_Click);
             // 
             // btnLivresNumRecherche
             // 
@@ -2223,7 +2223,7 @@ namespace MediaTekDocuments.view
             this.dgvLivresComListeCom.RowHeadersVisible = false;
             this.dgvLivresComListeCom.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvLivresComListeCom.Size = new System.Drawing.Size(451, 333);
-            this.dgvLivresComListeCom.TabIndex = 13;
+            this.dgvLivresComListeCom.TabIndex = 4;
             this.dgvLivresComListeCom.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvLivresComListeCom_ColumnHeaderMouseClick);
             this.dgvLivresComListeCom.SelectionChanged += new System.EventHandler(this.dgvLivresComListeCom_SelectionChanged);
             // 
@@ -2299,7 +2299,8 @@ namespace MediaTekDocuments.view
             this.dgvLivresComListe.RowHeadersVisible = false;
             this.dgvLivresComListe.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvLivresComListe.Size = new System.Drawing.Size(864, 196);
-            this.dgvLivresComListe.TabIndex = 12;
+            this.dgvLivresComListe.StandardTab = true;
+            this.dgvLivresComListe.TabIndex = 4;
             this.dgvLivresComListe.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvLivresComListe_ColumnHeaderMouseClick);
             this.dgvLivresComListe.SelectionChanged += new System.EventHandler(this.dgvLivresComListe_SelectionChanged);
             // 
@@ -2506,7 +2507,7 @@ namespace MediaTekDocuments.view
         private System.Windows.Forms.Button btnLivresNumRecherche;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txbLivresNumRecherche;
-        private System.Windows.Forms.Button btnlivresAnnulPublics;
+        private System.Windows.Forms.Button btnLivresAnnulPublics;
         private System.Windows.Forms.Button btnLivresAnnulRayons;
         private System.Windows.Forms.GroupBox grpDvdRecherche;
         private System.Windows.Forms.Button btnDvdAnnulRayons;

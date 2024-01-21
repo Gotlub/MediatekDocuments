@@ -27,7 +27,7 @@ namespace MediaTekDocuments.controller
         }
 
         /// <summary>
-        /// getter sur la liste des genres
+        /// Getter sur la liste des genres
         /// </summary>
         /// <returns>Liste d'objets Genre</returns>
         public List<Categorie> GetAllGenres()
@@ -36,7 +36,7 @@ namespace MediaTekDocuments.controller
         }
 
         /// <summary>
-        /// getter sur les rayons
+        /// Getter sur les rayons
         /// </summary>
         /// <returns>Liste d'objets Rayon</returns>
         public List<Categorie> GetAllRayons()
@@ -45,7 +45,7 @@ namespace MediaTekDocuments.controller
         }
 
         /// <summary>
-        /// getter sur les publics
+        /// Getter sur les publics
         /// </summary>
         /// <returns>Liste d'objets Public</returns>
         public List<Categorie> GetAllPublics()
@@ -54,7 +54,7 @@ namespace MediaTekDocuments.controller
         }
 
         /// <summary>
-        /// getter sur les etats
+        /// Getter sur les etats
         /// </summary>
         /// <returns></returns>
         public List<Suivi> GetAllSuivis()
@@ -241,7 +241,7 @@ namespace MediaTekDocuments.controller
 
         #region Onglet Livres
         /// <summary>
-        /// getter sur la liste des livres
+        /// Getter sur la liste des livres
         /// </summary>
         /// <returns>Liste d'objets Livre</returns>
         public List<Livre> GetAllLivres()
@@ -250,7 +250,7 @@ namespace MediaTekDocuments.controller
         }
 
         /// <summary>
-        /// creer un livre dans la BDD
+        /// Creer un livre dans la BDD
         /// </summary>
         /// <param name="livre"></param>
         /// <returns>true si oppration valide</returns>
@@ -270,7 +270,7 @@ namespace MediaTekDocuments.controller
         }
 
         /// <summary>
-        /// modifie un livre dans la bddd
+        /// Modifie un livre dans la bddd
         /// </summary>
         /// <param name="livre"></param>
         /// <returns>true si oppration valide</returns>
@@ -287,7 +287,7 @@ namespace MediaTekDocuments.controller
         }
 
         /// <summary>
-        /// supprime un livre dans la bdd
+        /// Supprime un livre dans la bdd
         /// </summary>
         /// <param name="livre"></param>
         /// <returns>true si oppration valide</returns>
@@ -309,7 +309,7 @@ namespace MediaTekDocuments.controller
 
         #region Onglet DvD
         /// <summary>
-        /// getter sur la liste des Dvd
+        /// Getter sur la liste des Dvd
         /// </summary>
         /// <returns>Liste d'objets dvd</returns>
         public List<Dvd> GetAllDvd()
@@ -318,7 +318,7 @@ namespace MediaTekDocuments.controller
         }
 
         /// <summary>
-        /// creer un dvd dans la bdd
+        /// Creer un dvd dans la bdd
         /// </summary>
         /// <param name="dvd"></param>
         /// <returns>true si oppration valide</returns>
@@ -337,7 +337,7 @@ namespace MediaTekDocuments.controller
         }
 
         /// <summary>
-        /// modifie un dvd dans la bdd
+        /// Modifie un dvd dans la bdd
         /// </summary>
         /// <param name="dvd"></param>
         /// <returns>true si oppration valide</returns>
@@ -354,7 +354,7 @@ namespace MediaTekDocuments.controller
         }
 
         /// <summary>
-        /// supprime un dvd dans la bdd
+        /// Supprime un dvd dans la bdd
         /// </summary>
         /// <param name="dvd"></param>
         /// <returns>true si oppration valide</returns>
@@ -375,7 +375,7 @@ namespace MediaTekDocuments.controller
 
         #region Onglet Revues
         /// <summary>
-        /// getter sur la liste des revues
+        /// Getter sur la liste des revues
         /// </summary>
         /// <returns>Liste d'objets Revue</returns>
         public List<Revue> GetAllRevues()
@@ -384,7 +384,7 @@ namespace MediaTekDocuments.controller
         }
 
         /// <summary>
-        /// creer une revue dans la bdd
+        /// Creer une revue dans la bdd
         /// </summary>
         /// <param name="revue"></param>
         /// <returns>true si oppration valide</returns>
@@ -401,7 +401,7 @@ namespace MediaTekDocuments.controller
         }
 
         /// <summary>
-        /// modifie une revue dans la bdd
+        /// Modifie une revue dans la bdd
         /// </summary>
         /// <param name="revue"></param>
         /// <returns>true si oppration valide</returns>
@@ -418,7 +418,7 @@ namespace MediaTekDocuments.controller
         }
 
         /// <summary>
-        /// supprime une revue dans la bdd
+        /// Supprime une revue dans la bdd
         /// </summary>
         /// <param name="revue"></param>
         /// <returns>true si oppration valide</returns>
@@ -437,7 +437,7 @@ namespace MediaTekDocuments.controller
 
         #region Onglet Parutions
         /// <summary>
-        /// récupère les exemplaires d'une revue
+        /// Récupère les exemplaires d'une revue
         /// </summary>
         /// <param name="idDocuement">id de la revue concernée</param>
         /// <returns>Liste d'objets Exemplaire</returns>
@@ -457,9 +457,9 @@ namespace MediaTekDocuments.controller
         }
         #endregion
 
-        #region Commandes de livres
+        #region Commandes de livres et Dvd
         /// <summary>
-        /// récupère les commandes d'une livre
+        /// Récupère les commandes d'une livre
         /// </summary>
         /// <param name="idLivre">id du livre concernée</param>
         /// <returns></returns>
@@ -468,11 +468,20 @@ namespace MediaTekDocuments.controller
             return access.GetCommandesLivres(idLivre);
         }
 
+        /// <summary>
+        /// Retourne l'id max des commandes
+        /// </summary>
+        /// <returns></returns>
         public string getNbCommandeMax()
         {
             return access.getNbCommandeMax();
         }
 
+        /// <summary>
+        /// Creer une commande livre/Dvd dans la bdd
+        /// </summary>
+        /// <param name="commandeLivreDvd"></param>
+        /// <returns></returns>
         public bool CreerLivreDvdCom(CommandeDocument commandeLivreDvd)
         {
             bool validateur = true;
@@ -483,6 +492,11 @@ namespace MediaTekDocuments.controller
             return validateur;
         }
 
+        /// <summary>
+        /// Modifie une commande livre/Dvd dans la bdd
+        /// </summary>
+        /// <param name="commandeLivreDvd"></param>
+        /// <returns></returns>
         public bool UpdateLivreDvdCom(CommandeDocument commandeLivreDvd)
         {
             bool validateur = true;
@@ -493,6 +507,11 @@ namespace MediaTekDocuments.controller
             return validateur;
         }
 
+        /// <summary>
+        /// Supprime une commande livre/Dvd dans la bdd
+        /// </summary>
+        /// <param name="commandeLivreDvd"></param>
+        /// <returns></returns>
         public bool SupprimerLivreDvdCom(CommandeDocument commandeLivreDvd)
         {
             bool validateur = true;

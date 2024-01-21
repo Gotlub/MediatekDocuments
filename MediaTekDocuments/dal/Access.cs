@@ -43,7 +43,6 @@ namespace MediaTekDocuments.dal
         /// </summary>
         private const string DELETE = "DELETE";
 
-
         /// <summary>
         /// Méthode privée pour créer un singleton
         /// initialise l'accès à l'API
@@ -186,7 +185,6 @@ namespace MediaTekDocuments.dal
             return false;
         }
 
-
         /// <summary>
         /// Retourne toutes les dvd à partir de la BDD
         /// </summary>
@@ -239,7 +237,7 @@ namespace MediaTekDocuments.dal
         }
 
         /// <summary>
-        /// ecriture d'un exemplaire en base de données
+        /// Ecriture d'un exemplaire en base de données
         /// </summary>
         /// <param name="exemplaire">exemplaire à insérer</param>
         /// <returns>true si l'insertion a pu se faire (retour != null)</returns>
