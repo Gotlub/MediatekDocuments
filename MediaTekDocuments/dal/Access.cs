@@ -185,6 +185,7 @@ namespace MediaTekDocuments.dal
             return false;
         }
 
+
         /// <summary>
         /// Retourne toutes les dvd à partir de la BDD
         /// </summary>
@@ -230,14 +231,20 @@ namespace MediaTekDocuments.dal
             return lesCommandesLivres;
         }
 
-        public string getNbCommandeMax()
+        /// <summary>
+        /// Retourne l'index max en string
+        /// de certaines tables
+        /// </summary>
+        /// <param name="maxIndex"></param>
+        /// <returns></returns>
+        public string getMaxIndex(string maxIndex)
         {
-            List<Categorie> maxCommande = TraitementRecup<Categorie>(GET, "maxcommande");
-            return maxCommande[0].Id;
+            List<Categorie> maxindex = TraitementRecup<Categorie>(GET, maxIndex);
+            return maxindex[0].Id;
         }
 
         /// <summary>
-        /// Ecriture d'un exemplaire en base de données
+        /// ecriture d'un exemplaire en base de données
         /// </summary>
         /// <param name="exemplaire">exemplaire à insérer</param>
         /// <returns>true si l'insertion a pu se faire (retour != null)</returns>

@@ -474,7 +474,34 @@ namespace MediaTekDocuments.controller
         /// <returns></returns>
         public string getNbCommandeMax()
         {
-            return access.getNbCommandeMax();
+            return access.getMaxIndex("maxcommande");
+        }
+
+        /// <summary>
+        /// Retourne l'id max des livres
+        /// </summary>
+        /// <returns></returns>
+        public string getNbLivreMax()
+        {
+            return access.getMaxIndex("maxlivre");
+        }
+
+        /// <summary>
+        /// Retourne l'id max des Dvd
+        /// </summary>
+        /// <returns></returns>
+        public string getNbDvdMax()
+        {
+            return access.getMaxIndex("maxdvd");
+        }
+
+        /// <summary>
+        /// Retourne l'id max des revues
+        /// </summary>
+        /// <returns></returns>
+        public string getNbRevueMax()
+        {
+            return access.getMaxIndex("maxrevue");
         }
 
         /// <summary>
