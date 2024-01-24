@@ -2129,6 +2129,7 @@ namespace MediaTekDocuments.view
             VideLivresComInfos();
             cbxLivresComEtat.SelectedIndex = 0;
             txbLivresComNbCommande.Text = id;
+            cbxLivresComEtat.Enabled = false;
         }
 
         /// <summary>
@@ -2141,6 +2142,8 @@ namespace MediaTekDocuments.view
             if (dgvLivresComListeCom.CurrentCell != null && txbLivresComNbCommande.Text != "")
             {
                 List<Suivi> lesSuivi = controller.GetAllSuivis().FindAll(o => o.Id >= ((Suivi)cbxLivresComEtat.SelectedItem).Id).ToList();
+                if (lesSuivi.Count > 2)
+                    lesSuivi = lesSuivi.FindAll(o => o.Id < 4).ToList();
                 enCoursModifLivresCom(true);
                 RemplirComboSuivi(lesSuivi, bdgLivresComEtat, cbxLivresComEtat);
                 cbxLivresComEtat.SelectedIndex = 0;
@@ -2749,6 +2752,7 @@ namespace MediaTekDocuments.view
             VideDvdComInfos();
             cbxDvdComEtat.SelectedIndex = 0;
             txbDvdComNbCommande.Text = id;
+            cbxDvdComEtat.Enabled = false;
         }
 
         /// <summary>
@@ -2761,6 +2765,8 @@ namespace MediaTekDocuments.view
             if (dgvDvdComListeCom.CurrentCell != null && txbDvdComNbCommande.Text != "")
             {
                 List<Suivi> lesSuivi = controller.GetAllSuivis().FindAll(o => o.Id >= ((Suivi)cbxDvdComEtat.SelectedItem).Id).ToList();
+                if (lesSuivi.Count > 2)
+                    lesSuivi = lesSuivi.FindAll(o => o.Id < 4).ToList();
                 enCoursModifDvdCom(true);
                 RemplirComboSuivi(lesSuivi, bdgDvdComEtat, cbxDvdComEtat);
                 cbxDvdComEtat.SelectedIndex = 0;

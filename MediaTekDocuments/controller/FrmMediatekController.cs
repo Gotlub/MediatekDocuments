@@ -256,7 +256,6 @@ namespace MediaTekDocuments.controller
             return access.getMaxIndex("maxrevue");
         }
 
-
         /// <summary>
         /// Permets de gérer les demandes de requêtes post update delete concernant
         /// une commande de livre ou dvd
@@ -300,7 +299,6 @@ namespace MediaTekDocuments.controller
         }
 
         
-
         /// <summary>
         /// Modifie une commande livre/Dvd dans la bdd
         /// </summary>
