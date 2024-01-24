@@ -2127,6 +2127,7 @@ namespace MediaTekDocuments.view
             if (id == "0")
                 id = "00001";
             VideLivresComInfos();
+            cbxLivresComEtat.SelectedIndex = 0;
             txbLivresComNbCommande.Text = id;
         }
 
@@ -2142,6 +2143,7 @@ namespace MediaTekDocuments.view
                 List<Suivi> lesSuivi = controller.GetAllSuivis().FindAll(o => o.Id >= ((Suivi)cbxLivresComEtat.SelectedItem).Id).ToList();
                 enCoursModifLivresCom(true);
                 RemplirComboSuivi(lesSuivi, bdgLivresComEtat, cbxLivresComEtat);
+                cbxLivresComEtat.SelectedIndex = 0;
             }
             else
             {
@@ -2409,11 +2411,6 @@ namespace MediaTekDocuments.view
                 }
                 RemplirLivresComListeCommandes(sortedList);
             }
-        }
-
-        private void cbxDvdComGenres_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
 
 
@@ -2718,6 +2715,7 @@ namespace MediaTekDocuments.view
             btnDvdComAnnulGenres.Enabled = !modif;
             btnlivresComAnnulPublics.Enabled = !modif;
             ajouterBool = false;
+                
         }
 
         /// <summary>
@@ -2749,6 +2747,7 @@ namespace MediaTekDocuments.view
             if (id == "0")
                 id = "00001";
             VideDvdComInfos();
+            cbxDvdComEtat.SelectedIndex = 0;
             txbDvdComNbCommande.Text = id;
         }
 
@@ -2764,6 +2763,7 @@ namespace MediaTekDocuments.view
                 List<Suivi> lesSuivi = controller.GetAllSuivis().FindAll(o => o.Id >= ((Suivi)cbxDvdComEtat.SelectedItem).Id).ToList();
                 enCoursModifDvdCom(true);
                 RemplirComboSuivi(lesSuivi, bdgDvdComEtat, cbxDvdComEtat);
+                cbxDvdComEtat.SelectedIndex = 0;
             }
             else
             {

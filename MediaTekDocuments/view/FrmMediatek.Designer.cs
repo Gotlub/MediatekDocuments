@@ -2832,7 +2832,6 @@ namespace MediaTekDocuments.view
             this.cbxDvdComGenres.Name = "cbxDvdComGenres";
             this.cbxDvdComGenres.Size = new System.Drawing.Size(204, 21);
             this.cbxDvdComGenres.TabIndex = 6;
-            this.cbxDvdComGenres.SelectedIndexChanged += new System.EventHandler(this.cbxDvdComGenres_SelectedIndexChanged);
             // 
             // label78
             // 

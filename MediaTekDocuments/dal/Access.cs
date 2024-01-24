@@ -171,7 +171,6 @@ namespace MediaTekDocuments.dal
         /// <returns></returns>
         public bool SupprimerEntite(string type, String jsonEntite)
         {
-            jsonEntite = jsonEntite.Replace(' ', '-');
             try
             {
                 // récupération soit d'une liste vide (requête ok) soit de null (erreur)
@@ -275,7 +274,7 @@ namespace MediaTekDocuments.dal
             List<T> liste = new List<T>();
             try
             {
-                Console.WriteLine("TraitementRecup string = " + message);
+                Console.WriteLine("TraitementRecup " + methode + " et " + message);
                 JObject retour = api.RecupDistant(methode, message);
                 // extraction du code retourné
                 String code = (String)retour["code"];
