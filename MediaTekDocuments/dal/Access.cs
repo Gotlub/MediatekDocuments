@@ -231,6 +231,18 @@ namespace MediaTekDocuments.dal
         }
 
         /// <summary>
+        /// Retourne les abonnements d'une revue
+        /// </summary>
+        /// <param name="idRevue"></param>
+        /// <returns></returns>
+        public List<Abonnement> GetAbonnements(string idRevue)
+        {
+            String jsonAbonnementIdRevue = convertToJson("idRevue", idRevue);
+            List<Abonnement> abonnements =  TraitementRecup<Abonnement>(GET, "abonnements/" + jsonAbonnementIdRevue);
+            return abonnements;
+        }
+
+        /// <summary>
         /// Retourne l'index max en string
         /// de certaines tables
         /// </summary>
