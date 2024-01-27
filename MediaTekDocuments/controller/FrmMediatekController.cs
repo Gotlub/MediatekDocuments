@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using MediaTekDocuments.model;
 using MediaTekDocuments.dal;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 using System.Threading;
 
 namespace MediaTekDocuments.controller
@@ -54,12 +55,32 @@ namespace MediaTekDocuments.controller
         }
 
         /// <summary>
-        /// Getter sur les etats
+        /// Getter sur les suivis
         /// </summary>
         /// <returns></returns>
         public List<Suivi> GetAllSuivis()
         {
             return access.GetAllSuivis();
+        }
+
+        /// <summary>
+        /// Getter sur les etats
+        /// </summary>
+        /// <returns></returns>
+        public List<Etat> GetAllEtats()
+        {
+            return access.GetAllEtats();
+        }
+
+        /// <summary>
+        /// Modification du convertisseur Json pour gérer le format de date
+        /// </summary>
+        private sealed class CustomDateTimeConverter : IsoDateTimeConverter
+        {
+            public CustomDateTimeConverter()
+            {
+                base.DateTimeFormat = "yyyy-MM-dd";
+            }
         }
         #endregion
 
@@ -72,6 +93,26 @@ namespace MediaTekDocuments.controller
         public List<Livre> GetAllLivres()
         {
             return access.GetAllLivres();
+        }
+
+        /// <summary>
+        /// Update un exemplaire dans la bdd
+        /// </summary>
+        /// <param name="exemplaire"></param>
+        /// <returns></returns>
+        public bool UpdateExemplaire(Exemplaire exemplaire)
+        {
+            return access.UpdateEntite("exemplaire", exemplaire.Id, JsonConvert.SerializeObject(exemplaire, new CustomDateTimeConverter()));
+        }
+
+        /// <summary>
+        /// Supprime un exemplaire dans la bdd
+        /// </summary>
+        /// <param name="exemplaire"></param>
+        /// <returns></returns>
+        public bool SupprimerExemplaire(Exemplaire exemplaire)
+        {
+            return access.SupprimerEntite("exemplaire", JsonConvert.SerializeObject(exemplaire, new CustomDateTimeConverter()));
         }
 
         /// <summary>
