@@ -1034,7 +1034,7 @@ namespace MediaTekDocuments.view
             cbxDvdRayonInfo.SelectedIndex = cbxDvdRayonInfo.FindString(dvd.Rayon);
             txbDvdTitre.Text = dvd.Titre;
             lesExemplairesDvd = controller.GetExemplairesRevue(dvd.Id);
-            gbxLivresEx.Text = "Les exemplaire de " + dvd.Titre;
+            gbxDvdEx.Text = "Les exemplaire de " + dvd.Titre;
             RemplirDvdListeExemplaire(lesExemplairesDvd);
             string image = dvd.Image;
             try
@@ -2367,7 +2367,7 @@ namespace MediaTekDocuments.view
 
         #endregion
 
-        #region Onglet Paarutions
+        #region Onglet Parutions
         private readonly BindingSource bdgExemplairesListe = new BindingSource();
         private List<Exemplaire> lesExemplaires = new List<Exemplaire>();
         const string ETATNEUF = "00001";
@@ -2381,6 +2381,8 @@ namespace MediaTekDocuments.view
         {
             lesRevues = controller.GetAllRevues();
             txbReceptionRevueNumero.Text = "";
+            RemplirComboEtat(controller.GetAllEtats(), bdgEtats, cxbReceptionRevueEtatEx);
+            lesEtatsEx = controller.GetAllEtats();
         }
 
         /// <summary>
@@ -2535,14 +2537,14 @@ namespace MediaTekDocuments.view
         /// <param name="e"></param>
         private void btnReceptionExemplaireValider_Click(object sender, EventArgs e)
         {
-            if (!txbReceptionExemplaireNumero.Text.Equals(""))
+            if (!txbReceptionExemplaireNumero.Text.Equals("") && cxbReceptionRevueEtatEx.SelectedIndex != -1)
             {
                 try
                 {
                     int numero = int.Parse(txbReceptionExemplaireNumero.Text);
                     DateTime dateAchat = dtpReceptionExemplaireDate.Value;
                     string photo = txbReceptionExemplaireImage.Text;
-                    string idEtat = ETATNEUF;
+                    string idEtat = ((Etat)cxbReceptionRevueEtatEx.SelectedItem).Id;
                     string idDocument = txbReceptionRevueNumero.Text;
                     Exemplaire exemplaire = new Exemplaire(numero, dateAchat, photo, idEtat, idDocument);
                     if (controller.CreerExemplaire(exemplaire))
@@ -2563,7 +2565,7 @@ namespace MediaTekDocuments.view
             }
             else
             {
-                MessageBox.Show("numéro de parution obligatoire", "Information");
+                MessageBox.Show("numéro de parution et selection de l'etat obligatoire", "Information");
             }
         }
 
@@ -2619,7 +2621,7 @@ namespace MediaTekDocuments.view
 
         #endregion
 
-        #region Commandes de livres
+        #region Onglet Commandes de livres
         private readonly BindingSource bdgLivresComListe = new BindingSource();
         private readonly BindingSource bdgLivresComListeCommande = new BindingSource();
         private readonly BindingSource bdgLivresComEtat = new BindingSource();
@@ -2639,6 +2641,7 @@ namespace MediaTekDocuments.view
             RemplirComboCategorie(controller.GetAllPublics(), bdgPublics, cbxLivresComPublics);
             RemplirComboCategorie(controller.GetAllRayons(), bdgRayons, cbxLivresComRayons);
             RemplirComboSuivi(controller.GetAllSuivis(), bdgLivresComEtat, cbxLivresComEtat);
+            RemplirComboEtat(controller.GetAllEtats(), bdgEtats, cbxLivresExEtat);
             enCoursModifLivresCom(false);
             RemplirLivresComListeComplete();
         }
@@ -2672,7 +2675,7 @@ namespace MediaTekDocuments.view
             {
                 bdgLivresComListeCommande.DataSource = LesCommandes;
                 dgvLivresComListeCom.DataSource = bdgLivresComListeCommande;
-                dgvLivresComListeCom.Columns["idLivreRevues"].Visible = false;
+                dgvLivresComListeCom.Columns["idLivreDvd"].Visible = false;
                 dgvLivresComListeCom.Columns["idSuivi"].Visible = false;
                 dgvLivresComListeCom.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
                 dgvLivresComListeCom.Columns["id"].DisplayIndex = 0;
@@ -3243,7 +3246,7 @@ namespace MediaTekDocuments.view
 
         #endregion
  
-        #region commandes de Dvd
+        #region Onglet Commandes de Dvd
 
         private readonly BindingSource bdgDvdComListe = new BindingSource();
         private readonly BindingSource bdgDvdComListeCommande = new BindingSource();
@@ -3861,7 +3864,7 @@ namespace MediaTekDocuments.view
         }
         #endregion
 
-        #region gestion des abonnements
+        #region Onglet Gestion des abonnements
         private readonly BindingSource bdgAboListe = new BindingSource();
         private readonly BindingSource bdgAboListeCommande = new BindingSource();
         private List<Revue> lesRevuesAbo = new List<Revue>();
