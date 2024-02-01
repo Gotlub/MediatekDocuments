@@ -1,3 +1,3 @@
-SonarScanner.MSBuild.exe begin /k:"Mediatekdocuments" /d:sonar.host.url="http://localhost:9000" /d:sonar.token="sqp_e338d63bc6a27d212d8e54d9e101908578c2387a"
+SonarScanner.MSBuild.exe begin /k:"Mediatekdocuments" /d:sonar.host.url="http://localhost:9000" /d:sonar.token="sqp_41c07b5af007b1a03488e07b36dc0ffa67129a32"
 MsBuild.exe /t:Rebuild
-SonarScanner.MSBuild.exe end /d:sonar.token="sqp_e338d63bc6a27d212d8e54d9e101908578c2387a"
+SonarScanner.MSBuild.exe end /d:sonar.token="sqp_41c07b5af007b1a03488e07b36dc0ffa67129a32"
