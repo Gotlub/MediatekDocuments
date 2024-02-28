@@ -133,6 +133,10 @@ namespace MediaTekDocuments.view
             }
         }
 
+        /// <summary>
+        /// Vérifie si les droits utilisateur
+        /// </summary>
+        /// <param name="lutilisateur"></param>
         private void VerifDroitAccueil(Utilisateur lutilisateur)
         {
             if(!controller.VerifDroitAccueil(lutilisateur))
@@ -140,6 +144,16 @@ namespace MediaTekDocuments.view
                 MessageBox.Show("Droits insuffisant");
                 Application.Exit();
             }
+        }
+
+        /// <summary>
+        /// Retourne la quantité d'exemplaire
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        private int VerifExemplaire(string id)
+        {
+            return controller.GetExemplairesRevue(id).Count();
         }
 
         /// <summary>
@@ -654,16 +668,23 @@ namespace MediaTekDocuments.view
             if (MessageBox.Show("Etes vous sur de vouloir supprimer" + leLivre.Titre + " de " + leLivre.Auteur + " ?",
                 "Validation suppresion", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                // fonction a modifier pour prendre en charge le faite que l'on ne pourra pas supprimer un livre tant que des examplaire de se livre existe
-                if (controller.SupprimerLivre(leLivre))
+                if (VerifExemplaire(leLivre.Id) == 0)
                 {
-                    Thread.Sleep(100);
-                    lesLivres = controller.GetAllLivres();
-                    RemplirLivresListeComplete();
+                    // fonction a modifier pour prendre en charge le faite que l'on ne pourra pas supprimer un livre tant que des examplaire de se livre existe
+                    if (controller.SupprimerLivre(leLivre))
+                    {
+                        Thread.Sleep(100);
+                        lesLivres = controller.GetAllLivres();
+                        RemplirLivresListeComplete();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Erreur");
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Erreur");
+                    MessageBox.Show("Vous ne pouvez pas supprimer une revue dont des exemplaire existe ");
                 }
             }
         }
@@ -726,7 +747,9 @@ namespace MediaTekDocuments.view
         {
             bool checkValid;
             if (!ajouterBool)  // si on est en  modification
+            {
                 checkValid = controller.UpdateLivre(livre);
+            }
             else      // si on est en creation
                 checkValid = controller.CreerLivre(livre);
             if (checkValid)
@@ -1451,17 +1474,24 @@ namespace MediaTekDocuments.view
             if (MessageBox.Show("Etes vous sur de vouloir supprimer" + leDvd.Titre + " de " + leDvd.Realisateur + " ?",
                 "Validation suppresion", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                // fonction a modifier pour prendre en charge le faite que l'on ne pourra pas supprimer un livre tant que des examplaire de se livre existe
-                if (controller.SupprimerDvd(leDvd))
+                if (VerifExemplaire(leDvd.Id) == 0)
                 {
-                    Thread.Sleep(100);
-                    lesDvd = controller.GetAllDvd();
-                    RemplirDvdListeComplete();
+                    // fonction a modifier pour prendre en charge le faite que l'on ne pourra pas supprimer un livre tant que des examplaire de se livre existe
+                    if (controller.SupprimerDvd(leDvd))
+                    {
+                        Thread.Sleep(100);
+                        lesDvd = controller.GetAllDvd();
+                        RemplirDvdListeComplete();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Erreur");
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Erreur");
-                }
+                    MessageBox.Show("Vous ne pouvez pas supprimer un DVD dont des exemplaires existent");
+                }   
             }
         }
 
@@ -2241,7 +2271,6 @@ namespace MediaTekDocuments.view
             {
                 if (controller.GetExemplairesRevue(laRevue.Id).Count == 0)
                 {
-
                     if (controller.SupprimerRevue(laRevue))
                     {
                         Thread.Sleep(100);

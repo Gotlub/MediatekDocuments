@@ -61,10 +61,10 @@ namespace MediaTekDocuments.dal
                     .WriteTo.Console()
                     .WriteTo.File("logs/log.txt")
                     .CreateLogger();
-                //String authenticationString = GetAuthentificationString(authenticationName);
-                //String uriApi = GetAuthentificationString(uriApiName);
-                String authenticationString = "admin:adminpwd";
-                String uriApi = "http://localhost/rest_mediatekdocuments/";
+                String authenticationString = GetAuthentificationString(authenticationName);
+                String uriApi = GetAuthentificationString(uriApiName);
+                //String authenticationString = "admin:adminpwd";
+                //String uriApi = "https://restmediatekdocuments.fr/";
                 api = ApiRest.GetInstance(uriApi, authenticationString);
             }
             catch (Exception e)

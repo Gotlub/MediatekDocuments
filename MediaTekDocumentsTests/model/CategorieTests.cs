@@ -12,8 +12,8 @@ namespace MediaTekDocuments.model.Tests
     public class CategorieTests
     {
         private const string id = "002";
-        private const string libelle = "libelle";
-        private static readonly Categorie categorie = new Categorie(id, libelle);
+        private const string libelle = "Horreure";
+        private static readonly Categorie categorie = new Genre(id, libelle);
 
         [TestMethod()]
         public void CategorieTest()
