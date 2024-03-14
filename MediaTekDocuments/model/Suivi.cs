@@ -13,7 +13,7 @@ namespace MediaTekDocuments.model
         }
 
         /// <summary>
-        /// Récupération du libellé pour l'affichage dans les combos
+        /// Récupération du libellé pour l'affichage
         /// </summary>
         /// <returns>Libelle</returns>
         public override string ToString()

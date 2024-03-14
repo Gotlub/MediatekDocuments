@@ -29,21 +29,6 @@ namespace MediaTekDocuments.view
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabLivres = new System.Windows.Forms.TabPage();
             this.txbLivresExId = new System.Windows.Forms.TextBox();
@@ -426,7 +411,7 @@ namespace MediaTekDocuments.view
             this.tabControl.Location = new System.Drawing.Point(0, 0);
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
-            this.tabControl.Size = new System.Drawing.Size(904, 967);
+            this.tabControl.Size = new System.Drawing.Size(888, 731);
             this.tabControl.TabIndex = 0;
             // 
             // tabLivres
@@ -437,7 +422,7 @@ namespace MediaTekDocuments.view
             this.tabLivres.Controls.Add(this.grpLivresRecherche);
             this.tabLivres.Location = new System.Drawing.Point(4, 22);
             this.tabLivres.Name = "tabLivres";
-            this.tabLivres.Size = new System.Drawing.Size(896, 941);
+            this.tabLivres.Size = new System.Drawing.Size(880, 705);
             this.tabLivres.TabIndex = 2;
             this.tabLivres.Text = "Livres";
             this.tabLivres.UseVisualStyleBackColor = true;
@@ -447,7 +432,7 @@ namespace MediaTekDocuments.view
             // 
             this.txbLivresExId.Location = new System.Drawing.Point(531, 937);
             this.txbLivresExId.Name = "txbLivresExId";
-            this.txbLivresExId.Size = new System.Drawing.Size(100, 20);
+            this.txbLivresExId.Size = new System.Drawing.Size(100, 23);
             this.txbLivresExId.TabIndex = 39;
             this.txbLivresExId.Visible = false;
             // 
@@ -498,7 +483,7 @@ namespace MediaTekDocuments.view
             this.cbxLivresExEtat.FormattingEnabled = true;
             this.cbxLivresExEtat.Location = new System.Drawing.Point(562, 132);
             this.cbxLivresExEtat.Name = "cbxLivresExEtat";
-            this.cbxLivresExEtat.Size = new System.Drawing.Size(198, 21);
+            this.cbxLivresExEtat.Size = new System.Drawing.Size(198, 25);
             this.cbxLivresExEtat.TabIndex = 28;
             // 
             // txbLivresPhotoEx
@@ -506,14 +491,14 @@ namespace MediaTekDocuments.view
             this.txbLivresPhotoEx.Location = new System.Drawing.Point(560, 96);
             this.txbLivresPhotoEx.Name = "txbLivresPhotoEx";
             this.txbLivresPhotoEx.ReadOnly = true;
-            this.txbLivresPhotoEx.Size = new System.Drawing.Size(200, 20);
+            this.txbLivresPhotoEx.Size = new System.Drawing.Size(200, 23);
             this.txbLivresPhotoEx.TabIndex = 27;
             // 
             // dtpLivresDateAchatEx
             // 
             this.dtpLivresDateAchatEx.Location = new System.Drawing.Point(560, 64);
             this.dtpLivresDateAchatEx.Name = "dtpLivresDateAchatEx";
-            this.dtpLivresDateAchatEx.Size = new System.Drawing.Size(200, 20);
+            this.dtpLivresDateAchatEx.Size = new System.Drawing.Size(200, 23);
             this.dtpLivresDateAchatEx.TabIndex = 26;
             // 
             // txbLivresNbEx
@@ -521,7 +506,7 @@ namespace MediaTekDocuments.view
             this.txbLivresNbEx.Location = new System.Drawing.Point(620, 33);
             this.txbLivresNbEx.Name = "txbLivresNbEx";
             this.txbLivresNbEx.ReadOnly = true;
-            this.txbLivresNbEx.Size = new System.Drawing.Size(140, 20);
+            this.txbLivresNbEx.Size = new System.Drawing.Size(140, 23);
             this.txbLivresNbEx.TabIndex = 25;
             // 
             // label103
@@ -530,7 +515,7 @@ namespace MediaTekDocuments.view
             this.label103.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label103.Location = new System.Drawing.Point(438, 140);
             this.label103.Name = "label103";
-            this.label103.Size = new System.Drawing.Size(118, 13);
+            this.label103.Size = new System.Drawing.Size(151, 17);
             this.label103.TabIndex = 9;
             this.label103.Text = "Etat de l\'exemplaire";
             // 
@@ -540,7 +525,7 @@ namespace MediaTekDocuments.view
             this.label102.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label102.Location = new System.Drawing.Point(438, 103);
             this.label102.Name = "label102";
-            this.label102.Size = new System.Drawing.Size(48, 13);
+            this.label102.Size = new System.Drawing.Size(60, 17);
             this.label102.TabIndex = 8;
             this.label102.Text = "Photo :";
             // 
@@ -550,7 +535,7 @@ namespace MediaTekDocuments.view
             this.label101.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label101.Location = new System.Drawing.Point(438, 70);
             this.label101.Name = "label101";
-            this.label101.Size = new System.Drawing.Size(88, 13);
+            this.label101.Size = new System.Drawing.Size(110, 17);
             this.label101.TabIndex = 7;
             this.label101.Text = "Date d\'achat :";
             // 
@@ -560,7 +545,7 @@ namespace MediaTekDocuments.view
             this.label88.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label88.Location = new System.Drawing.Point(438, 36);
             this.label88.Name = "label88";
-            this.label88.Size = new System.Drawing.Size(132, 13);
+            this.label88.Size = new System.Drawing.Size(170, 17);
             this.label88.TabIndex = 6;
             this.label88.Text = "Numéro d\'exemplaire :";
             // 
@@ -570,35 +555,12 @@ namespace MediaTekDocuments.view
             this.dgvLivresListeEx.AllowUserToDeleteRows = false;
             this.dgvLivresListeEx.AllowUserToResizeColumns = false;
             this.dgvLivresListeEx.AllowUserToResizeRows = false;
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvLivresListeEx.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle16;
             this.dgvLivresListeEx.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvLivresListeEx.DefaultCellStyle = dataGridViewCellStyle17;
             this.dgvLivresListeEx.Location = new System.Drawing.Point(0, 19);
             this.dgvLivresListeEx.MultiSelect = false;
             this.dgvLivresListeEx.Name = "dgvLivresListeEx";
             this.dgvLivresListeEx.ReadOnly = true;
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvLivresListeEx.RowHeadersDefaultCellStyle = dataGridViewCellStyle18;
+            this.dgvLivresListeEx.RowHeadersWidth = 51;
             this.dgvLivresListeEx.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvLivresListeEx.Size = new System.Drawing.Size(387, 187);
             this.dgvLivresListeEx.TabIndex = 0;
@@ -644,7 +606,7 @@ namespace MediaTekDocuments.view
             this.cbxLivresRayonInfo.FormattingEnabled = true;
             this.cbxLivresRayonInfo.Location = new System.Drawing.Point(150, 170);
             this.cbxLivresRayonInfo.Name = "cbxLivresRayonInfo";
-            this.cbxLivresRayonInfo.Size = new System.Drawing.Size(121, 21);
+            this.cbxLivresRayonInfo.Size = new System.Drawing.Size(121, 25);
             this.cbxLivresRayonInfo.TabIndex = 41;
             // 
             // cbxLivresPublicInfo
@@ -652,7 +614,7 @@ namespace MediaTekDocuments.view
             this.cbxLivresPublicInfo.FormattingEnabled = true;
             this.cbxLivresPublicInfo.Location = new System.Drawing.Point(150, 145);
             this.cbxLivresPublicInfo.Name = "cbxLivresPublicInfo";
-            this.cbxLivresPublicInfo.Size = new System.Drawing.Size(121, 21);
+            this.cbxLivresPublicInfo.Size = new System.Drawing.Size(121, 25);
             this.cbxLivresPublicInfo.TabIndex = 40;
             // 
             // cbxLivresGenresInfo
@@ -660,7 +622,7 @@ namespace MediaTekDocuments.view
             this.cbxLivresGenresInfo.FormattingEnabled = true;
             this.cbxLivresGenresInfo.Location = new System.Drawing.Point(150, 120);
             this.cbxLivresGenresInfo.Name = "cbxLivresGenresInfo";
-            this.cbxLivresGenresInfo.Size = new System.Drawing.Size(121, 21);
+            this.cbxLivresGenresInfo.Size = new System.Drawing.Size(121, 25);
             this.cbxLivresGenresInfo.TabIndex = 39;
             // 
             // btnValiderLivres
@@ -724,7 +686,7 @@ namespace MediaTekDocuments.view
             this.label59.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label59.Location = new System.Drawing.Point(557, 11);
             this.label59.Name = "label59";
-            this.label59.Size = new System.Drawing.Size(49, 13);
+            this.label59.Size = new System.Drawing.Size(61, 17);
             this.label59.TabIndex = 33;
             this.label59.Text = "Image :";
             // 
@@ -733,7 +695,7 @@ namespace MediaTekDocuments.view
             this.txbLivresIsbn.Location = new System.Drawing.Point(441, 20);
             this.txbLivresIsbn.Name = "txbLivresIsbn";
             this.txbLivresIsbn.ReadOnly = true;
-            this.txbLivresIsbn.Size = new System.Drawing.Size(100, 20);
+            this.txbLivresIsbn.Size = new System.Drawing.Size(100, 23);
             this.txbLivresIsbn.TabIndex = 32;
             // 
             // txbLivresImage
@@ -741,7 +703,7 @@ namespace MediaTekDocuments.view
             this.txbLivresImage.Location = new System.Drawing.Point(150, 195);
             this.txbLivresImage.Name = "txbLivresImage";
             this.txbLivresImage.ReadOnly = true;
-            this.txbLivresImage.Size = new System.Drawing.Size(391, 20);
+            this.txbLivresImage.Size = new System.Drawing.Size(391, 23);
             this.txbLivresImage.TabIndex = 31;
             // 
             // txbLivresCollection
@@ -749,7 +711,7 @@ namespace MediaTekDocuments.view
             this.txbLivresCollection.Location = new System.Drawing.Point(150, 95);
             this.txbLivresCollection.Name = "txbLivresCollection";
             this.txbLivresCollection.ReadOnly = true;
-            this.txbLivresCollection.Size = new System.Drawing.Size(391, 20);
+            this.txbLivresCollection.Size = new System.Drawing.Size(391, 23);
             this.txbLivresCollection.TabIndex = 27;
             // 
             // txbLivresAuteur
@@ -757,7 +719,7 @@ namespace MediaTekDocuments.view
             this.txbLivresAuteur.Location = new System.Drawing.Point(150, 70);
             this.txbLivresAuteur.Name = "txbLivresAuteur";
             this.txbLivresAuteur.ReadOnly = true;
-            this.txbLivresAuteur.Size = new System.Drawing.Size(207, 20);
+            this.txbLivresAuteur.Size = new System.Drawing.Size(207, 23);
             this.txbLivresAuteur.TabIndex = 26;
             // 
             // txbLivresTitre
@@ -765,7 +727,7 @@ namespace MediaTekDocuments.view
             this.txbLivresTitre.Location = new System.Drawing.Point(150, 45);
             this.txbLivresTitre.Name = "txbLivresTitre";
             this.txbLivresTitre.ReadOnly = true;
-            this.txbLivresTitre.Size = new System.Drawing.Size(391, 20);
+            this.txbLivresTitre.Size = new System.Drawing.Size(391, 23);
             this.txbLivresTitre.TabIndex = 25;
             // 
             // txbLivresNumero
@@ -773,7 +735,7 @@ namespace MediaTekDocuments.view
             this.txbLivresNumero.Location = new System.Drawing.Point(150, 20);
             this.txbLivresNumero.Name = "txbLivresNumero";
             this.txbLivresNumero.ReadOnly = true;
-            this.txbLivresNumero.Size = new System.Drawing.Size(100, 20);
+            this.txbLivresNumero.Size = new System.Drawing.Size(100, 23);
             this.txbLivresNumero.TabIndex = 24;
             // 
             // label22
@@ -782,7 +744,7 @@ namespace MediaTekDocuments.view
             this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.Location = new System.Drawing.Point(6, 120);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(49, 13);
+            this.label22.Size = new System.Drawing.Size(63, 17);
             this.label22.TabIndex = 22;
             this.label22.Text = "Genre :";
             // 
@@ -802,7 +764,7 @@ namespace MediaTekDocuments.view
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label19.Location = new System.Drawing.Point(6, 145);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(50, 13);
+            this.label19.Size = new System.Drawing.Size(62, 17);
             this.label19.TabIndex = 19;
             this.label19.Text = "Public :";
             // 
@@ -812,7 +774,7 @@ namespace MediaTekDocuments.view
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(6, 170);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 13);
+            this.label1.Size = new System.Drawing.Size(64, 17);
             this.label1.TabIndex = 17;
             this.label1.Text = "Rayon :";
             // 
@@ -822,7 +784,7 @@ namespace MediaTekDocuments.view
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(6, 45);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(41, 13);
+            this.label10.Size = new System.Drawing.Size(52, 17);
             this.label10.TabIndex = 8;
             this.label10.Text = "Titre :";
             // 
@@ -832,7 +794,7 @@ namespace MediaTekDocuments.view
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(6, 20);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(135, 13);
+            this.label7.Size = new System.Drawing.Size(172, 17);
             this.label7.TabIndex = 5;
             this.label7.Text = "Numéro de document :";
             // 
@@ -842,7 +804,7 @@ namespace MediaTekDocuments.view
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.Location = new System.Drawing.Point(6, 70);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(67, 13);
+            this.label11.Size = new System.Drawing.Size(87, 17);
             this.label11.TabIndex = 9;
             this.label11.Text = "Auteur(e) :";
             // 
@@ -852,7 +814,7 @@ namespace MediaTekDocuments.view
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(6, 195);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(117, 13);
+            this.label8.Size = new System.Drawing.Size(150, 17);
             this.label8.TabIndex = 6;
             this.label8.Text = "Chemin de l\'image :";
             // 
@@ -862,7 +824,7 @@ namespace MediaTekDocuments.view
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.Location = new System.Drawing.Point(6, 95);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(71, 13);
+            this.label12.Size = new System.Drawing.Size(89, 17);
             this.label12.TabIndex = 10;
             this.label12.Text = "Collection :";
             // 
@@ -872,7 +834,7 @@ namespace MediaTekDocuments.view
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(357, 20);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(77, 13);
+            this.label9.Size = new System.Drawing.Size(95, 17);
             this.label9.TabIndex = 7;
             this.label9.Text = "Code ISBN :";
             // 
@@ -939,7 +901,7 @@ namespace MediaTekDocuments.view
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(6, 63);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(186, 13);
+            this.label5.Size = new System.Drawing.Size(239, 17);
             this.label5.TabIndex = 13;
             this.label5.Text = "Saisir un numéro de document :";
             // 
@@ -947,7 +909,7 @@ namespace MediaTekDocuments.view
             // 
             this.txbLivresNumRecherche.Location = new System.Drawing.Point(220, 60);
             this.txbLivresNumRecherche.Name = "txbLivresNumRecherche";
-            this.txbLivresNumRecherche.Size = new System.Drawing.Size(67, 20);
+            this.txbLivresNumRecherche.Size = new System.Drawing.Size(67, 23);
             this.txbLivresNumRecherche.TabIndex = 12;
             // 
             // btnLivresAnnulGenres
@@ -966,7 +928,7 @@ namespace MediaTekDocuments.view
             this.cbxLivresRayons.FormattingEnabled = true;
             this.cbxLivresRayons.Location = new System.Drawing.Point(620, 105);
             this.cbxLivresRayons.Name = "cbxLivresRayons";
-            this.cbxLivresRayons.Size = new System.Drawing.Size(207, 21);
+            this.cbxLivresRayons.Size = new System.Drawing.Size(207, 25);
             this.cbxLivresRayons.TabIndex = 10;
             this.cbxLivresRayons.SelectedIndexChanged += new System.EventHandler(this.CbxLivresRayons_SelectedIndexChanged);
             // 
@@ -976,7 +938,7 @@ namespace MediaTekDocuments.view
             this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.Location = new System.Drawing.Point(458, 108);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(153, 13);
+            this.label21.Size = new System.Drawing.Size(197, 17);
             this.label21.TabIndex = 9;
             this.label21.Text = "Ou sélectionner le rayon :";
             // 
@@ -985,7 +947,7 @@ namespace MediaTekDocuments.view
             this.cbxLivresPublics.FormattingEnabled = true;
             this.cbxLivresPublics.Location = new System.Drawing.Point(620, 60);
             this.cbxLivresPublics.Name = "cbxLivresPublics";
-            this.cbxLivresPublics.Size = new System.Drawing.Size(207, 21);
+            this.cbxLivresPublics.Size = new System.Drawing.Size(207, 25);
             this.cbxLivresPublics.TabIndex = 8;
             this.cbxLivresPublics.SelectedIndexChanged += new System.EventHandler(this.CbxLivresPublics_SelectedIndexChanged);
             // 
@@ -995,7 +957,7 @@ namespace MediaTekDocuments.view
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.Location = new System.Drawing.Point(458, 63);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(156, 13);
+            this.label20.Size = new System.Drawing.Size(199, 17);
             this.label20.TabIndex = 7;
             this.label20.Text = "Ou sélectionner le public :";
             // 
@@ -1004,7 +966,7 @@ namespace MediaTekDocuments.view
             this.cbxLivresGenres.FormattingEnabled = true;
             this.cbxLivresGenres.Location = new System.Drawing.Point(620, 18);
             this.cbxLivresGenres.Name = "cbxLivresGenres";
-            this.cbxLivresGenres.Size = new System.Drawing.Size(207, 21);
+            this.cbxLivresGenres.Size = new System.Drawing.Size(207, 25);
             this.cbxLivresGenres.TabIndex = 6;
             this.cbxLivresGenres.SelectedIndexChanged += new System.EventHandler(this.CbxLivresGenres_SelectedIndexChanged);
             // 
@@ -1014,7 +976,7 @@ namespace MediaTekDocuments.view
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.Location = new System.Drawing.Point(460, 21);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(154, 13);
+            this.label14.Size = new System.Drawing.Size(198, 17);
             this.label14.TabIndex = 5;
             this.label14.Text = "Ou sélectionner le genre :";
             // 
@@ -1030,6 +992,7 @@ namespace MediaTekDocuments.view
             this.dgvLivresListe.Name = "dgvLivresListe";
             this.dgvLivresListe.ReadOnly = true;
             this.dgvLivresListe.RowHeadersVisible = false;
+            this.dgvLivresListe.RowHeadersWidth = 51;
             this.dgvLivresListe.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvLivresListe.Size = new System.Drawing.Size(844, 200);
             this.dgvLivresListe.TabIndex = 4;
@@ -1042,7 +1005,7 @@ namespace MediaTekDocuments.view
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(6, 21);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(208, 13);
+            this.label6.Size = new System.Drawing.Size(269, 17);
             this.label6.TabIndex = 2;
             this.label6.Text = "Saisir le titre ou la partie d\'un titre :";
             // 
@@ -1050,7 +1013,7 @@ namespace MediaTekDocuments.view
             // 
             this.txbLivresTitreRecherche.Location = new System.Drawing.Point(220, 18);
             this.txbLivresTitreRecherche.Name = "txbLivresTitreRecherche";
-            this.txbLivresTitreRecherche.Size = new System.Drawing.Size(190, 20);
+            this.txbLivresTitreRecherche.Size = new System.Drawing.Size(190, 23);
             this.txbLivresTitreRecherche.TabIndex = 3;
             this.txbLivresTitreRecherche.TextChanged += new System.EventHandler(this.TxbLivresTitreRecherche_TextChanged);
             // 
@@ -1061,7 +1024,7 @@ namespace MediaTekDocuments.view
             this.tabDvd.Controls.Add(this.grpDvdRecherche);
             this.tabDvd.Location = new System.Drawing.Point(4, 22);
             this.tabDvd.Name = "tabDvd";
-            this.tabDvd.Size = new System.Drawing.Size(921, 941);
+            this.tabDvd.Size = new System.Drawing.Size(896, 941);
             this.tabDvd.TabIndex = 3;
             this.tabDvd.Text = "DVD";
             this.tabDvd.UseVisualStyleBackColor = true;
@@ -1092,7 +1055,7 @@ namespace MediaTekDocuments.view
             // 
             this.txbDvdExId.Location = new System.Drawing.Point(535, 185);
             this.txbDvdExId.Name = "txbDvdExId";
-            this.txbDvdExId.Size = new System.Drawing.Size(100, 20);
+            this.txbDvdExId.Size = new System.Drawing.Size(100, 23);
             this.txbDvdExId.TabIndex = 40;
             this.txbDvdExId.Visible = false;
             // 
@@ -1123,7 +1086,7 @@ namespace MediaTekDocuments.view
             this.cbxDvdExEtat.FormattingEnabled = true;
             this.cbxDvdExEtat.Location = new System.Drawing.Point(562, 132);
             this.cbxDvdExEtat.Name = "cbxDvdExEtat";
-            this.cbxDvdExEtat.Size = new System.Drawing.Size(198, 21);
+            this.cbxDvdExEtat.Size = new System.Drawing.Size(198, 25);
             this.cbxDvdExEtat.TabIndex = 28;
             // 
             // txbDvdPhotoEx
@@ -1131,14 +1094,14 @@ namespace MediaTekDocuments.view
             this.txbDvdPhotoEx.Location = new System.Drawing.Point(560, 96);
             this.txbDvdPhotoEx.Name = "txbDvdPhotoEx";
             this.txbDvdPhotoEx.ReadOnly = true;
-            this.txbDvdPhotoEx.Size = new System.Drawing.Size(200, 20);
+            this.txbDvdPhotoEx.Size = new System.Drawing.Size(200, 23);
             this.txbDvdPhotoEx.TabIndex = 27;
             // 
             // dtpDvdDateAchatEx
             // 
             this.dtpDvdDateAchatEx.Location = new System.Drawing.Point(560, 64);
             this.dtpDvdDateAchatEx.Name = "dtpDvdDateAchatEx";
-            this.dtpDvdDateAchatEx.Size = new System.Drawing.Size(200, 20);
+            this.dtpDvdDateAchatEx.Size = new System.Drawing.Size(200, 23);
             this.dtpDvdDateAchatEx.TabIndex = 26;
             // 
             // txbDvdNbEx
@@ -1146,7 +1109,7 @@ namespace MediaTekDocuments.view
             this.txbDvdNbEx.Location = new System.Drawing.Point(620, 33);
             this.txbDvdNbEx.Name = "txbDvdNbEx";
             this.txbDvdNbEx.ReadOnly = true;
-            this.txbDvdNbEx.Size = new System.Drawing.Size(140, 20);
+            this.txbDvdNbEx.Size = new System.Drawing.Size(140, 23);
             this.txbDvdNbEx.TabIndex = 25;
             // 
             // label104
@@ -1155,7 +1118,7 @@ namespace MediaTekDocuments.view
             this.label104.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label104.Location = new System.Drawing.Point(438, 140);
             this.label104.Name = "label104";
-            this.label104.Size = new System.Drawing.Size(118, 13);
+            this.label104.Size = new System.Drawing.Size(151, 17);
             this.label104.TabIndex = 9;
             this.label104.Text = "Etat de l\'exemplaire";
             // 
@@ -1165,7 +1128,7 @@ namespace MediaTekDocuments.view
             this.label105.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label105.Location = new System.Drawing.Point(438, 103);
             this.label105.Name = "label105";
-            this.label105.Size = new System.Drawing.Size(48, 13);
+            this.label105.Size = new System.Drawing.Size(60, 17);
             this.label105.TabIndex = 8;
             this.label105.Text = "Photo :";
             // 
@@ -1175,7 +1138,7 @@ namespace MediaTekDocuments.view
             this.label106.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label106.Location = new System.Drawing.Point(438, 70);
             this.label106.Name = "label106";
-            this.label106.Size = new System.Drawing.Size(88, 13);
+            this.label106.Size = new System.Drawing.Size(110, 17);
             this.label106.TabIndex = 7;
             this.label106.Text = "Date d\'achat :";
             // 
@@ -1185,7 +1148,7 @@ namespace MediaTekDocuments.view
             this.label107.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label107.Location = new System.Drawing.Point(438, 36);
             this.label107.Name = "label107";
-            this.label107.Size = new System.Drawing.Size(132, 13);
+            this.label107.Size = new System.Drawing.Size(170, 17);
             this.label107.TabIndex = 6;
             this.label107.Text = "Numéro d\'exemplaire :";
             // 
@@ -1195,35 +1158,12 @@ namespace MediaTekDocuments.view
             this.dgvDvdListeEx.AllowUserToDeleteRows = false;
             this.dgvDvdListeEx.AllowUserToResizeColumns = false;
             this.dgvDvdListeEx.AllowUserToResizeRows = false;
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle19.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle19.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvDvdListeEx.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle19;
             this.dgvDvdListeEx.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle20.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvDvdListeEx.DefaultCellStyle = dataGridViewCellStyle20;
             this.dgvDvdListeEx.Location = new System.Drawing.Point(0, 19);
             this.dgvDvdListeEx.MultiSelect = false;
             this.dgvDvdListeEx.Name = "dgvDvdListeEx";
             this.dgvDvdListeEx.ReadOnly = true;
-            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle21.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle21.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle21.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvDvdListeEx.RowHeadersDefaultCellStyle = dataGridViewCellStyle21;
+            this.dgvDvdListeEx.RowHeadersWidth = 51;
             this.dgvDvdListeEx.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDvdListeEx.Size = new System.Drawing.Size(387, 187);
             this.dgvDvdListeEx.TabIndex = 0;
@@ -1269,7 +1209,7 @@ namespace MediaTekDocuments.view
             this.cbxDvdRayonInfo.FormattingEnabled = true;
             this.cbxDvdRayonInfo.Location = new System.Drawing.Point(150, 188);
             this.cbxDvdRayonInfo.Name = "cbxDvdRayonInfo";
-            this.cbxDvdRayonInfo.Size = new System.Drawing.Size(121, 21);
+            this.cbxDvdRayonInfo.Size = new System.Drawing.Size(121, 25);
             this.cbxDvdRayonInfo.TabIndex = 41;
             // 
             // cbxDvdPublicInfo
@@ -1277,7 +1217,7 @@ namespace MediaTekDocuments.view
             this.cbxDvdPublicInfo.FormattingEnabled = true;
             this.cbxDvdPublicInfo.Location = new System.Drawing.Point(150, 162);
             this.cbxDvdPublicInfo.Name = "cbxDvdPublicInfo";
-            this.cbxDvdPublicInfo.Size = new System.Drawing.Size(121, 21);
+            this.cbxDvdPublicInfo.Size = new System.Drawing.Size(121, 25);
             this.cbxDvdPublicInfo.TabIndex = 40;
             // 
             // cbxDvdGenresInfo
@@ -1285,7 +1225,7 @@ namespace MediaTekDocuments.view
             this.cbxDvdGenresInfo.FormattingEnabled = true;
             this.cbxDvdGenresInfo.Location = new System.Drawing.Point(150, 137);
             this.cbxDvdGenresInfo.Name = "cbxDvdGenresInfo";
-            this.cbxDvdGenresInfo.Size = new System.Drawing.Size(121, 21);
+            this.cbxDvdGenresInfo.Size = new System.Drawing.Size(121, 25);
             this.cbxDvdGenresInfo.TabIndex = 39;
             // 
             // btnValiderDvd
@@ -1349,7 +1289,7 @@ namespace MediaTekDocuments.view
             this.label58.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label58.Location = new System.Drawing.Point(557, 11);
             this.label58.Name = "label58";
-            this.label58.Size = new System.Drawing.Size(49, 13);
+            this.label58.Size = new System.Drawing.Size(61, 17);
             this.label58.TabIndex = 33;
             this.label58.Text = "Image :";
             // 
@@ -1358,7 +1298,7 @@ namespace MediaTekDocuments.view
             this.txbDvdDuree.Location = new System.Drawing.Point(441, 20);
             this.txbDvdDuree.Name = "txbDvdDuree";
             this.txbDvdDuree.ReadOnly = true;
-            this.txbDvdDuree.Size = new System.Drawing.Size(100, 20);
+            this.txbDvdDuree.Size = new System.Drawing.Size(100, 23);
             this.txbDvdDuree.TabIndex = 32;
             // 
             // txbDvdImage
@@ -1366,7 +1306,7 @@ namespace MediaTekDocuments.view
             this.txbDvdImage.Location = new System.Drawing.Point(150, 215);
             this.txbDvdImage.Name = "txbDvdImage";
             this.txbDvdImage.ReadOnly = true;
-            this.txbDvdImage.Size = new System.Drawing.Size(391, 20);
+            this.txbDvdImage.Size = new System.Drawing.Size(391, 23);
             this.txbDvdImage.TabIndex = 31;
             // 
             // txbDvdSynopsis
@@ -1385,7 +1325,7 @@ namespace MediaTekDocuments.view
             this.txbDvdRealisateur.Location = new System.Drawing.Point(150, 70);
             this.txbDvdRealisateur.Name = "txbDvdRealisateur";
             this.txbDvdRealisateur.ReadOnly = true;
-            this.txbDvdRealisateur.Size = new System.Drawing.Size(207, 20);
+            this.txbDvdRealisateur.Size = new System.Drawing.Size(207, 23);
             this.txbDvdRealisateur.TabIndex = 26;
             // 
             // txbDvdTitre
@@ -1393,7 +1333,7 @@ namespace MediaTekDocuments.view
             this.txbDvdTitre.Location = new System.Drawing.Point(150, 45);
             this.txbDvdTitre.Name = "txbDvdTitre";
             this.txbDvdTitre.ReadOnly = true;
-            this.txbDvdTitre.Size = new System.Drawing.Size(391, 20);
+            this.txbDvdTitre.Size = new System.Drawing.Size(391, 23);
             this.txbDvdTitre.TabIndex = 25;
             // 
             // txbDvdNumero
@@ -1401,7 +1341,7 @@ namespace MediaTekDocuments.view
             this.txbDvdNumero.Location = new System.Drawing.Point(150, 20);
             this.txbDvdNumero.Name = "txbDvdNumero";
             this.txbDvdNumero.ReadOnly = true;
-            this.txbDvdNumero.Size = new System.Drawing.Size(100, 20);
+            this.txbDvdNumero.Size = new System.Drawing.Size(100, 23);
             this.txbDvdNumero.TabIndex = 24;
             // 
             // label23
@@ -1410,7 +1350,7 @@ namespace MediaTekDocuments.view
             this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label23.Location = new System.Drawing.Point(6, 140);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(49, 13);
+            this.label23.Size = new System.Drawing.Size(63, 17);
             this.label23.TabIndex = 22;
             this.label23.Text = "Genre :";
             // 
@@ -1430,7 +1370,7 @@ namespace MediaTekDocuments.view
             this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label24.Location = new System.Drawing.Point(6, 165);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(50, 13);
+            this.label24.Size = new System.Drawing.Size(62, 17);
             this.label24.TabIndex = 19;
             this.label24.Text = "Public :";
             // 
@@ -1440,7 +1380,7 @@ namespace MediaTekDocuments.view
             this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label25.Location = new System.Drawing.Point(6, 190);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(51, 13);
+            this.label25.Size = new System.Drawing.Size(64, 17);
             this.label25.TabIndex = 17;
             this.label25.Text = "Rayon :";
             // 
@@ -1450,7 +1390,7 @@ namespace MediaTekDocuments.view
             this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label26.Location = new System.Drawing.Point(6, 45);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(41, 13);
+            this.label26.Size = new System.Drawing.Size(52, 17);
             this.label26.TabIndex = 8;
             this.label26.Text = "Titre :";
             // 
@@ -1460,7 +1400,7 @@ namespace MediaTekDocuments.view
             this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label27.Location = new System.Drawing.Point(6, 20);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(135, 13);
+            this.label27.Size = new System.Drawing.Size(172, 17);
             this.label27.TabIndex = 5;
             this.label27.Text = "Numéro de document :";
             // 
@@ -1470,7 +1410,7 @@ namespace MediaTekDocuments.view
             this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label28.Location = new System.Drawing.Point(6, 70);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(112, 13);
+            this.label28.Size = new System.Drawing.Size(145, 17);
             this.label28.TabIndex = 9;
             this.label28.Text = "Réalisateur(trice) :";
             // 
@@ -1480,7 +1420,7 @@ namespace MediaTekDocuments.view
             this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label29.Location = new System.Drawing.Point(6, 215);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(117, 13);
+            this.label29.Size = new System.Drawing.Size(150, 17);
             this.label29.TabIndex = 6;
             this.label29.Text = "Chemin de l\'image :";
             // 
@@ -1490,7 +1430,7 @@ namespace MediaTekDocuments.view
             this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label30.Location = new System.Drawing.Point(6, 95);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(65, 13);
+            this.label30.Size = new System.Drawing.Size(83, 17);
             this.label30.TabIndex = 10;
             this.label30.Text = "Synopsis :";
             // 
@@ -1500,7 +1440,7 @@ namespace MediaTekDocuments.view
             this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label31.Location = new System.Drawing.Point(357, 20);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(49, 13);
+            this.label31.Size = new System.Drawing.Size(62, 17);
             this.label31.TabIndex = 7;
             this.label31.Text = "Durée :";
             // 
@@ -1567,7 +1507,7 @@ namespace MediaTekDocuments.view
             this.label38.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label38.Location = new System.Drawing.Point(6, 63);
             this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(186, 13);
+            this.label38.Size = new System.Drawing.Size(239, 17);
             this.label38.TabIndex = 13;
             this.label38.Text = "Saisir un numéro de document :";
             // 
@@ -1575,7 +1515,7 @@ namespace MediaTekDocuments.view
             // 
             this.txbDvdNumRecherche.Location = new System.Drawing.Point(220, 60);
             this.txbDvdNumRecherche.Name = "txbDvdNumRecherche";
-            this.txbDvdNumRecherche.Size = new System.Drawing.Size(67, 20);
+            this.txbDvdNumRecherche.Size = new System.Drawing.Size(67, 23);
             this.txbDvdNumRecherche.TabIndex = 12;
             // 
             // btnDvdAnnulGenres
@@ -1594,7 +1534,7 @@ namespace MediaTekDocuments.view
             this.cbxDvdRayons.FormattingEnabled = true;
             this.cbxDvdRayons.Location = new System.Drawing.Point(620, 105);
             this.cbxDvdRayons.Name = "cbxDvdRayons";
-            this.cbxDvdRayons.Size = new System.Drawing.Size(207, 21);
+            this.cbxDvdRayons.Size = new System.Drawing.Size(207, 25);
             this.cbxDvdRayons.TabIndex = 10;
             this.cbxDvdRayons.SelectedIndexChanged += new System.EventHandler(this.CbxDvdRayons_SelectedIndexChanged);
             // 
@@ -1604,7 +1544,7 @@ namespace MediaTekDocuments.view
             this.label39.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label39.Location = new System.Drawing.Point(458, 108);
             this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(153, 13);
+            this.label39.Size = new System.Drawing.Size(197, 17);
             this.label39.TabIndex = 9;
             this.label39.Text = "Ou sélectionner le rayon :";
             // 
@@ -1613,7 +1553,7 @@ namespace MediaTekDocuments.view
             this.cbxDvdPublics.FormattingEnabled = true;
             this.cbxDvdPublics.Location = new System.Drawing.Point(620, 60);
             this.cbxDvdPublics.Name = "cbxDvdPublics";
-            this.cbxDvdPublics.Size = new System.Drawing.Size(207, 21);
+            this.cbxDvdPublics.Size = new System.Drawing.Size(207, 25);
             this.cbxDvdPublics.TabIndex = 8;
             this.cbxDvdPublics.SelectedIndexChanged += new System.EventHandler(this.CbxDvdPublics_SelectedIndexChanged);
             // 
@@ -1623,7 +1563,7 @@ namespace MediaTekDocuments.view
             this.label40.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label40.Location = new System.Drawing.Point(458, 63);
             this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(156, 13);
+            this.label40.Size = new System.Drawing.Size(199, 17);
             this.label40.TabIndex = 7;
             this.label40.Text = "Ou sélectionner le public :";
             // 
@@ -1632,7 +1572,7 @@ namespace MediaTekDocuments.view
             this.cbxDvdGenres.FormattingEnabled = true;
             this.cbxDvdGenres.Location = new System.Drawing.Point(620, 18);
             this.cbxDvdGenres.Name = "cbxDvdGenres";
-            this.cbxDvdGenres.Size = new System.Drawing.Size(207, 21);
+            this.cbxDvdGenres.Size = new System.Drawing.Size(207, 25);
             this.cbxDvdGenres.TabIndex = 6;
             this.cbxDvdGenres.SelectedIndexChanged += new System.EventHandler(this.cbxDvdGenres_SelectedIndexChanged);
             // 
@@ -1642,7 +1582,7 @@ namespace MediaTekDocuments.view
             this.label41.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label41.Location = new System.Drawing.Point(460, 21);
             this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(154, 13);
+            this.label41.Size = new System.Drawing.Size(198, 17);
             this.label41.TabIndex = 5;
             this.label41.Text = "Ou sélectionner le genre :";
             // 
@@ -1658,6 +1598,7 @@ namespace MediaTekDocuments.view
             this.dgvDvdListe.Name = "dgvDvdListe";
             this.dgvDvdListe.ReadOnly = true;
             this.dgvDvdListe.RowHeadersVisible = false;
+            this.dgvDvdListe.RowHeadersWidth = 51;
             this.dgvDvdListe.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDvdListe.Size = new System.Drawing.Size(844, 200);
             this.dgvDvdListe.TabIndex = 4;
@@ -1670,7 +1611,7 @@ namespace MediaTekDocuments.view
             this.label42.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label42.Location = new System.Drawing.Point(6, 21);
             this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(208, 13);
+            this.label42.Size = new System.Drawing.Size(269, 17);
             this.label42.TabIndex = 2;
             this.label42.Text = "Saisir le titre ou la partie d\'un titre :";
             // 
@@ -1678,7 +1619,7 @@ namespace MediaTekDocuments.view
             // 
             this.txbDvdTitreRecherche.Location = new System.Drawing.Point(220, 18);
             this.txbDvdTitreRecherche.Name = "txbDvdTitreRecherche";
-            this.txbDvdTitreRecherche.Size = new System.Drawing.Size(190, 20);
+            this.txbDvdTitreRecherche.Size = new System.Drawing.Size(190, 23);
             this.txbDvdTitreRecherche.TabIndex = 3;
             this.txbDvdTitreRecherche.TextChanged += new System.EventHandler(this.TxbDvdTitreRecherche_TextChanged);
             // 
@@ -1690,7 +1631,7 @@ namespace MediaTekDocuments.view
             this.tabRevues.Location = new System.Drawing.Point(4, 22);
             this.tabRevues.Name = "tabRevues";
             this.tabRevues.Padding = new System.Windows.Forms.Padding(3);
-            this.tabRevues.Size = new System.Drawing.Size(921, 941);
+            this.tabRevues.Size = new System.Drawing.Size(896, 941);
             this.tabRevues.TabIndex = 1;
             this.tabRevues.Text = "Revues";
             this.tabRevues.UseVisualStyleBackColor = true;
@@ -1721,7 +1662,7 @@ namespace MediaTekDocuments.view
             // 
             this.txbRevuesExId.Location = new System.Drawing.Point(540, 186);
             this.txbRevuesExId.Name = "txbRevuesExId";
-            this.txbRevuesExId.Size = new System.Drawing.Size(100, 20);
+            this.txbRevuesExId.Size = new System.Drawing.Size(100, 23);
             this.txbRevuesExId.TabIndex = 40;
             this.txbRevuesExId.Visible = false;
             // 
@@ -1752,7 +1693,7 @@ namespace MediaTekDocuments.view
             this.cbxRevuesExEtat.FormattingEnabled = true;
             this.cbxRevuesExEtat.Location = new System.Drawing.Point(562, 132);
             this.cbxRevuesExEtat.Name = "cbxRevuesExEtat";
-            this.cbxRevuesExEtat.Size = new System.Drawing.Size(198, 21);
+            this.cbxRevuesExEtat.Size = new System.Drawing.Size(198, 25);
             this.cbxRevuesExEtat.TabIndex = 28;
             // 
             // txbRevuesPhotoEx
@@ -1760,14 +1701,14 @@ namespace MediaTekDocuments.view
             this.txbRevuesPhotoEx.Location = new System.Drawing.Point(560, 96);
             this.txbRevuesPhotoEx.Name = "txbRevuesPhotoEx";
             this.txbRevuesPhotoEx.ReadOnly = true;
-            this.txbRevuesPhotoEx.Size = new System.Drawing.Size(200, 20);
+            this.txbRevuesPhotoEx.Size = new System.Drawing.Size(200, 23);
             this.txbRevuesPhotoEx.TabIndex = 27;
             // 
             // dtpRevuesDateAchatEx
             // 
             this.dtpRevuesDateAchatEx.Location = new System.Drawing.Point(560, 64);
             this.dtpRevuesDateAchatEx.Name = "dtpRevuesDateAchatEx";
-            this.dtpRevuesDateAchatEx.Size = new System.Drawing.Size(200, 20);
+            this.dtpRevuesDateAchatEx.Size = new System.Drawing.Size(200, 23);
             this.dtpRevuesDateAchatEx.TabIndex = 26;
             // 
             // txbRevuesNbEx
@@ -1775,7 +1716,7 @@ namespace MediaTekDocuments.view
             this.txbRevuesNbEx.Location = new System.Drawing.Point(620, 33);
             this.txbRevuesNbEx.Name = "txbRevuesNbEx";
             this.txbRevuesNbEx.ReadOnly = true;
-            this.txbRevuesNbEx.Size = new System.Drawing.Size(140, 20);
+            this.txbRevuesNbEx.Size = new System.Drawing.Size(140, 23);
             this.txbRevuesNbEx.TabIndex = 25;
             // 
             // label108
@@ -1784,7 +1725,7 @@ namespace MediaTekDocuments.view
             this.label108.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label108.Location = new System.Drawing.Point(438, 140);
             this.label108.Name = "label108";
-            this.label108.Size = new System.Drawing.Size(118, 13);
+            this.label108.Size = new System.Drawing.Size(151, 17);
             this.label108.TabIndex = 9;
             this.label108.Text = "Etat de l\'exemplaire";
             // 
@@ -1794,7 +1735,7 @@ namespace MediaTekDocuments.view
             this.label109.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label109.Location = new System.Drawing.Point(438, 103);
             this.label109.Name = "label109";
-            this.label109.Size = new System.Drawing.Size(48, 13);
+            this.label109.Size = new System.Drawing.Size(60, 17);
             this.label109.TabIndex = 8;
             this.label109.Text = "Photo :";
             // 
@@ -1804,7 +1745,7 @@ namespace MediaTekDocuments.view
             this.label110.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label110.Location = new System.Drawing.Point(438, 70);
             this.label110.Name = "label110";
-            this.label110.Size = new System.Drawing.Size(88, 13);
+            this.label110.Size = new System.Drawing.Size(110, 17);
             this.label110.TabIndex = 7;
             this.label110.Text = "Date d\'achat :";
             // 
@@ -1814,7 +1755,7 @@ namespace MediaTekDocuments.view
             this.label111.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label111.Location = new System.Drawing.Point(438, 36);
             this.label111.Name = "label111";
-            this.label111.Size = new System.Drawing.Size(132, 13);
+            this.label111.Size = new System.Drawing.Size(170, 17);
             this.label111.TabIndex = 6;
             this.label111.Text = "Numéro d\'exemplaire :";
             // 
@@ -1824,35 +1765,12 @@ namespace MediaTekDocuments.view
             this.dgvRevuesListeEx.AllowUserToDeleteRows = false;
             this.dgvRevuesListeEx.AllowUserToResizeColumns = false;
             this.dgvRevuesListeEx.AllowUserToResizeRows = false;
-            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle22.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle22.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle22.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvRevuesListeEx.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle22;
             this.dgvRevuesListeEx.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle23.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle23.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle23.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvRevuesListeEx.DefaultCellStyle = dataGridViewCellStyle23;
             this.dgvRevuesListeEx.Location = new System.Drawing.Point(0, 19);
             this.dgvRevuesListeEx.MultiSelect = false;
             this.dgvRevuesListeEx.Name = "dgvRevuesListeEx";
             this.dgvRevuesListeEx.ReadOnly = true;
-            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle24.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle24.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle24.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvRevuesListeEx.RowHeadersDefaultCellStyle = dataGridViewCellStyle24;
+            this.dgvRevuesListeEx.RowHeadersWidth = 51;
             this.dgvRevuesListeEx.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvRevuesListeEx.Size = new System.Drawing.Size(387, 187);
             this.dgvRevuesListeEx.TabIndex = 0;
@@ -1896,7 +1814,7 @@ namespace MediaTekDocuments.view
             this.cbxRevuesRayonInfo.FormattingEnabled = true;
             this.cbxRevuesRayonInfo.Location = new System.Drawing.Point(150, 170);
             this.cbxRevuesRayonInfo.Name = "cbxRevuesRayonInfo";
-            this.cbxRevuesRayonInfo.Size = new System.Drawing.Size(121, 21);
+            this.cbxRevuesRayonInfo.Size = new System.Drawing.Size(121, 25);
             this.cbxRevuesRayonInfo.TabIndex = 40;
             // 
             // cbxRevuesPublicInfo
@@ -1904,7 +1822,7 @@ namespace MediaTekDocuments.view
             this.cbxRevuesPublicInfo.FormattingEnabled = true;
             this.cbxRevuesPublicInfo.Location = new System.Drawing.Point(150, 145);
             this.cbxRevuesPublicInfo.Name = "cbxRevuesPublicInfo";
-            this.cbxRevuesPublicInfo.Size = new System.Drawing.Size(121, 21);
+            this.cbxRevuesPublicInfo.Size = new System.Drawing.Size(121, 25);
             this.cbxRevuesPublicInfo.TabIndex = 39;
             // 
             // cbxRevuesGenresInfo
@@ -1912,7 +1830,7 @@ namespace MediaTekDocuments.view
             this.cbxRevuesGenresInfo.FormattingEnabled = true;
             this.cbxRevuesGenresInfo.Location = new System.Drawing.Point(150, 120);
             this.cbxRevuesGenresInfo.Name = "cbxRevuesGenresInfo";
-            this.cbxRevuesGenresInfo.Size = new System.Drawing.Size(121, 21);
+            this.cbxRevuesGenresInfo.Size = new System.Drawing.Size(121, 25);
             this.cbxRevuesGenresInfo.TabIndex = 38;
             // 
             // btnValiderRevues
@@ -1976,7 +1894,7 @@ namespace MediaTekDocuments.view
             this.label57.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label57.Location = new System.Drawing.Point(557, 11);
             this.label57.Name = "label57";
-            this.label57.Size = new System.Drawing.Size(49, 13);
+            this.label57.Size = new System.Drawing.Size(61, 17);
             this.label57.TabIndex = 32;
             this.label57.Text = "Image :";
             // 
@@ -1985,7 +1903,7 @@ namespace MediaTekDocuments.view
             this.txbRevuesImage.Location = new System.Drawing.Point(150, 195);
             this.txbRevuesImage.Name = "txbRevuesImage";
             this.txbRevuesImage.ReadOnly = true;
-            this.txbRevuesImage.Size = new System.Drawing.Size(391, 20);
+            this.txbRevuesImage.Size = new System.Drawing.Size(391, 23);
             this.txbRevuesImage.TabIndex = 31;
             // 
             // txbRevuesDateMiseADispo
@@ -1993,7 +1911,7 @@ namespace MediaTekDocuments.view
             this.txbRevuesDateMiseADispo.Location = new System.Drawing.Point(150, 95);
             this.txbRevuesDateMiseADispo.Name = "txbRevuesDateMiseADispo";
             this.txbRevuesDateMiseADispo.ReadOnly = true;
-            this.txbRevuesDateMiseADispo.Size = new System.Drawing.Size(100, 20);
+            this.txbRevuesDateMiseADispo.Size = new System.Drawing.Size(100, 23);
             this.txbRevuesDateMiseADispo.TabIndex = 27;
             // 
             // txbRevuesPeriodicite
@@ -2001,7 +1919,7 @@ namespace MediaTekDocuments.view
             this.txbRevuesPeriodicite.Location = new System.Drawing.Point(150, 70);
             this.txbRevuesPeriodicite.Name = "txbRevuesPeriodicite";
             this.txbRevuesPeriodicite.ReadOnly = true;
-            this.txbRevuesPeriodicite.Size = new System.Drawing.Size(100, 20);
+            this.txbRevuesPeriodicite.Size = new System.Drawing.Size(100, 23);
             this.txbRevuesPeriodicite.TabIndex = 26;
             // 
             // txbRevuesTitre
@@ -2009,7 +1927,7 @@ namespace MediaTekDocuments.view
             this.txbRevuesTitre.Location = new System.Drawing.Point(150, 45);
             this.txbRevuesTitre.Name = "txbRevuesTitre";
             this.txbRevuesTitre.ReadOnly = true;
-            this.txbRevuesTitre.Size = new System.Drawing.Size(391, 20);
+            this.txbRevuesTitre.Size = new System.Drawing.Size(391, 23);
             this.txbRevuesTitre.TabIndex = 25;
             // 
             // txbRevuesNumero
@@ -2017,7 +1935,7 @@ namespace MediaTekDocuments.view
             this.txbRevuesNumero.Location = new System.Drawing.Point(150, 20);
             this.txbRevuesNumero.Name = "txbRevuesNumero";
             this.txbRevuesNumero.ReadOnly = true;
-            this.txbRevuesNumero.Size = new System.Drawing.Size(100, 20);
+            this.txbRevuesNumero.Size = new System.Drawing.Size(100, 23);
             this.txbRevuesNumero.TabIndex = 24;
             // 
             // label35
@@ -2026,7 +1944,7 @@ namespace MediaTekDocuments.view
             this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label35.Location = new System.Drawing.Point(6, 120);
             this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(49, 13);
+            this.label35.Size = new System.Drawing.Size(63, 17);
             this.label35.TabIndex = 22;
             this.label35.Text = "Genre :";
             // 
@@ -2046,7 +1964,7 @@ namespace MediaTekDocuments.view
             this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label36.Location = new System.Drawing.Point(6, 145);
             this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(50, 13);
+            this.label36.Size = new System.Drawing.Size(62, 17);
             this.label36.TabIndex = 19;
             this.label36.Text = "Public :";
             // 
@@ -2056,7 +1974,7 @@ namespace MediaTekDocuments.view
             this.label37.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label37.Location = new System.Drawing.Point(6, 170);
             this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(51, 13);
+            this.label37.Size = new System.Drawing.Size(64, 17);
             this.label37.TabIndex = 17;
             this.label37.Text = "Rayon :";
             // 
@@ -2066,7 +1984,7 @@ namespace MediaTekDocuments.view
             this.label43.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label43.Location = new System.Drawing.Point(6, 45);
             this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(41, 13);
+            this.label43.Size = new System.Drawing.Size(52, 17);
             this.label43.TabIndex = 8;
             this.label43.Text = "Titre :";
             // 
@@ -2076,7 +1994,7 @@ namespace MediaTekDocuments.view
             this.label44.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label44.Location = new System.Drawing.Point(6, 20);
             this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(135, 13);
+            this.label44.Size = new System.Drawing.Size(172, 17);
             this.label44.TabIndex = 5;
             this.label44.Text = "Numéro de document :";
             // 
@@ -2086,7 +2004,7 @@ namespace MediaTekDocuments.view
             this.label45.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label45.Location = new System.Drawing.Point(6, 70);
             this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(75, 13);
+            this.label45.Size = new System.Drawing.Size(95, 17);
             this.label45.TabIndex = 9;
             this.label45.Text = "Périodicité :";
             // 
@@ -2096,7 +2014,7 @@ namespace MediaTekDocuments.view
             this.label46.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label46.Location = new System.Drawing.Point(6, 195);
             this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(117, 13);
+            this.label46.Size = new System.Drawing.Size(150, 17);
             this.label46.TabIndex = 6;
             this.label46.Text = "Chemin de l\'image :";
             // 
@@ -2106,7 +2024,7 @@ namespace MediaTekDocuments.view
             this.label47.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label47.Location = new System.Drawing.Point(6, 95);
             this.label47.Name = "label47";
-            this.label47.Size = new System.Drawing.Size(118, 13);
+            this.label47.Size = new System.Drawing.Size(151, 17);
             this.label47.TabIndex = 10;
             this.label47.Text = "Délai mise à dispo :";
             // 
@@ -2173,7 +2091,7 @@ namespace MediaTekDocuments.view
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(6, 63);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(186, 13);
+            this.label2.Size = new System.Drawing.Size(239, 17);
             this.label2.TabIndex = 13;
             this.label2.Text = "Saisir un numéro de document :";
             // 
@@ -2181,7 +2099,7 @@ namespace MediaTekDocuments.view
             // 
             this.txbRevuesNumRecherche.Location = new System.Drawing.Point(220, 60);
             this.txbRevuesNumRecherche.Name = "txbRevuesNumRecherche";
-            this.txbRevuesNumRecherche.Size = new System.Drawing.Size(67, 20);
+            this.txbRevuesNumRecherche.Size = new System.Drawing.Size(67, 23);
             this.txbRevuesNumRecherche.TabIndex = 12;
             // 
             // btnRevuesAnnulGenres
@@ -2200,7 +2118,7 @@ namespace MediaTekDocuments.view
             this.cbxRevuesRayons.FormattingEnabled = true;
             this.cbxRevuesRayons.Location = new System.Drawing.Point(620, 105);
             this.cbxRevuesRayons.Name = "cbxRevuesRayons";
-            this.cbxRevuesRayons.Size = new System.Drawing.Size(207, 21);
+            this.cbxRevuesRayons.Size = new System.Drawing.Size(207, 25);
             this.cbxRevuesRayons.TabIndex = 10;
             this.cbxRevuesRayons.SelectedIndexChanged += new System.EventHandler(this.cbxRevuesRayons_SelectedIndexChanged);
             // 
@@ -2210,7 +2128,7 @@ namespace MediaTekDocuments.view
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(458, 108);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(153, 13);
+            this.label4.Size = new System.Drawing.Size(197, 17);
             this.label4.TabIndex = 9;
             this.label4.Text = "Ou sélectionner le rayon :";
             // 
@@ -2219,7 +2137,7 @@ namespace MediaTekDocuments.view
             this.cbxRevuesPublics.FormattingEnabled = true;
             this.cbxRevuesPublics.Location = new System.Drawing.Point(620, 60);
             this.cbxRevuesPublics.Name = "cbxRevuesPublics";
-            this.cbxRevuesPublics.Size = new System.Drawing.Size(207, 21);
+            this.cbxRevuesPublics.Size = new System.Drawing.Size(207, 25);
             this.cbxRevuesPublics.TabIndex = 8;
             this.cbxRevuesPublics.SelectedIndexChanged += new System.EventHandler(this.cbxRevuesPublics_SelectedIndexChanged);
             // 
@@ -2229,7 +2147,7 @@ namespace MediaTekDocuments.view
             this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label32.Location = new System.Drawing.Point(458, 63);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(156, 13);
+            this.label32.Size = new System.Drawing.Size(199, 17);
             this.label32.TabIndex = 7;
             this.label32.Text = "Ou sélectionner le public :";
             // 
@@ -2238,7 +2156,7 @@ namespace MediaTekDocuments.view
             this.cbxRevuesGenres.FormattingEnabled = true;
             this.cbxRevuesGenres.Location = new System.Drawing.Point(620, 18);
             this.cbxRevuesGenres.Name = "cbxRevuesGenres";
-            this.cbxRevuesGenres.Size = new System.Drawing.Size(207, 21);
+            this.cbxRevuesGenres.Size = new System.Drawing.Size(207, 25);
             this.cbxRevuesGenres.TabIndex = 6;
             this.cbxRevuesGenres.SelectedIndexChanged += new System.EventHandler(this.cbxRevuesGenres_SelectedIndexChanged);
             // 
@@ -2248,7 +2166,7 @@ namespace MediaTekDocuments.view
             this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label33.Location = new System.Drawing.Point(460, 21);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(154, 13);
+            this.label33.Size = new System.Drawing.Size(198, 17);
             this.label33.TabIndex = 5;
             this.label33.Text = "Ou sélectionner le genre :";
             // 
@@ -2264,6 +2182,7 @@ namespace MediaTekDocuments.view
             this.dgvRevuesListe.Name = "dgvRevuesListe";
             this.dgvRevuesListe.ReadOnly = true;
             this.dgvRevuesListe.RowHeadersVisible = false;
+            this.dgvRevuesListe.RowHeadersWidth = 51;
             this.dgvRevuesListe.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvRevuesListe.Size = new System.Drawing.Size(844, 200);
             this.dgvRevuesListe.TabIndex = 4;
@@ -2276,7 +2195,7 @@ namespace MediaTekDocuments.view
             this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label34.Location = new System.Drawing.Point(6, 21);
             this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(208, 13);
+            this.label34.Size = new System.Drawing.Size(269, 17);
             this.label34.TabIndex = 2;
             this.label34.Text = "Saisir le titre ou la partie d\'un titre :";
             // 
@@ -2284,7 +2203,7 @@ namespace MediaTekDocuments.view
             // 
             this.txbRevuesTitreRecherche.Location = new System.Drawing.Point(220, 18);
             this.txbRevuesTitreRecherche.Name = "txbRevuesTitreRecherche";
-            this.txbRevuesTitreRecherche.Size = new System.Drawing.Size(190, 20);
+            this.txbRevuesTitreRecherche.Size = new System.Drawing.Size(190, 23);
             this.txbRevuesTitreRecherche.TabIndex = 3;
             this.txbRevuesTitreRecherche.TextChanged += new System.EventHandler(this.txbRevuesTitreRecherche_TextChanged);
             // 
@@ -2326,7 +2245,7 @@ namespace MediaTekDocuments.view
             this.cxbReceptionRevueEtatEx.FormattingEnabled = true;
             this.cxbReceptionRevueEtatEx.Location = new System.Drawing.Point(150, 96);
             this.cxbReceptionRevueEtatEx.Name = "cxbReceptionRevueEtatEx";
-            this.cxbReceptionRevueEtatEx.Size = new System.Drawing.Size(100, 21);
+            this.cxbReceptionRevueEtatEx.Size = new System.Drawing.Size(100, 25);
             this.cxbReceptionRevueEtatEx.TabIndex = 59;
             // 
             // label112
@@ -2335,7 +2254,7 @@ namespace MediaTekDocuments.view
             this.label112.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label112.Location = new System.Drawing.Point(6, 99);
             this.label112.Name = "label112";
-            this.label112.Size = new System.Drawing.Size(126, 13);
+            this.label112.Size = new System.Drawing.Size(161, 17);
             this.label112.TabIndex = 58;
             this.label112.Text = "Etat de l\'exemplaire :";
             // 
@@ -2345,7 +2264,7 @@ namespace MediaTekDocuments.view
             this.label55.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label55.Location = new System.Drawing.Point(557, 10);
             this.label55.Name = "label55";
-            this.label55.Size = new System.Drawing.Size(113, 13);
+            this.label55.Size = new System.Drawing.Size(144, 17);
             this.label55.TabIndex = 57;
             this.label55.Text = "Image exemplaire :";
             // 
@@ -2386,7 +2305,7 @@ namespace MediaTekDocuments.view
             this.txbReceptionExemplaireImage.Location = new System.Drawing.Point(150, 70);
             this.txbReceptionExemplaireImage.Name = "txbReceptionExemplaireImage";
             this.txbReceptionExemplaireImage.ReadOnly = true;
-            this.txbReceptionExemplaireImage.Size = new System.Drawing.Size(290, 20);
+            this.txbReceptionExemplaireImage.Size = new System.Drawing.Size(290, 23);
             this.txbReceptionExemplaireImage.TabIndex = 5;
             // 
             // label18
@@ -2395,7 +2314,7 @@ namespace MediaTekDocuments.view
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.Location = new System.Drawing.Point(6, 70);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(127, 13);
+            this.label18.Size = new System.Drawing.Size(162, 17);
             this.label18.TabIndex = 4;
             this.label18.Text = "Emplacement image :";
             // 
@@ -2403,7 +2322,7 @@ namespace MediaTekDocuments.view
             // 
             this.txbReceptionExemplaireNumero.Location = new System.Drawing.Point(150, 20);
             this.txbReceptionExemplaireNumero.Name = "txbReceptionExemplaireNumero";
-            this.txbReceptionExemplaireNumero.Size = new System.Drawing.Size(100, 20);
+            this.txbReceptionExemplaireNumero.Size = new System.Drawing.Size(100, 23);
             this.txbReceptionExemplaireNumero.TabIndex = 3;
             // 
             // label17
@@ -2412,7 +2331,7 @@ namespace MediaTekDocuments.view
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.Location = new System.Drawing.Point(6, 45);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(110, 13);
+            this.label17.Size = new System.Drawing.Size(140, 17);
             this.label17.TabIndex = 2;
             this.label17.Text = "Date de parution :";
             // 
@@ -2421,7 +2340,7 @@ namespace MediaTekDocuments.view
             this.dtpReceptionExemplaireDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpReceptionExemplaireDate.Location = new System.Drawing.Point(150, 45);
             this.dtpReceptionExemplaireDate.Name = "dtpReceptionExemplaireDate";
-            this.dtpReceptionExemplaireDate.Size = new System.Drawing.Size(100, 20);
+            this.dtpReceptionExemplaireDate.Size = new System.Drawing.Size(100, 23);
             this.dtpReceptionExemplaireDate.TabIndex = 1;
             // 
             // label16
@@ -2430,7 +2349,7 @@ namespace MediaTekDocuments.view
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.Location = new System.Drawing.Point(6, 20);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(129, 13);
+            this.label16.Size = new System.Drawing.Size(165, 17);
             this.label16.TabIndex = 0;
             this.label16.Text = "Numéro réceptionné :";
             // 
@@ -2472,7 +2391,7 @@ namespace MediaTekDocuments.view
             this.label48.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label48.Location = new System.Drawing.Point(557, 127);
             this.label48.Name = "label48";
-            this.label48.Size = new System.Drawing.Size(113, 13);
+            this.label48.Size = new System.Drawing.Size(144, 17);
             this.label48.TabIndex = 56;
             this.label48.Text = "Image exemplaire :";
             // 
@@ -2482,7 +2401,7 @@ namespace MediaTekDocuments.view
             this.label56.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label56.Location = new System.Drawing.Point(557, 20);
             this.label56.Name = "label56";
-            this.label56.Size = new System.Drawing.Size(85, 13);
+            this.label56.Size = new System.Drawing.Size(107, 17);
             this.label56.TabIndex = 55;
             this.label56.Text = "Image revue :";
             // 
@@ -2502,7 +2421,7 @@ namespace MediaTekDocuments.view
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.Location = new System.Drawing.Point(6, 220);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(68, 13);
+            this.label13.Size = new System.Drawing.Size(87, 17);
             this.label13.TabIndex = 53;
             this.label13.Text = "Parutions :";
             // 
@@ -2518,6 +2437,7 @@ namespace MediaTekDocuments.view
             this.dgvReceptionExemplairesListe.Name = "dgvReceptionExemplairesListe";
             this.dgvReceptionExemplairesListe.ReadOnly = true;
             this.dgvReceptionExemplairesListe.RowHeadersVisible = false;
+            this.dgvReceptionExemplairesListe.RowHeadersWidth = 51;
             this.dgvReceptionExemplairesListe.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvReceptionExemplairesListe.Size = new System.Drawing.Size(391, 134);
             this.dgvReceptionExemplairesListe.TabIndex = 52;
@@ -2529,7 +2449,7 @@ namespace MediaTekDocuments.view
             this.txbReceptionRevueImage.Location = new System.Drawing.Point(150, 195);
             this.txbReceptionRevueImage.Name = "txbReceptionRevueImage";
             this.txbReceptionRevueImage.ReadOnly = true;
-            this.txbReceptionRevueImage.Size = new System.Drawing.Size(391, 20);
+            this.txbReceptionRevueImage.Size = new System.Drawing.Size(391, 23);
             this.txbReceptionRevueImage.TabIndex = 50;
             // 
             // txbReceptionRevueRayon
@@ -2537,7 +2457,7 @@ namespace MediaTekDocuments.view
             this.txbReceptionRevueRayon.Location = new System.Drawing.Point(150, 170);
             this.txbReceptionRevueRayon.Name = "txbReceptionRevueRayon";
             this.txbReceptionRevueRayon.ReadOnly = true;
-            this.txbReceptionRevueRayon.Size = new System.Drawing.Size(207, 20);
+            this.txbReceptionRevueRayon.Size = new System.Drawing.Size(207, 23);
             this.txbReceptionRevueRayon.TabIndex = 49;
             // 
             // txbReceptionRevuePublic
@@ -2545,7 +2465,7 @@ namespace MediaTekDocuments.view
             this.txbReceptionRevuePublic.Location = new System.Drawing.Point(150, 145);
             this.txbReceptionRevuePublic.Name = "txbReceptionRevuePublic";
             this.txbReceptionRevuePublic.ReadOnly = true;
-            this.txbReceptionRevuePublic.Size = new System.Drawing.Size(207, 20);
+            this.txbReceptionRevuePublic.Size = new System.Drawing.Size(207, 23);
             this.txbReceptionRevuePublic.TabIndex = 48;
             // 
             // txbReceptionRevueGenre
@@ -2553,7 +2473,7 @@ namespace MediaTekDocuments.view
             this.txbReceptionRevueGenre.Location = new System.Drawing.Point(150, 120);
             this.txbReceptionRevueGenre.Name = "txbReceptionRevueGenre";
             this.txbReceptionRevueGenre.ReadOnly = true;
-            this.txbReceptionRevueGenre.Size = new System.Drawing.Size(207, 20);
+            this.txbReceptionRevueGenre.Size = new System.Drawing.Size(207, 23);
             this.txbReceptionRevueGenre.TabIndex = 47;
             // 
             // txbReceptionRevueDelaiMiseADispo
@@ -2561,7 +2481,7 @@ namespace MediaTekDocuments.view
             this.txbReceptionRevueDelaiMiseADispo.Location = new System.Drawing.Point(150, 95);
             this.txbReceptionRevueDelaiMiseADispo.Name = "txbReceptionRevueDelaiMiseADispo";
             this.txbReceptionRevueDelaiMiseADispo.ReadOnly = true;
-            this.txbReceptionRevueDelaiMiseADispo.Size = new System.Drawing.Size(100, 20);
+            this.txbReceptionRevueDelaiMiseADispo.Size = new System.Drawing.Size(100, 23);
             this.txbReceptionRevueDelaiMiseADispo.TabIndex = 46;
             // 
             // txbReceptionRevuePeriodicite
@@ -2569,7 +2489,7 @@ namespace MediaTekDocuments.view
             this.txbReceptionRevuePeriodicite.Location = new System.Drawing.Point(150, 70);
             this.txbReceptionRevuePeriodicite.Name = "txbReceptionRevuePeriodicite";
             this.txbReceptionRevuePeriodicite.ReadOnly = true;
-            this.txbReceptionRevuePeriodicite.Size = new System.Drawing.Size(100, 20);
+            this.txbReceptionRevuePeriodicite.Size = new System.Drawing.Size(100, 23);
             this.txbReceptionRevuePeriodicite.TabIndex = 45;
             // 
             // txbReceptionRevueTitre
@@ -2577,14 +2497,14 @@ namespace MediaTekDocuments.view
             this.txbReceptionRevueTitre.Location = new System.Drawing.Point(150, 45);
             this.txbReceptionRevueTitre.Name = "txbReceptionRevueTitre";
             this.txbReceptionRevueTitre.ReadOnly = true;
-            this.txbReceptionRevueTitre.Size = new System.Drawing.Size(391, 20);
+            this.txbReceptionRevueTitre.Size = new System.Drawing.Size(391, 23);
             this.txbReceptionRevueTitre.TabIndex = 44;
             // 
             // txbReceptionRevueNumero
             // 
             this.txbReceptionRevueNumero.Location = new System.Drawing.Point(150, 20);
             this.txbReceptionRevueNumero.Name = "txbReceptionRevueNumero";
-            this.txbReceptionRevueNumero.Size = new System.Drawing.Size(100, 20);
+            this.txbReceptionRevueNumero.Size = new System.Drawing.Size(100, 23);
             this.txbReceptionRevueNumero.TabIndex = 43;
             this.txbReceptionRevueNumero.TextChanged += new System.EventHandler(this.txbReceptionRevueNumero_TextChanged);
             // 
@@ -2594,7 +2514,7 @@ namespace MediaTekDocuments.view
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(6, 120);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(49, 13);
+            this.label3.Size = new System.Drawing.Size(63, 17);
             this.label3.TabIndex = 42;
             this.label3.Text = "Genre :";
             // 
@@ -2614,7 +2534,7 @@ namespace MediaTekDocuments.view
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.Location = new System.Drawing.Point(6, 145);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(50, 13);
+            this.label15.Size = new System.Drawing.Size(62, 17);
             this.label15.TabIndex = 40;
             this.label15.Text = "Public :";
             // 
@@ -2624,7 +2544,7 @@ namespace MediaTekDocuments.view
             this.label49.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label49.Location = new System.Drawing.Point(6, 170);
             this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(51, 13);
+            this.label49.Size = new System.Drawing.Size(64, 17);
             this.label49.TabIndex = 39;
             this.label49.Text = "Rayon :";
             // 
@@ -2634,7 +2554,7 @@ namespace MediaTekDocuments.view
             this.label50.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label50.Location = new System.Drawing.Point(6, 45);
             this.label50.Name = "label50";
-            this.label50.Size = new System.Drawing.Size(41, 13);
+            this.label50.Size = new System.Drawing.Size(52, 17);
             this.label50.TabIndex = 36;
             this.label50.Text = "Titre :";
             // 
@@ -2644,7 +2564,7 @@ namespace MediaTekDocuments.view
             this.label51.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label51.Location = new System.Drawing.Point(6, 20);
             this.label51.Name = "label51";
-            this.label51.Size = new System.Drawing.Size(94, 13);
+            this.label51.Size = new System.Drawing.Size(120, 17);
             this.label51.TabIndex = 33;
             this.label51.Text = "Numéro revue :";
             // 
@@ -2654,7 +2574,7 @@ namespace MediaTekDocuments.view
             this.label52.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label52.Location = new System.Drawing.Point(6, 70);
             this.label52.Name = "label52";
-            this.label52.Size = new System.Drawing.Size(75, 13);
+            this.label52.Size = new System.Drawing.Size(95, 17);
             this.label52.TabIndex = 37;
             this.label52.Text = "Périodicité :";
             // 
@@ -2664,7 +2584,7 @@ namespace MediaTekDocuments.view
             this.label53.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label53.Location = new System.Drawing.Point(6, 195);
             this.label53.Name = "label53";
-            this.label53.Size = new System.Drawing.Size(117, 13);
+            this.label53.Size = new System.Drawing.Size(150, 17);
             this.label53.TabIndex = 34;
             this.label53.Text = "Chemin de l\'image :";
             // 
@@ -2674,7 +2594,7 @@ namespace MediaTekDocuments.view
             this.label54.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label54.Location = new System.Drawing.Point(6, 95);
             this.label54.Name = "label54";
-            this.label54.Size = new System.Drawing.Size(118, 13);
+            this.label54.Size = new System.Drawing.Size(151, 17);
             this.label54.TabIndex = 38;
             this.label54.Text = "Délai mise à dispo :";
             // 
@@ -2791,7 +2711,7 @@ namespace MediaTekDocuments.view
             this.label72.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label72.Location = new System.Drawing.Point(513, 223);
             this.label72.Name = "label72";
-            this.label72.Size = new System.Drawing.Size(323, 13);
+            this.label72.Size = new System.Drawing.Size(416, 17);
             this.label72.TabIndex = 26;
             this.label72.Text = "Les commandes livrées ne peuvent pas être supprimées";
             // 
@@ -2800,42 +2720,42 @@ namespace MediaTekDocuments.view
             this.cbxLivresComEtat.FormattingEnabled = true;
             this.cbxLivresComEtat.Location = new System.Drawing.Point(666, 182);
             this.cbxLivresComEtat.Name = "cbxLivresComEtat";
-            this.cbxLivresComEtat.Size = new System.Drawing.Size(182, 21);
+            this.cbxLivresComEtat.Size = new System.Drawing.Size(182, 25);
             this.cbxLivresComEtat.TabIndex = 25;
             // 
             // dtpLivresComDateCommande
             // 
             this.dtpLivresComDateCommande.Location = new System.Drawing.Point(666, 56);
             this.dtpLivresComDateCommande.Name = "dtpLivresComDateCommande";
-            this.dtpLivresComDateCommande.Size = new System.Drawing.Size(182, 20);
+            this.dtpLivresComDateCommande.Size = new System.Drawing.Size(182, 23);
             this.dtpLivresComDateCommande.TabIndex = 24;
             // 
             // txbLivresComNbExemplaires
             // 
             this.txbLivresComNbExemplaires.Location = new System.Drawing.Point(666, 119);
             this.txbLivresComNbExemplaires.Name = "txbLivresComNbExemplaires";
-            this.txbLivresComNbExemplaires.Size = new System.Drawing.Size(182, 20);
+            this.txbLivresComNbExemplaires.Size = new System.Drawing.Size(182, 23);
             this.txbLivresComNbExemplaires.TabIndex = 23;
             // 
             // txbLivresComMontant
             // 
             this.txbLivresComMontant.Location = new System.Drawing.Point(666, 88);
             this.txbLivresComMontant.Name = "txbLivresComMontant";
-            this.txbLivresComMontant.Size = new System.Drawing.Size(182, 20);
+            this.txbLivresComMontant.Size = new System.Drawing.Size(182, 23);
             this.txbLivresComMontant.TabIndex = 22;
             // 
             // txbLivresComNumLivre
             // 
             this.txbLivresComNumLivre.Location = new System.Drawing.Point(666, 150);
             this.txbLivresComNumLivre.Name = "txbLivresComNumLivre";
-            this.txbLivresComNumLivre.Size = new System.Drawing.Size(182, 20);
+            this.txbLivresComNumLivre.Size = new System.Drawing.Size(182, 23);
             this.txbLivresComNumLivre.TabIndex = 21;
             // 
             // txbLivresComNbCommande
             // 
             this.txbLivresComNbCommande.Location = new System.Drawing.Point(666, 26);
             this.txbLivresComNbCommande.Name = "txbLivresComNbCommande";
-            this.txbLivresComNbCommande.Size = new System.Drawing.Size(182, 20);
+            this.txbLivresComNbCommande.Size = new System.Drawing.Size(182, 23);
             this.txbLivresComNbCommande.TabIndex = 20;
             // 
             // label71
@@ -2844,7 +2764,7 @@ namespace MediaTekDocuments.view
             this.label71.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label71.Location = new System.Drawing.Point(493, 190);
             this.label71.Name = "label71";
-            this.label71.Size = new System.Drawing.Size(134, 13);
+            this.label71.Size = new System.Drawing.Size(170, 17);
             this.label71.TabIndex = 19;
             this.label71.Text = "Etat de la commande :";
             // 
@@ -2854,7 +2774,7 @@ namespace MediaTekDocuments.view
             this.label70.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label70.Location = new System.Drawing.Point(493, 157);
             this.label70.Name = "label70";
-            this.label70.Size = new System.Drawing.Size(104, 13);
+            this.label70.Size = new System.Drawing.Size(133, 17);
             this.label70.TabIndex = 18;
             this.label70.Text = "Numéro du livre :";
             // 
@@ -2864,7 +2784,7 @@ namespace MediaTekDocuments.view
             this.label69.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label69.Location = new System.Drawing.Point(493, 126);
             this.label69.Name = "label69";
-            this.label69.Size = new System.Drawing.Size(138, 13);
+            this.label69.Size = new System.Drawing.Size(178, 17);
             this.label69.TabIndex = 17;
             this.label69.Text = "Nombre d\'exemplaires :";
             // 
@@ -2874,7 +2794,7 @@ namespace MediaTekDocuments.view
             this.label68.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label68.Location = new System.Drawing.Point(493, 95);
             this.label68.Name = "label68";
-            this.label68.Size = new System.Drawing.Size(61, 13);
+            this.label68.Size = new System.Drawing.Size(76, 17);
             this.label68.TabIndex = 16;
             this.label68.Text = "Montant :";
             // 
@@ -2884,7 +2804,7 @@ namespace MediaTekDocuments.view
             this.label67.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label67.Location = new System.Drawing.Point(493, 62);
             this.label67.Name = "label67";
-            this.label67.Size = new System.Drawing.Size(124, 13);
+            this.label67.Size = new System.Drawing.Size(157, 17);
             this.label67.TabIndex = 15;
             this.label67.Text = "Date de commande :";
             // 
@@ -2894,7 +2814,7 @@ namespace MediaTekDocuments.view
             this.label66.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label66.Location = new System.Drawing.Point(493, 29);
             this.label66.Name = "label66";
-            this.label66.Size = new System.Drawing.Size(140, 13);
+            this.label66.Size = new System.Drawing.Size(179, 17);
             this.label66.TabIndex = 14;
             this.label66.Text = "Numéro de commande :";
             // 
@@ -2910,6 +2830,7 @@ namespace MediaTekDocuments.view
             this.dgvLivresComListeCom.Name = "dgvLivresComListeCom";
             this.dgvLivresComListeCom.ReadOnly = true;
             this.dgvLivresComListeCom.RowHeadersVisible = false;
+            this.dgvLivresComListeCom.RowHeadersWidth = 51;
             this.dgvLivresComListeCom.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvLivresComListeCom.Size = new System.Drawing.Size(461, 333);
             this.dgvLivresComListeCom.TabIndex = 4;
@@ -2986,6 +2907,7 @@ namespace MediaTekDocuments.view
             this.dgvLivresComListe.Name = "dgvLivresComListe";
             this.dgvLivresComListe.ReadOnly = true;
             this.dgvLivresComListe.RowHeadersVisible = false;
+            this.dgvLivresComListe.RowHeadersWidth = 51;
             this.dgvLivresComListe.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvLivresComListe.Size = new System.Drawing.Size(864, 196);
             this.dgvLivresComListe.StandardTab = true;
@@ -2998,7 +2920,7 @@ namespace MediaTekDocuments.view
             this.cbxLivresComRayons.FormattingEnabled = true;
             this.cbxLivresComRayons.Location = new System.Drawing.Point(613, 74);
             this.cbxLivresComRayons.Name = "cbxLivresComRayons";
-            this.cbxLivresComRayons.Size = new System.Drawing.Size(204, 21);
+            this.cbxLivresComRayons.Size = new System.Drawing.Size(204, 25);
             this.cbxLivresComRayons.TabIndex = 11;
             this.cbxLivresComRayons.SelectedIndexChanged += new System.EventHandler(this.CbxLivresComRayons_SelectedIndexChanged);
             // 
@@ -3007,7 +2929,7 @@ namespace MediaTekDocuments.view
             this.cbxLivresComPublics.FormattingEnabled = true;
             this.cbxLivresComPublics.Location = new System.Drawing.Point(613, 47);
             this.cbxLivresComPublics.Name = "cbxLivresComPublics";
-            this.cbxLivresComPublics.Size = new System.Drawing.Size(204, 21);
+            this.cbxLivresComPublics.Size = new System.Drawing.Size(204, 25);
             this.cbxLivresComPublics.TabIndex = 10;
             this.cbxLivresComPublics.SelectedIndexChanged += new System.EventHandler(this.CbxLivresComPublics_SelectedIndexChanged);
             // 
@@ -3016,7 +2938,7 @@ namespace MediaTekDocuments.view
             this.cbxLivresComGenres.FormattingEnabled = true;
             this.cbxLivresComGenres.Location = new System.Drawing.Point(613, 20);
             this.cbxLivresComGenres.Name = "cbxLivresComGenres";
-            this.cbxLivresComGenres.Size = new System.Drawing.Size(204, 21);
+            this.cbxLivresComGenres.Size = new System.Drawing.Size(204, 25);
             this.cbxLivresComGenres.TabIndex = 9;
             this.cbxLivresComGenres.SelectedIndexChanged += new System.EventHandler(this.CbxLivresComGenres_SelectedIndexChanged);
             // 
@@ -3035,14 +2957,14 @@ namespace MediaTekDocuments.view
             // 
             this.txbLivresComNumRecherche.Location = new System.Drawing.Point(161, 76);
             this.txbLivresComNumRecherche.Name = "txbLivresComNumRecherche";
-            this.txbLivresComNumRecherche.Size = new System.Drawing.Size(91, 20);
+            this.txbLivresComNumRecherche.Size = new System.Drawing.Size(91, 23);
             this.txbLivresComNumRecherche.TabIndex = 7;
             // 
             // txbLivresComTitreRecherche
             // 
             this.txbLivresComTitreRecherche.Location = new System.Drawing.Point(161, 34);
             this.txbLivresComTitreRecherche.Name = "txbLivresComTitreRecherche";
-            this.txbLivresComTitreRecherche.Size = new System.Drawing.Size(197, 20);
+            this.txbLivresComTitreRecherche.Size = new System.Drawing.Size(197, 23);
             this.txbLivresComTitreRecherche.TabIndex = 6;
             this.txbLivresComTitreRecherche.TextChanged += new System.EventHandler(this.TxbLivresComTitreRecherche_TextChanged);
             // 
@@ -3052,7 +2974,7 @@ namespace MediaTekDocuments.view
             this.label65.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label65.Location = new System.Drawing.Point(406, 23);
             this.label65.Name = "label65";
-            this.label65.Size = new System.Drawing.Size(100, 13);
+            this.label65.Size = new System.Drawing.Size(128, 17);
             this.label65.TabIndex = 5;
             this.label65.Text = "Ou sélectionner ";
             // 
@@ -3062,7 +2984,7 @@ namespace MediaTekDocuments.view
             this.label64.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label64.Location = new System.Drawing.Point(548, 77);
             this.label64.Name = "label64";
-            this.label64.Size = new System.Drawing.Size(60, 13);
+            this.label64.Size = new System.Drawing.Size(77, 17);
             this.label64.TabIndex = 4;
             this.label64.Text = "le rayon :";
             // 
@@ -3072,7 +2994,7 @@ namespace MediaTekDocuments.view
             this.label63.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label63.Location = new System.Drawing.Point(544, 52);
             this.label63.Name = "label63";
-            this.label63.Size = new System.Drawing.Size(63, 13);
+            this.label63.Size = new System.Drawing.Size(79, 17);
             this.label63.TabIndex = 3;
             this.label63.Text = "le public :";
             // 
@@ -3082,7 +3004,7 @@ namespace MediaTekDocuments.view
             this.label62.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label62.Location = new System.Drawing.Point(547, 23);
             this.label62.Name = "label62";
-            this.label62.Size = new System.Drawing.Size(61, 13);
+            this.label62.Size = new System.Drawing.Size(78, 17);
             this.label62.TabIndex = 2;
             this.label62.Text = "le genre :";
             // 
@@ -3092,7 +3014,7 @@ namespace MediaTekDocuments.view
             this.label61.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label61.Location = new System.Drawing.Point(3, 60);
             this.label61.Name = "label61";
-            this.label61.Size = new System.Drawing.Size(186, 13);
+            this.label61.Size = new System.Drawing.Size(239, 17);
             this.label61.TabIndex = 1;
             this.label61.Text = "Saisir un numéro de document :";
             // 
@@ -3102,7 +3024,7 @@ namespace MediaTekDocuments.view
             this.label60.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label60.Location = new System.Drawing.Point(3, 18);
             this.label60.Name = "label60";
-            this.label60.Size = new System.Drawing.Size(208, 13);
+            this.label60.Size = new System.Drawing.Size(269, 17);
             this.label60.TabIndex = 0;
             this.label60.Text = "Saisir le titre ou la partie d\'un titre :";
             // 
@@ -3153,7 +3075,7 @@ namespace MediaTekDocuments.view
             this.label85.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label85.Location = new System.Drawing.Point(493, 190);
             this.label85.Name = "label85";
-            this.label85.Size = new System.Drawing.Size(134, 13);
+            this.label85.Size = new System.Drawing.Size(170, 17);
             this.label85.TabIndex = 31;
             this.label85.Text = "Etat de la commande :";
             // 
@@ -3161,14 +3083,14 @@ namespace MediaTekDocuments.view
             // 
             this.txbDvdComNumLivre.Location = new System.Drawing.Point(666, 150);
             this.txbDvdComNumLivre.Name = "txbDvdComNumLivre";
-            this.txbDvdComNumLivre.Size = new System.Drawing.Size(182, 20);
+            this.txbDvdComNumLivre.Size = new System.Drawing.Size(182, 23);
             this.txbDvdComNumLivre.TabIndex = 30;
             // 
             // dtpDvdComDateCommande
             // 
             this.dtpDvdComDateCommande.Location = new System.Drawing.Point(666, 56);
             this.dtpDvdComDateCommande.Name = "dtpDvdComDateCommande";
-            this.dtpDvdComDateCommande.Size = new System.Drawing.Size(182, 20);
+            this.dtpDvdComDateCommande.Size = new System.Drawing.Size(182, 23);
             this.dtpDvdComDateCommande.TabIndex = 29;
             // 
             // cbxDvdComEtat
@@ -3176,28 +3098,28 @@ namespace MediaTekDocuments.view
             this.cbxDvdComEtat.FormattingEnabled = true;
             this.cbxDvdComEtat.Location = new System.Drawing.Point(666, 182);
             this.cbxDvdComEtat.Name = "cbxDvdComEtat";
-            this.cbxDvdComEtat.Size = new System.Drawing.Size(182, 21);
+            this.cbxDvdComEtat.Size = new System.Drawing.Size(182, 25);
             this.cbxDvdComEtat.TabIndex = 28;
             // 
             // txbDvdComNbExemplaires
             // 
             this.txbDvdComNbExemplaires.Location = new System.Drawing.Point(666, 119);
             this.txbDvdComNbExemplaires.Name = "txbDvdComNbExemplaires";
-            this.txbDvdComNbExemplaires.Size = new System.Drawing.Size(182, 20);
+            this.txbDvdComNbExemplaires.Size = new System.Drawing.Size(182, 23);
             this.txbDvdComNbExemplaires.TabIndex = 27;
             // 
             // txbDvdComMontant
             // 
             this.txbDvdComMontant.Location = new System.Drawing.Point(666, 88);
             this.txbDvdComMontant.Name = "txbDvdComMontant";
-            this.txbDvdComMontant.Size = new System.Drawing.Size(182, 20);
+            this.txbDvdComMontant.Size = new System.Drawing.Size(182, 23);
             this.txbDvdComMontant.TabIndex = 26;
             // 
             // txbDvdComNbCommande
             // 
             this.txbDvdComNbCommande.Location = new System.Drawing.Point(666, 26);
             this.txbDvdComNbCommande.Name = "txbDvdComNbCommande";
-            this.txbDvdComNbCommande.Size = new System.Drawing.Size(182, 20);
+            this.txbDvdComNbCommande.Size = new System.Drawing.Size(182, 23);
             this.txbDvdComNbCommande.TabIndex = 25;
             // 
             // label84
@@ -3206,7 +3128,7 @@ namespace MediaTekDocuments.view
             this.label84.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label84.Location = new System.Drawing.Point(513, 223);
             this.label84.Name = "label84";
-            this.label84.Size = new System.Drawing.Size(323, 13);
+            this.label84.Size = new System.Drawing.Size(416, 17);
             this.label84.TabIndex = 24;
             this.label84.Text = "Les commandes livrées ne peuvent pas être supprimées";
             // 
@@ -3216,7 +3138,7 @@ namespace MediaTekDocuments.view
             this.label83.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label83.Location = new System.Drawing.Point(493, 157);
             this.label83.Name = "label83";
-            this.label83.Size = new System.Drawing.Size(104, 13);
+            this.label83.Size = new System.Drawing.Size(133, 17);
             this.label83.TabIndex = 23;
             this.label83.Text = "Numéro du livre :";
             // 
@@ -3226,7 +3148,7 @@ namespace MediaTekDocuments.view
             this.label82.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label82.Location = new System.Drawing.Point(493, 126);
             this.label82.Name = "label82";
-            this.label82.Size = new System.Drawing.Size(138, 13);
+            this.label82.Size = new System.Drawing.Size(178, 17);
             this.label82.TabIndex = 22;
             this.label82.Text = "Nombre d\'exemplaires :";
             // 
@@ -3236,7 +3158,7 @@ namespace MediaTekDocuments.view
             this.label81.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label81.Location = new System.Drawing.Point(493, 95);
             this.label81.Name = "label81";
-            this.label81.Size = new System.Drawing.Size(61, 13);
+            this.label81.Size = new System.Drawing.Size(76, 17);
             this.label81.TabIndex = 21;
             this.label81.Text = "Montant :";
             // 
@@ -3246,7 +3168,7 @@ namespace MediaTekDocuments.view
             this.label80.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label80.Location = new System.Drawing.Point(493, 62);
             this.label80.Name = "label80";
-            this.label80.Size = new System.Drawing.Size(124, 13);
+            this.label80.Size = new System.Drawing.Size(157, 17);
             this.label80.TabIndex = 20;
             this.label80.Text = "Date de commande :";
             // 
@@ -3256,7 +3178,7 @@ namespace MediaTekDocuments.view
             this.label79.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label79.Location = new System.Drawing.Point(493, 29);
             this.label79.Name = "label79";
-            this.label79.Size = new System.Drawing.Size(140, 13);
+            this.label79.Size = new System.Drawing.Size(179, 17);
             this.label79.TabIndex = 19;
             this.label79.Text = "Numéro de commande :";
             // 
@@ -3327,6 +3249,7 @@ namespace MediaTekDocuments.view
             this.dgvDvdComListeCom.Name = "dgvDvdComListeCom";
             this.dgvDvdComListeCom.ReadOnly = true;
             this.dgvDvdComListeCom.RowHeadersVisible = false;
+            this.dgvDvdComListeCom.RowHeadersWidth = 51;
             this.dgvDvdComListeCom.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDvdComListeCom.Size = new System.Drawing.Size(461, 333);
             this.dgvDvdComListeCom.TabIndex = 13;
@@ -3404,6 +3327,7 @@ namespace MediaTekDocuments.view
             this.dgvDvdComListe.Name = "dgvDvdComListe";
             this.dgvDvdComListe.ReadOnly = true;
             this.dgvDvdComListe.RowHeadersVisible = false;
+            this.dgvDvdComListe.RowHeadersWidth = 51;
             this.dgvDvdComListe.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDvdComListe.Size = new System.Drawing.Size(864, 196);
             this.dgvDvdComListe.TabIndex = 12;
@@ -3425,14 +3349,14 @@ namespace MediaTekDocuments.view
             // 
             this.txbDvdComNumRecherche.Location = new System.Drawing.Point(161, 76);
             this.txbDvdComNumRecherche.Name = "txbDvdComNumRecherche";
-            this.txbDvdComNumRecherche.Size = new System.Drawing.Size(91, 20);
+            this.txbDvdComNumRecherche.Size = new System.Drawing.Size(91, 23);
             this.txbDvdComNumRecherche.TabIndex = 10;
             // 
             // txbDvdComTitreRecherche
             // 
             this.txbDvdComTitreRecherche.Location = new System.Drawing.Point(161, 34);
             this.txbDvdComTitreRecherche.Name = "txbDvdComTitreRecherche";
-            this.txbDvdComTitreRecherche.Size = new System.Drawing.Size(197, 20);
+            this.txbDvdComTitreRecherche.Size = new System.Drawing.Size(197, 23);
             this.txbDvdComTitreRecherche.TabIndex = 9;
             this.txbDvdComTitreRecherche.TextChanged += new System.EventHandler(this.TxbDvdComTitreRecherche_TextChanged);
             // 
@@ -3441,7 +3365,7 @@ namespace MediaTekDocuments.view
             this.cbxDvdComRayons.FormattingEnabled = true;
             this.cbxDvdComRayons.Location = new System.Drawing.Point(613, 74);
             this.cbxDvdComRayons.Name = "cbxDvdComRayons";
-            this.cbxDvdComRayons.Size = new System.Drawing.Size(204, 21);
+            this.cbxDvdComRayons.Size = new System.Drawing.Size(204, 25);
             this.cbxDvdComRayons.TabIndex = 8;
             this.cbxDvdComRayons.SelectedIndexChanged += new System.EventHandler(this.CbxDvdComRayons_SelectedIndexChanged);
             // 
@@ -3450,7 +3374,7 @@ namespace MediaTekDocuments.view
             this.cbxDvdComPublics.FormattingEnabled = true;
             this.cbxDvdComPublics.Location = new System.Drawing.Point(613, 47);
             this.cbxDvdComPublics.Name = "cbxDvdComPublics";
-            this.cbxDvdComPublics.Size = new System.Drawing.Size(204, 21);
+            this.cbxDvdComPublics.Size = new System.Drawing.Size(204, 25);
             this.cbxDvdComPublics.TabIndex = 7;
             this.cbxDvdComPublics.SelectedIndexChanged += new System.EventHandler(this.CbxDvdComPublics_SelectedIndexChanged);
             // 
@@ -3459,7 +3383,7 @@ namespace MediaTekDocuments.view
             this.cbxDvdComGenres.FormattingEnabled = true;
             this.cbxDvdComGenres.Location = new System.Drawing.Point(613, 20);
             this.cbxDvdComGenres.Name = "cbxDvdComGenres";
-            this.cbxDvdComGenres.Size = new System.Drawing.Size(204, 21);
+            this.cbxDvdComGenres.Size = new System.Drawing.Size(204, 25);
             this.cbxDvdComGenres.TabIndex = 6;
             this.cbxDvdComGenres.SelectedIndexChanged += new System.EventHandler(this.CbxDvdComGenres_SelectedIndexChanged);
             // 
@@ -3469,7 +3393,7 @@ namespace MediaTekDocuments.view
             this.label78.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label78.Location = new System.Drawing.Point(548, 77);
             this.label78.Name = "label78";
-            this.label78.Size = new System.Drawing.Size(60, 13);
+            this.label78.Size = new System.Drawing.Size(77, 17);
             this.label78.TabIndex = 5;
             this.label78.Text = "le rayon :";
             // 
@@ -3479,7 +3403,7 @@ namespace MediaTekDocuments.view
             this.label77.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label77.Location = new System.Drawing.Point(544, 52);
             this.label77.Name = "label77";
-            this.label77.Size = new System.Drawing.Size(63, 13);
+            this.label77.Size = new System.Drawing.Size(79, 17);
             this.label77.TabIndex = 4;
             this.label77.Text = "le public :";
             // 
@@ -3489,7 +3413,7 @@ namespace MediaTekDocuments.view
             this.label76.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label76.Location = new System.Drawing.Point(547, 23);
             this.label76.Name = "label76";
-            this.label76.Size = new System.Drawing.Size(61, 13);
+            this.label76.Size = new System.Drawing.Size(78, 17);
             this.label76.TabIndex = 3;
             this.label76.Text = "le genre :";
             // 
@@ -3499,7 +3423,7 @@ namespace MediaTekDocuments.view
             this.label75.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label75.Location = new System.Drawing.Point(406, 23);
             this.label75.Name = "label75";
-            this.label75.Size = new System.Drawing.Size(100, 13);
+            this.label75.Size = new System.Drawing.Size(128, 17);
             this.label75.TabIndex = 2;
             this.label75.Text = "Ou sélectionner ";
             // 
@@ -3509,7 +3433,7 @@ namespace MediaTekDocuments.view
             this.label74.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label74.Location = new System.Drawing.Point(3, 60);
             this.label74.Name = "label74";
-            this.label74.Size = new System.Drawing.Size(186, 13);
+            this.label74.Size = new System.Drawing.Size(239, 17);
             this.label74.TabIndex = 1;
             this.label74.Text = "Saisir un numéro de document :";
             // 
@@ -3519,7 +3443,7 @@ namespace MediaTekDocuments.view
             this.label73.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label73.Location = new System.Drawing.Point(3, 18);
             this.label73.Name = "label73";
-            this.label73.Size = new System.Drawing.Size(208, 13);
+            this.label73.Size = new System.Drawing.Size(269, 17);
             this.label73.TabIndex = 0;
             this.label73.Text = "Saisir le titre ou la partie d\'un titre :";
             // 
@@ -3530,7 +3454,7 @@ namespace MediaTekDocuments.view
             this.tabAbonnements.Location = new System.Drawing.Point(4, 22);
             this.tabAbonnements.Name = "tabAbonnements";
             this.tabAbonnements.Padding = new System.Windows.Forms.Padding(3);
-            this.tabAbonnements.Size = new System.Drawing.Size(921, 941);
+            this.tabAbonnements.Size = new System.Drawing.Size(880, 705);
             this.tabAbonnements.TabIndex = 7;
             this.tabAbonnements.Text = "Abonnements";
             this.tabAbonnements.UseVisualStyleBackColor = true;
@@ -3581,7 +3505,7 @@ namespace MediaTekDocuments.view
             this.label100.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label100.Location = new System.Drawing.Point(68, 29);
             this.label100.Name = "label100";
-            this.label100.Size = new System.Drawing.Size(145, 13);
+            this.label100.Size = new System.Drawing.Size(187, 17);
             this.label100.TabIndex = 35;
             this.label100.Text = "dans moins de 30 jours :";
             // 
@@ -3591,7 +3515,7 @@ namespace MediaTekDocuments.view
             this.label98.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label98.Location = new System.Drawing.Point(2, 16);
             this.label98.Name = "label98";
-            this.label98.Size = new System.Drawing.Size(211, 13);
+            this.label98.Size = new System.Drawing.Size(274, 17);
             this.label98.TabIndex = 34;
             this.label98.Text = "Filtrer les abonnements se terminant";
             // 
@@ -3654,35 +3578,35 @@ namespace MediaTekDocuments.view
             // 
             this.txbAboNumRevue.Location = new System.Drawing.Point(666, 150);
             this.txbAboNumRevue.Name = "txbAboNumRevue";
-            this.txbAboNumRevue.Size = new System.Drawing.Size(182, 20);
+            this.txbAboNumRevue.Size = new System.Drawing.Size(182, 23);
             this.txbAboNumRevue.TabIndex = 27;
             // 
             // txbAboMontant
             // 
             this.txbAboMontant.Location = new System.Drawing.Point(666, 88);
             this.txbAboMontant.Name = "txbAboMontant";
-            this.txbAboMontant.Size = new System.Drawing.Size(182, 20);
+            this.txbAboMontant.Size = new System.Drawing.Size(182, 23);
             this.txbAboMontant.TabIndex = 26;
             // 
             // dtpAboDateFin
             // 
             this.dtpAboDateFin.Location = new System.Drawing.Point(666, 119);
             this.dtpAboDateFin.Name = "dtpAboDateFin";
-            this.dtpAboDateFin.Size = new System.Drawing.Size(182, 20);
+            this.dtpAboDateFin.Size = new System.Drawing.Size(182, 23);
             this.dtpAboDateFin.TabIndex = 25;
             // 
             // dtpAboDateCommande
             // 
             this.dtpAboDateCommande.Location = new System.Drawing.Point(666, 56);
             this.dtpAboDateCommande.Name = "dtpAboDateCommande";
-            this.dtpAboDateCommande.Size = new System.Drawing.Size(182, 20);
+            this.dtpAboDateCommande.Size = new System.Drawing.Size(182, 23);
             this.dtpAboDateCommande.TabIndex = 24;
             // 
             // txbAboNbCommande
             // 
             this.txbAboNbCommande.Location = new System.Drawing.Point(666, 26);
             this.txbAboNbCommande.Name = "txbAboNbCommande";
-            this.txbAboNbCommande.Size = new System.Drawing.Size(182, 20);
+            this.txbAboNbCommande.Size = new System.Drawing.Size(182, 23);
             this.txbAboNbCommande.TabIndex = 23;
             // 
             // label96
@@ -3691,7 +3615,7 @@ namespace MediaTekDocuments.view
             this.label96.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label96.Location = new System.Drawing.Point(493, 157);
             this.label96.Name = "label96";
-            this.label96.Size = new System.Drawing.Size(62, 13);
+            this.label96.Size = new System.Drawing.Size(77, 17);
             this.label96.TabIndex = 21;
             this.label96.Text = "N° Revue";
             // 
@@ -3701,7 +3625,7 @@ namespace MediaTekDocuments.view
             this.label95.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label95.Location = new System.Drawing.Point(493, 125);
             this.label95.Name = "label95";
-            this.label95.Size = new System.Drawing.Size(115, 13);
+            this.label95.Size = new System.Drawing.Size(147, 17);
             this.label95.TabIndex = 20;
             this.label95.Text = "Fin d\'abonnement :";
             // 
@@ -3711,7 +3635,7 @@ namespace MediaTekDocuments.view
             this.label94.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label94.Location = new System.Drawing.Point(493, 95);
             this.label94.Name = "label94";
-            this.label94.Size = new System.Drawing.Size(61, 13);
+            this.label94.Size = new System.Drawing.Size(76, 17);
             this.label94.TabIndex = 19;
             this.label94.Text = "Montant :";
             // 
@@ -3721,7 +3645,7 @@ namespace MediaTekDocuments.view
             this.label93.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label93.Location = new System.Drawing.Point(493, 62);
             this.label93.Name = "label93";
-            this.label93.Size = new System.Drawing.Size(124, 13);
+            this.label93.Size = new System.Drawing.Size(157, 17);
             this.label93.TabIndex = 18;
             this.label93.Text = "Date de commande :";
             // 
@@ -3731,7 +3655,7 @@ namespace MediaTekDocuments.view
             this.label92.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label92.Location = new System.Drawing.Point(493, 29);
             this.label92.Name = "label92";
-            this.label92.Size = new System.Drawing.Size(140, 13);
+            this.label92.Size = new System.Drawing.Size(179, 17);
             this.label92.TabIndex = 17;
             this.label92.Text = "Numéro de commande :";
             // 
@@ -3741,36 +3665,13 @@ namespace MediaTekDocuments.view
             this.dgvAboListeCom.AllowUserToDeleteRows = false;
             this.dgvAboListeCom.AllowUserToResizeColumns = false;
             this.dgvAboListeCom.AllowUserToResizeRows = false;
-            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle25.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle25.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle25.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle25.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle25.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle25.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvAboListeCom.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle25;
             this.dgvAboListeCom.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle26.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle26.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle26.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle26.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle26.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvAboListeCom.DefaultCellStyle = dataGridViewCellStyle26;
             this.dgvAboListeCom.Location = new System.Drawing.Point(0, 45);
             this.dgvAboListeCom.MultiSelect = false;
             this.dgvAboListeCom.Name = "dgvAboListeCom";
             this.dgvAboListeCom.ReadOnly = true;
-            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle27.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle27.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle27.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle27.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle27.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvAboListeCom.RowHeadersDefaultCellStyle = dataGridViewCellStyle27;
             this.dgvAboListeCom.RowHeadersVisible = false;
+            this.dgvAboListeCom.RowHeadersWidth = 51;
             this.dgvAboListeCom.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvAboListeCom.Size = new System.Drawing.Size(461, 307);
             this.dgvAboListeCom.TabIndex = 16;
@@ -3821,7 +3722,7 @@ namespace MediaTekDocuments.view
             this.label99.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label99.Location = new System.Drawing.Point(263, 40);
             this.label99.Name = "label99";
-            this.label99.Size = new System.Drawing.Size(137, 13);
+            this.label99.Size = new System.Drawing.Size(177, 17);
             this.label99.TabIndex = 18;
             this.label99.Text = "dans moins de 30 jours";
             // 
@@ -3831,7 +3732,7 @@ namespace MediaTekDocuments.view
             this.label97.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label97.Location = new System.Drawing.Point(263, 18);
             this.label97.Name = "label97";
-            this.label97.Size = new System.Drawing.Size(232, 13);
+            this.label97.Size = new System.Drawing.Size(297, 17);
             this.label97.TabIndex = 17;
             this.label97.Text = "Revues dont un abonnement se termine";
             // 
@@ -3840,36 +3741,13 @@ namespace MediaTekDocuments.view
             this.dgvAboListe.AllowUserToAddRows = false;
             this.dgvAboListe.AllowUserToDeleteRows = false;
             this.dgvAboListe.AllowUserToResizeRows = false;
-            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle28.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle28.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle28.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle28.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle28.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle28.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvAboListe.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle28;
             this.dgvAboListe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle29.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle29.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle29.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle29.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle29.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle29.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvAboListe.DefaultCellStyle = dataGridViewCellStyle29;
             this.dgvAboListe.Location = new System.Drawing.Point(1, 103);
             this.dgvAboListe.MultiSelect = false;
             this.dgvAboListe.Name = "dgvAboListe";
             this.dgvAboListe.ReadOnly = true;
-            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle30.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle30.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle30.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle30.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle30.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle30.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvAboListe.RowHeadersDefaultCellStyle = dataGridViewCellStyle30;
             this.dgvAboListe.RowHeadersVisible = false;
+            this.dgvAboListe.RowHeadersWidth = 51;
             this.dgvAboListe.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvAboListe.Size = new System.Drawing.Size(864, 196);
             this.dgvAboListe.TabIndex = 15;
@@ -3925,7 +3803,7 @@ namespace MediaTekDocuments.view
             this.cbxAboRayons.FormattingEnabled = true;
             this.cbxAboRayons.Location = new System.Drawing.Point(613, 74);
             this.cbxAboRayons.Name = "cbxAboRayons";
-            this.cbxAboRayons.Size = new System.Drawing.Size(204, 21);
+            this.cbxAboRayons.Size = new System.Drawing.Size(204, 25);
             this.cbxAboRayons.TabIndex = 10;
             this.cbxAboRayons.SelectedIndexChanged += new System.EventHandler(this.CbxAboRayons_SelectedIndexChanged);
             // 
@@ -3934,7 +3812,7 @@ namespace MediaTekDocuments.view
             this.cbxAboPublics.FormattingEnabled = true;
             this.cbxAboPublics.Location = new System.Drawing.Point(613, 47);
             this.cbxAboPublics.Name = "cbxAboPublics";
-            this.cbxAboPublics.Size = new System.Drawing.Size(204, 21);
+            this.cbxAboPublics.Size = new System.Drawing.Size(204, 25);
             this.cbxAboPublics.TabIndex = 9;
             this.cbxAboPublics.SelectedIndexChanged += new System.EventHandler(this.CbxAboPublics_SelectedIndexChanged);
             // 
@@ -3943,7 +3821,7 @@ namespace MediaTekDocuments.view
             this.cbxAboGenres.FormattingEnabled = true;
             this.cbxAboGenres.Location = new System.Drawing.Point(613, 20);
             this.cbxAboGenres.Name = "cbxAboGenres";
-            this.cbxAboGenres.Size = new System.Drawing.Size(204, 21);
+            this.cbxAboGenres.Size = new System.Drawing.Size(204, 25);
             this.cbxAboGenres.TabIndex = 8;
             this.cbxAboGenres.SelectedIndexChanged += new System.EventHandler(this.CbxAboGenres_SelectedIndexChanged);
             // 
@@ -3951,14 +3829,14 @@ namespace MediaTekDocuments.view
             // 
             this.txbAboNumRecherche.Location = new System.Drawing.Point(39, 77);
             this.txbAboNumRecherche.Name = "txbAboNumRecherche";
-            this.txbAboNumRecherche.Size = new System.Drawing.Size(91, 20);
+            this.txbAboNumRecherche.Size = new System.Drawing.Size(91, 23);
             this.txbAboNumRecherche.TabIndex = 7;
             // 
             // txbAboTitreRecherche
             // 
             this.txbAboTitreRecherche.Location = new System.Drawing.Point(39, 37);
             this.txbAboTitreRecherche.Name = "txbAboTitreRecherche";
-            this.txbAboTitreRecherche.Size = new System.Drawing.Size(197, 20);
+            this.txbAboTitreRecherche.Size = new System.Drawing.Size(197, 23);
             this.txbAboTitreRecherche.TabIndex = 6;
             this.txbAboTitreRecherche.TextChanged += new System.EventHandler(this.TxbAboTitreRecherche_TextChanged);
             // 
@@ -3968,7 +3846,7 @@ namespace MediaTekDocuments.view
             this.label91.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label91.Location = new System.Drawing.Point(548, 77);
             this.label91.Name = "label91";
-            this.label91.Size = new System.Drawing.Size(60, 13);
+            this.label91.Size = new System.Drawing.Size(77, 17);
             this.label91.TabIndex = 5;
             this.label91.Text = "le rayon :";
             // 
@@ -3978,7 +3856,7 @@ namespace MediaTekDocuments.view
             this.label90.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label90.Location = new System.Drawing.Point(544, 52);
             this.label90.Name = "label90";
-            this.label90.Size = new System.Drawing.Size(63, 13);
+            this.label90.Size = new System.Drawing.Size(79, 17);
             this.label90.TabIndex = 4;
             this.label90.Text = "le public :";
             // 
@@ -3988,7 +3866,7 @@ namespace MediaTekDocuments.view
             this.label89.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label89.Location = new System.Drawing.Point(547, 23);
             this.label89.Name = "label89";
-            this.label89.Size = new System.Drawing.Size(61, 13);
+            this.label89.Size = new System.Drawing.Size(78, 17);
             this.label89.TabIndex = 3;
             this.label89.Text = "le genre :";
             // 
@@ -3998,7 +3876,7 @@ namespace MediaTekDocuments.view
             this.label87.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label87.Location = new System.Drawing.Point(3, 60);
             this.label87.Name = "label87";
-            this.label87.Size = new System.Drawing.Size(186, 13);
+            this.label87.Size = new System.Drawing.Size(239, 17);
             this.label87.TabIndex = 1;
             this.label87.Text = "Saisir un numéro de document :";
             // 
@@ -4008,7 +3886,7 @@ namespace MediaTekDocuments.view
             this.label86.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label86.Location = new System.Drawing.Point(3, 18);
             this.label86.Name = "label86";
-            this.label86.Size = new System.Drawing.Size(208, 13);
+            this.label86.Size = new System.Drawing.Size(269, 17);
             this.label86.TabIndex = 0;
             this.label86.Text = "Saisir le titre ou la partie d\'un titre :";
             // 

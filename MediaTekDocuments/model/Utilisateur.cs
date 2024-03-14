@@ -6,7 +6,7 @@ namespace MediaTekDocuments.model
         /// <summary>D
         /// Valorise les propriétés
         /// </summary>
-        /// <param name="idpersonnel"></param>
+        /// <param name="id"></param>
         /// <param name="nom"></param>
         /// <param name="prenom"></param>
         /// <param name="mail"></param>

@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using MediaTekDocuments.model;
 using MediaTekDocuments.dal;
 using Newtonsoft.Json;
@@ -17,6 +16,18 @@ namespace MediaTekDocuments.controller
         /// Objet d'accès aux données
         /// </summary>
         private readonly Access access;
+        /// <summary>
+        ///  Services autorisé pour ouvrir le programme
+        /// </summary>
+        private static readonly List<string> services = new List<string> { "compta", "biblio", "accueil" };
+        /// <summary>
+        /// Services ayant droit de modification
+        /// </summary>
+        private static readonly List<string> servicesModif = new List<string> { "biblio", "accueil" };
+        /// <summary>
+        /// Services ayant droits au commandes
+        /// </summary>
+        private static readonly List<string> servicesCommande = new List<string> { "biblio"};
 
         /// <summary>
         /// Récupération de l'instance unique d'accès aux données
@@ -79,10 +90,6 @@ namespace MediaTekDocuments.controller
         /// <returns></returns>
         public bool VerifDroitAccueil(Utilisateur utilisateur)
         {
-            List<string> services = new List<string> { "compta", "biblio", "accueil" };
-            //Console.WriteLine(utilisateur.Nom);
-            //Console.WriteLine(utilisateur.Service);
-            //Console.WriteLine(services.Contains(utilisateur.Service.Libelle));
             if (services.Contains(utilisateur.Service.Libelle))
                 return true;
             return false;
@@ -96,9 +103,7 @@ namespace MediaTekDocuments.controller
         /// <returns></returns>
         public bool VerifDroitModif(Utilisateur utilisateur)
         {
-            //Console.WriteLine(utilisateur.Nom);
-            List<string> services = new List<string> {"biblio", "accueil" };
-            if (services.Contains(utilisateur.Service.Libelle))
+            if (servicesModif.Contains(utilisateur.Service.Libelle))
                 return true;
             return false;
         }
@@ -111,8 +116,7 @@ namespace MediaTekDocuments.controller
         /// <returns></returns>
         public bool VerifCommande(Utilisateur utilisateur)
         {
-            List<string> services = new List<string> {"biblio" };
-            if (services.Contains(utilisateur.Service.Libelle))
+            if (servicesCommande.Contains(utilisateur.Service.Libelle))
                 return true;
             return false;
         }

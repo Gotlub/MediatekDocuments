@@ -89,7 +89,7 @@ namespace MediaTekDocuments.view
         }
 
         /// <summary>
-        /// Augemente un index de type string
+        /// Augemente un index numerique de type string
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>

@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using MediaTekDocuments.model;
+﻿using MediaTekDocuments.model;
 using MediaTekDocuments.dal;
 using System.Security.Cryptography;
 using System.Text;
 using MediaTekDocuments.view;
-using System.Windows.Forms;
 
 namespace MediaTekDocuments.controller
 {

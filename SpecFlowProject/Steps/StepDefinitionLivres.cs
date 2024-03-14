@@ -53,9 +53,8 @@ namespace SpecFlowProject.Steps
                 {
                     result = false;
                 }
-
-                result.Should().BeTrue();
             }
+            result.Should().BeTrue();
         }
 
         [Given(@"je saisie la valleur dans le champs de recherche des titres: ""([^""]*)""")]
@@ -81,9 +80,8 @@ namespace SpecFlowProject.Steps
                 {
                     result = false;
                 }
-
-                result.Should().BeTrue();
             }
+            result.Should().BeTrue();
         }
 
         [Given(@"je selectionne le rayon : ""([^""]*)""")]
@@ -111,9 +109,8 @@ namespace SpecFlowProject.Steps
                 {
                     result = false;
                 }
-
-                result.Should().BeTrue();
             }
+            result.Should().BeTrue();
         }
     }
 }
