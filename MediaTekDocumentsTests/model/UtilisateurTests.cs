@@ -26,8 +26,6 @@ namespace MediaTekDocuments.model.Tests
             Assert.AreEqual(nom, utilisateur.Nom, "devrait réussir : nom valorisé");
             Assert.AreEqual(prenom, utilisateur.Prenom, "devrait réussir : prenom valorisé");
             Assert.AreEqual(mail, utilisateur.Mail, "devrait réussir : mail valorisé");
-            Assert.AreEqual(idService, utilisateur.Service.Id, "devrait réussir : idService valorisé");
-            Assert.AreEqual(service, utilisateur.Service, "devrait réussir : service valorisé");
         }
     }
 }

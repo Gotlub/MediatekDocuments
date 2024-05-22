@@ -63,6 +63,8 @@ namespace MediaTekDocuments.dal
                     .CreateLogger();
                 String authenticationString = GetAuthentificationString(authenticationName);
                 String uriApi = GetAuthentificationString(uriApiName);
+                //Pour pouvoir effectuer les tests les données de connexion sont rentré en dur
+                //api = ApiRest.GetInstance("http://localhost/rest_mediatekdocuments/", "admin:adminpwd");
                 api = ApiRest.GetInstance(uriApi, authenticationString);
             }
             catch (Exception e)

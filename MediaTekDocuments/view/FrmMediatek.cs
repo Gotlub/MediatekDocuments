@@ -207,7 +207,6 @@ namespace MediaTekDocuments.view
                 EnCoursModifLivres(false);
                 if (firstLoad)
                 {
-                    Thread.Sleep(150);
                     AfficherAlerteAbo();
                     firstLoad = false;
                 }
@@ -798,7 +797,6 @@ namespace MediaTekDocuments.view
                         controller.SupprimerExemplaire(exemplaire);
                         lesExemplairesLivres = controller.GetExemplairesRevue(iDocument);
                         RemplirLivresListeExemplaire(lesExemplairesLivres);
-                        Thread.Sleep(20);
                     }
                 }
                 else
@@ -836,7 +834,6 @@ namespace MediaTekDocuments.view
                         EnCoursModifLivres(false);
                         lesExemplairesLivres = controller.GetExemplairesRevue(iDocument);
                         RemplirLivresListeExemplaire(lesExemplairesLivres);
-                        Thread.Sleep(20);
                         grpLivresInfos.Enabled = true;
                     }
                 }
