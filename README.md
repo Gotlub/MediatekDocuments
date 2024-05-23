@@ -1,15 +1,22 @@
-# MediatekDocuments
+# MediatekDocuments 
+MediatekDocuments est un fork de [MediaTekDocuments](https://github.com/CNED-SLAM/MediaTekDocuments).
+C'est un projet réalisé dans le cadre du BTS SIO SLAM. D'autres informations et le client lourd de l'application sont disponibles [sur cette page.](https://www.nicolasfrere.fr/pages/mediatekDocuments.html)
 Cette application permet de gérer les documents (livres, DVD, revues) d'une médiathèque. Elle a été codée en C# sous Visual Studio 2019. C'est une application de bureau, prévue d'être installée sur plusieurs postes accédant à la même base de données.<br>
 L'application exploite une API REST pour accéder à la BDD MySQL. Des explications sont données plus loin, ainsi que le lien de récupération.
+
 ## Présentation
-Actuellement l'application est partiellement codée. Voici les fonctionnalités actuellement opérationnelles : recherches et affichage d'informations sur les documents de la médiathèque (livres, DVD, revues), réception de nouveaux numéros de revues.<br>
-![img1](https://github.com/CNED-SLAM/MediaTekDocuments/assets/100127886/9b5a4c1b-6914-4455-94bf-fec24adba3ec)
+L'application dispose de quatre niveaux de droit différents correspondant aux services de la médiathèque :
+-les services non habilités ne peuvent accéder au programme.
+-le service comptabilité a la possibilité de consulter les livres, les dvd et revues.
+-l'accueil peut gérer les documents (livres, DVD, revues) mais ne peut effectuer de commandes ou prise d'abonnements.
+-les bibliothécaires peuvent accéder à l'enssemble des fonctionnalités.
+
 <br>L'application ne comporte qu'une seule fenêtre divisée en plusieurs onglets.
 ## Les différents onglets
 ### Onglet 1 : Livres
 Cet onglet présente la liste des livres, triée par défaut sur le titre.<br>
 La liste comporte les informations suivantes : titre, auteur, collection, genre, public, rayon.
-![img2](https://github.com/CNED-SLAM/MediaTekDocuments/assets/100127886/e3f31979-cf24-416d-afb1-a588356e8966)
+![img2](https://www.nicolasfrere.fr/ressources/MediatekDocumentsCapture.jpg)
 #### Recherches
 <strong>Par le titre :</strong> Il est possible de rechercher un ou plusieurs livres par le titre. La saisie dans la zone de recherche se fait en autocomplétions sans tenir compte de la casse. Seuls les livres concernés apparaissent dans la liste.<br>
 <strong>Par le numéro :</strong> il est possible de saisir un numéro et, en cliquant sur "Rechercher", seul le livre concerné apparait dans la liste (ou un message d'erreur si le livre n'est pas trouvé, avec la liste remplie à nouveau).
@@ -22,7 +29,9 @@ Il est possible aussi d'annuler le filtre en cliquant sur une des croix.
 Le fait de cliquer sur le titre d'une des colonnes de la liste des livres, permet de trier la liste par rapport à la colonne choisie.
 #### Affichage des informations détaillées
 Si la liste des livres contient des éléments, par défaut il y en a toujours un de sélectionné. Il est aussi possible de sélectionner une ligne (donc un livre) en cliquant n'importe où sur la ligne.<br>
-La partie basse de la fenêtre affiche les informations détaillées du livre sélectionné (numéro de document, code ISBN, titre, auteur(e), collection, genre, public, rayon, chemin de l'image) ainsi que l'image.
+La fenêtre affiche les informations détaillées du livre sélectionné (numéro de document, code ISBN, titre, auteur(e), collection, genre, public, rayon, chemin de l'image) ainsi que l'image. Les services habilités peuvent modifier les documents.
+#### Affichage des exemplaires
+Le fait de cliquer sur le titre d'une des lignes de la liste des livres, permet d'afficher ses exemplaires en circulation.  Les services habilités peuvent modifier leurs états.
 ### Onglet 2 : DVD
 Cet onglet présente la liste des DVD, triée par titre.<br>
 La liste comporte les informations suivantes : titre, durée, réalisateur, genre, public, rayon.<br>
@@ -46,10 +55,32 @@ Il est possible alors de réceptionner une nouvelle parution en saisissant son n
 Le clic sur "Valider la réception" va permettre d'ajouter un tuple dans la table Exemplaire de la BDD. La parution correspondante apparaitra alors automatiquement dans la liste des parutions et les zones de la partie "Nouvelle parution réceptionnée pour cette revue" seront réinitialisées.<br>
 Si le numéro de la parution existe déjà, il n’est pas ajouté et un message est affiché.
 ![img3](https://github.com/CNED-SLAM/MediaTekDocuments/assets/100127886/225e10f2-406a-4b5e-bfa9-368d45456056)
+
+### Onglet 5 :Commandes de livres
+La partie haute de cet onglet présente la liste des livres, triée par défaut sur le titre.<br>
+Le fonctionnement est identique à l'onglet des livres.<br>
+La partie basse permet de consulter les commandes des livres et de modifier leurs etats.
+Certaines règles s'applique aux commandes:
+-les nouvelles commande ont par défaut leurs statuts a "en cours".
+-les commandes livrées ne peuvent etre supprimer. Quand le statuts d'une commande passe a livrée, le nombre de livres correpondant est ajouté aux exemplaires en circulation.
+-une commande ne peut repasser au statuts précédent. Pour pouvoir être réglée, elle doit au préalable avoir été livrée.
+![img4](https://raw.githubusercontent.com/r4ndomfriday/PortFolio/main/ressources/ap3Commandes.png)
+### Onglet 6 : Commandes de DVD
+
+Le fonctionnement est identique à l'onglet des livres.<br>
+La seule différence réside dans certaines informations détaillées, spécifiques aux DVD.
+
+### Onglet 7 : Abonnements
+
+Le fonctionnement de la partie haute de l'ongle est identique à celui des commandes de livres.<br>
+Un abonnement correspond à une revue. Il a un début (Date de commande) et une fin.
+Il n'est pas possible de supprimer un abonnement dont un exemplaire a été acquis pendant sa durée.
+
+![img5](https://raw.githubusercontent.com/r4ndomfriday/PortFolio/main/ressources/ap3Abonnements.png)
 ## La base de données
 La base de données 'mediatek86 ' est au format MySQL.<br>
 Voici sa structure :<br>
-![img4](https://github.com/CNED-SLAM/MediaTekDocuments/assets/100127886/4314f083-ec8b-4d27-9746-fecd1387d77b)
+![img6](https://raw.githubusercontent.com/Gotlub/MediatekDocuments/main/images/schemaSGBD.jpg)
 <br>On distingue les documents "génériques" (ce sont les entités Document, Revue, Livres-DVD, Livre et DVD) des documents "physiques" qui sont les exemplaires de livres ou de DVD, ou bien les numéros d’une revue ou d’un journal.<br>
 Chaque exemplaire est numéroté à l’intérieur du document correspondant, et a donc un identifiant relatif. Cet identifiant est réel : ce n'est pas un numéro automatique. <br>
 Un exemplaire est caractérisé par :<br>
@@ -65,13 +96,19 @@ Enfin, 3 tables permettent de mémoriser les données concernant les commandes d
 <br>
 La base de données est remplie de quelques exemples pour pouvoir tester son application. Dans les champs image (de Document) et photo (de Exemplaire) doit normalement se trouver le chemin complet vers l'image correspondante. Pour les tests, vous devrez créer un dossier, le remplir de quelques images et mettre directement les chemins dans certains tuples de la base de données qui, pour le moment, ne contient aucune image.<br>
 Lorsque l'application sera opérationnelle, c'est le personnel de la médiathèque qui sera en charge de saisir les informations des documents.
+
+
 ## L'API REST
 L'accès à la BDD se fait à travers une API REST protégée par une authentification basique.<br>
 Le code de l'API se trouve ici :<br>
-https://github.com/CNED-SLAM/rest_mediatekdocuments<br>
+https://github.com/Gotlub/rest_mediatekdocuments<br>
 avec toutes les explications pour l'utiliser (dans le readme).
 ## Installation de l'application
 Ce mode opératoire permet d'installer l'application pour pouvoir travailler dessus.<br>
 - Installer Visual Studio 2019 entreprise et les extension Specflow et newtonsoft.json (pour ce dernier, voir l'article "Accéder à une API REST à partir d'une application C#" dans le wiki de ce dépôt : consulter juste le début pour la configuration, car la suite permet de comprendre le code existant).<br>
 - Télécharger le code et le dézipper puis renommer le dossier en "mediatekdocuments".<br>
-- Récupérer et installer l'API REST nécessaire (https://github.com/CNED-SLAM/rest_mediatekdocuments) ainsi que la base de données (les explications sont données dans le readme correspondant).
+- Récupérer et installer l'API REST nécessaire (https://github.com/Gotlub/rest_mediatekdocuments) ainsi que la base de données (les explications sont données dans le readme correspondant).
+
+## Tests fonctionnels
+Pour pouvoir réaliser les tests fonctionnels, il faut commenter ("//")  dans le constructeur d'Access (dal/Access.cs) la ligne "api + ApiRest.GetInstance()" et dé commenter là ligne du dessus.
+![img7](https://raw.githubusercontent.com/Gotlub/MediatekDocuments/main/images/Access.png)
