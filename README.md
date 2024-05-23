@@ -1,15 +1,16 @@
 # MediatekDocuments 
-MediatekDocuments est un fork de [MediaTekDocuments](https://github.com/CNED-SLAM/MediaTekDocuments).
-C'est un projet réalisé dans le cadre du BTS SIO SLAM. D'autres informations et le client lourd de l'application sont disponibles [sur cette page.](https://www.nicolasfrere.fr/pages/mediatekDocuments.html)
 Cette application permet de gérer les documents (livres, DVD, revues) d'une médiathèque. Elle a été codée en C# sous Visual Studio 2019. C'est une application de bureau, prévue d'être installée sur plusieurs postes accédant à la même base de données.<br>
 L'application exploite une API REST pour accéder à la BDD MySQL. Des explications sont données plus loin, ainsi que le lien de récupération.
+<br>MediatekDocuments est un fork de [MediaTekDocuments](https://github.com/CNED-SLAM/MediaTekDocuments).
+C'est un projet réalisé dans le cadre du BTS SIO SLAM.
 
 ## Présentation
+[Page de presentation du projet](https://www.nicolasfrere.fr/pages/mediatekDocuments.html)  
 L'application dispose de quatre niveaux de droit différents correspondant aux services de la médiathèque :
--les services non habilités ne peuvent accéder au programme.
--le service comptabilité a la possibilité de consulter les livres, les dvd et revues.
--l'accueil peut gérer les documents (livres, DVD, revues) mais ne peut effectuer de commandes ou prise d'abonnements.
--les bibliothécaires peuvent accéder à l'enssemble des fonctionnalités.
+<br>-les services non habilités ne peuvent accéder au programme.
+<br>-le service comptabilité a la possibilité de consulter les livres, les dvd et revues.
+<br>-l'accueil peut gérer les documents (livres, DVD, revues) mais ne peut effectuer de commandes ou prise d'abonnements.
+<br>-les bibliothécaires peuvent accéder à l'enssemble des fonctionnalités.
 
 <br>L'application ne comporte qu'une seule fenêtre divisée en plusieurs onglets.
 ## Les différents onglets
