@@ -65,7 +65,7 @@ Certaines règles s'applique aux commandes:
 -les nouvelles commande ont par défaut leurs statuts a "en cours".
 -les commandes livrées ne peuvent etre supprimer. Quand le statuts d'une commande passe a livrée, le nombre de livres correpondant est ajouté aux exemplaires en circulation.
 -une commande ne peut repasser au statuts précédent. Pour pouvoir être réglée, elle doit au préalable avoir été livrée.
-![img4](https://raw.githubusercontent.com/r4ndomfriday/PortFolio/main/ressources/ap3Commandes.png)
+![img4](https://github.com/Gotlub/MediatekDocuments/blob/main/images/ap3Commandes.png?raw=true)
 ### Onglet 6 : Commandes de DVD
 
 Le fonctionnement est identique à l'onglet des livres.<br>
@@ -77,11 +77,11 @@ Le fonctionnement de la partie haute de l'ongle est identique à celui des comma
 Un abonnement correspond à une revue. Il a un début (Date de commande) et une fin.
 Il n'est pas possible de supprimer un abonnement dont un exemplaire a été acquis pendant sa durée.
 
-![img5](https://raw.githubusercontent.com/r4ndomfriday/PortFolio/main/ressources/ap3Abonnements.png)
+![img5](https://github.com/Gotlub/MediatekDocuments/blob/main/images/ap3Abonnements.png?raw=true)
 ## La base de données
 La base de données 'mediatek86 ' est au format MySQL.<br>
 Voici sa structure :<br>
-![img6](https://raw.githubusercontent.com/Gotlub/MediatekDocuments/main/images/schemaSGBD.jpg)
+![img6](https://github.com/Gotlub/MediatekDocuments/blob/main/images/schemaSGBD.jpg?raw=true)
 <br>On distingue les documents "génériques" (ce sont les entités Document, Revue, Livres-DVD, Livre et DVD) des documents "physiques" qui sont les exemplaires de livres ou de DVD, ou bien les numéros d’une revue ou d’un journal.<br>
 Chaque exemplaire est numéroté à l’intérieur du document correspondant, et a donc un identifiant relatif. Cet identifiant est réel : ce n'est pas un numéro automatique. <br>
 Un exemplaire est caractérisé par :<br>
