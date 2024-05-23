@@ -111,5 +111,6 @@ Ce mode opératoire permet d'installer l'application pour pouvoir travailler des
 - Récupérer et installer l'API REST nécessaire (https://github.com/Gotlub/rest_mediatekdocuments) ainsi que la base de données (les explications sont données dans le readme correspondant).
 
 ## Tests fonctionnels
-Pour pouvoir réaliser les tests fonctionnels, il faut commenter ("//")  dans le constructeur d'Access (dal/Access.cs) la ligne "api + ApiRest.GetInstance()" et dé commenter là ligne du dessus.
+Installer Specflow dans les extensions de Visual Studio 2019.
+<br>Puis pour pouvoir réaliser les tests fonctionnels, il faut commenter ("//")  dans le constructeur d'Access (dal/Access.cs) la ligne "api + ApiRest.GetInstance()" et dé commenter là ligne du dessus.
 ![img7](https://raw.githubusercontent.com/Gotlub/MediatekDocuments/main/images/Access.png)
