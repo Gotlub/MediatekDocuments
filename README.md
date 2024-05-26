@@ -104,13 +104,16 @@ L'accès à la BDD se fait à travers une API REST protégée par une authentifi
 Le code de l'API se trouve ici :<br>
 https://github.com/Gotlub/rest_mediatekdocuments<br>
 avec toutes les explications pour l'utiliser (dans le readme).
+
 ## Installation de l'application
 Ce mode opératoire permet d'installer l'application pour pouvoir travailler dessus.<br>
 - Installer Visual Studio 2019 entreprise et les extension Specflow et newtonsoft.json (pour ce dernier, voir l'article "Accéder à une API REST à partir d'une application C#" dans le wiki de ce dépôt : consulter juste le début pour la configuration, car la suite permet de comprendre le code existant).<br>
 - Télécharger le code et le dézipper puis renommer le dossier en "mediatekdocuments".<br>
 - Récupérer et installer l'API REST nécessaire (https://github.com/Gotlub/rest_mediatekdocuments) ainsi que la base de données (les explications sont données dans le readme correspondant).
+- Le projet est en .NET Framework 4.7.2.
+![img7](https://github.com/Gotlub/MediatekDocuments/blob/main/images/netFramework.png?raw=true)
 
 ## Tests fonctionnels
 Installer Specflow dans les extensions de Visual Studio 2019.
 <br>Puis pour pouvoir réaliser les tests fonctionnels, il faut commenter ("//")  dans le constructeur d'Access (dal/Access.cs) la ligne "api + ApiRest.GetInstance()" et dé commenter là ligne du dessus.
-![img7](https://raw.githubusercontent.com/Gotlub/MediatekDocuments/main/images/Access.png)
+![img8](https://raw.githubusercontent.com/Gotlub/MediatekDocuments/main/images/Access.png)
