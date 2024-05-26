@@ -115,5 +115,5 @@ Ce mode opératoire permet d'installer l'application pour pouvoir travailler des
 
 ## Tests fonctionnels
 Installer Specflow dans les extensions de Visual Studio 2019.
-<br>Puis pour pouvoir réaliser les tests fonctionnels, il faut commenter ("//")  dans le constructeur d'Access (dal/Access.cs) la ligne "api + ApiRest.GetInstance()" et dé commenter là ligne du dessus.
+<br>Puis pour pouvoir réaliser les tests fonctionnels, il faut commenter ("//")  dans le constructeur d'Access (dal/Access.cs) la ligne ```api + ApiRest.GetInstance()``` et rentrer les données de connexion en dur ```api = ApiRest.GetInstance("http://localhost/rest_mediatekdocuments/", "admin:adminpwd");``` comme dans la capture si dessous.
 ![img8](https://raw.githubusercontent.com/Gotlub/MediatekDocuments/main/images/Access.png)
