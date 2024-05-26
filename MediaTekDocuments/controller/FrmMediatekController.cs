@@ -392,7 +392,7 @@ namespace MediaTekDocuments.controller
         /// <summary>
         /// Creer un abonnement dans la bdd
         /// </summary>
-        /// <param name="commandeLivreDvd"></param>
+        /// <param name="abonnement"></param>
         /// <returns></returns>
         public bool CreerAbonnement(Abonnement abonnement)
         {
@@ -402,7 +402,7 @@ namespace MediaTekDocuments.controller
         /// <summary>
         /// Modifie un abonnement dans la bdd
         /// </summary>
-        /// <param name="commandeLivreDvd"></param>
+        /// <param name="abonnement"></param>
         /// <returns></returns>
         public bool UpdateAbonnement(Abonnement abonnement)
         {

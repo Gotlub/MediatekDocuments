@@ -64,8 +64,8 @@ namespace MediaTekDocuments.dal
                 String authenticationString = GetAuthentificationString(authenticationName);
                 String uriApi = GetAuthentificationString(uriApiName);
                 //Pour pouvoir effectuer les tests les données de connexion sont rentré en dur
-                //api = ApiRest.GetInstance("http://localhost/rest_mediatekdocuments/", "admin:adminpwd");
-                api = ApiRest.GetInstance(uriApi, authenticationString);
+                api = ApiRest.GetInstance("http://localhost/rest_mediatekdocuments/", "admin:adminpwd");
+                //api = ApiRest.GetInstance(uriApi, authenticationString);
             }
             catch (Exception e)
             {
@@ -187,6 +187,7 @@ namespace MediaTekDocuments.dal
         /// <summary>
         /// Créer une entite dans la BDD, return true si l'opération, c'est correctement déroulé
         /// </summary>
+        /// <param name="type"></param>
         /// <param name="jsonEntite"></param>
         /// <returns></returns>
         public bool CreerEntite(string type, String jsonEntite)
@@ -208,6 +209,7 @@ namespace MediaTekDocuments.dal
         /// <summary>
         /// Modifie une entite dans la BDD, return true si l'opération, c'est correctement déroulé
         /// </summary>
+        /// /// <param name="type"></param>
         /// <param name="id"></param>
         /// <param name="jsonEntite"></param>
         /// <returns></returns>
@@ -230,6 +232,7 @@ namespace MediaTekDocuments.dal
         /// <summary>
         /// Supprime une entité dans la BDD, return true si l'opération, c'est correctement déroulé
         /// </summary>
+        /// <param name="type"></param>
         /// <param name="jsonEntite"></param>
         /// <returns></returns>
         public bool SupprimerEntite(string type, String jsonEntite)

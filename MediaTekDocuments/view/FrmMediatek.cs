@@ -59,7 +59,7 @@ namespace MediaTekDocuments.view
         /// <summary>
         /// Rempli un combo de suivi
         /// </summary>
-        /// <param name="lesCategories">liste des objets de type Genre ou Public ou Rayon</param>
+        /// <param name="lesSuivis">liste des etats de suivis</param>
         /// <param name="bdg">bindingsource contenant les informations</param>
         /// <param name="cbx">combobox à remplir</param>
         public void RemplirComboSuivi(List<Suivi> lesSuivis, BindingSource bdg, ComboBox cbx)
@@ -153,7 +153,7 @@ namespace MediaTekDocuments.view
         /// <returns></returns>
         private int VerifExemplaire(string id)
         {
-            return controller.GetExemplairesRevue(id).Count();
+            return controller.GetExemplairesRevue(id).Count;
         }
 
         /// <summary>
@@ -2909,7 +2909,7 @@ namespace MediaTekDocuments.view
         /// <summary>
         /// Remplit le dategrid avec la liste reçue en paramètre
         /// </summary>
-        /// <param name="livres">liste de livres</param>
+        /// <param name="LesCommandes">liste de commandes</param>
         private void RemplirLivresComListeCommandes(List<CommandeDocument> LesCommandes)
         {
             if (LesCommandes.Count > 0)
@@ -3569,7 +3569,7 @@ namespace MediaTekDocuments.view
         /// <summary>
         /// Remplit le dategrid avec la liste reçue en paramètre
         /// </summary>
-        /// <param name="livres">liste de livres</param>
+        /// <param name="LesCommandes">liste de commandes</param>
         private void RemplirDvdComListeCommandes(List<CommandeDocument> LesCommandes)
         {
             if (LesCommandes.Count > 0)
@@ -3713,9 +3713,9 @@ namespace MediaTekDocuments.view
         }
 
         /// <summary>
-        /// Récupère et affiche les commandes d'un livre
+        /// Récupère et affiche les commandes d'un dvd
         /// </summary>
-        /// <param name="livre"></param>
+        /// <param name="dvd"></param>
         private void AfficheDvdCommandeInfos(Dvd dvd)
         {
             string idDvd = dvd.Id;
@@ -4206,7 +4206,7 @@ namespace MediaTekDocuments.view
         /// <summary>
         /// Remplit le dategrid avec la liste reçue en paramètre
         /// </summary>
-        /// <param name="livres">liste de livres</param>
+        /// <param name="revues">liste de revues</param>
         private void RemplirAboListe(List<Revue> revues)
         {
             bdgAboListe.DataSource = revues;
@@ -4224,7 +4224,7 @@ namespace MediaTekDocuments.view
         /// <summary>
         /// Remplit le dategrid avec la liste reçue en paramètre
         /// </summary>
-        /// <param name="livres">liste de livres</param>
+        /// <param name="LesAbonnements">liste d'abonnements</param>
         private void RemplirAboListeCommandes(List<Abonnement> LesAbonnements)
         {
             if (LesAbonnements.Count > 0)
@@ -4367,9 +4367,9 @@ namespace MediaTekDocuments.view
         }
 
         /// <summary>
-        /// Récupère et affiche les commandes d'un livre
+        /// Récupère et affiche les abonnements d'une revue
         /// </summary>
-        /// <param name="livre"></param>
+        /// <param name="revue"></param>
         private void AfficheAboInfos(Revue revue)
         {
             string idRevue = revue.Id;
@@ -4476,9 +4476,9 @@ namespace MediaTekDocuments.view
         }
 
         /// <summary>
-        /// affiche les détailles d'une commande
+        /// affiche les détailles d'un abonnement
         /// </summary>
-        /// <param name="laCommande"></param>
+        /// <param name="labonnement"></param>
         private void AfficheAboInfo(Abonnement labonnement)
         {
             txbAboNbCommande.Text = labonnement.Id;
