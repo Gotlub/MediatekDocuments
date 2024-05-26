@@ -3109,7 +3109,7 @@ namespace MediaTekDocuments.view
             VideLivresComZones();
         }
 
-        // <summary>
+        /// <summary>
         /// vide les zones de recherche et de filtre
         /// </summary>
         private void VideLivresComZones()
@@ -3767,7 +3767,7 @@ namespace MediaTekDocuments.view
             VideDvdComZones();
         }
 
-        // <summary>
+        /// <summary>
         /// vide les zones de recherche et de filtre
         /// </summary>
         private void VideDvdComZones()
@@ -4421,7 +4421,7 @@ namespace MediaTekDocuments.view
             VideAboZones();
         }
 
-        // <summary>
+        /// <summary>
         /// vide les zones de recherche et de filtre
         /// </summary>
         private void VideAboZones()
